@@ -14,10 +14,8 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         // GET: Admin
        /* public ActionResult Index()
         {
-       hola
-       adios parte 3 
-       no se pudoasdfasdfasdfasdfsadfasdfa
-       Ya me cansefasdfasdf            return View();
+ 
+        return View();
         }
        */
         public ActionResult Index(string precio)
