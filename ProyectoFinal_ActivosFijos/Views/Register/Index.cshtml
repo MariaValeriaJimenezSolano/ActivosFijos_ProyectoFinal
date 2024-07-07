@@ -1,0 +1,79 @@
+﻿@model ProyectoFinal_ActivosFijos.Models.ViewModel.UsuariosViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<html>
+<head>
+    <title>Registro de Usuario</title>
+
+</head>
+<body style="background-color: black;">
+    @if (TempData["Mensaje"] != null)
+    {
+        <script>
+            alert('@TempData["Mensaje"]');
+            TempData["Mensaje"] = null;
+        </script>
+    }
+
+    @using (Html.BeginForm("Index", "Register", FormMethod.Post, new { @class = "needs-validation", id = "mainForm" }))
+    {
+        <div class="background-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="container form-container" style="color: white;">
+                        <h2 style="display: flex; font-family: Staatliches; color: black; justify-content: center">Crear una cuenta</h2>
+                        <div id="paso1" class="form-step-active" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+
+                            @Html.TextBoxFor(Model => Model.Cedula, null, new { @class = "form-control", placeholder = "Cédula", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
+
+                            @Html.TextBoxFor(Model => Model.Nombre, null, new { @class = "form-control", placeholder = "Nombre", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+
+                            @Html.TextBoxFor(Model => Model.PrimerApellido, null, new { @class = "form-control", placeholder = "Primer Apellido", required = "required" })
+                            @Html.ValidationMessageFor(model => model.PrimerApellido, "", new { @class = "text-danger" })
+
+                            @Html.TextBoxFor(Model => Model.SegundoApellido, null, new { @class = "form-control", placeholder = "Segundo Apellido", required = "required" })
+                            @Html.ValidationMessageFor(model => model.SegundoApellido, "", new { @class = "text-danger" })
+
+                            @Html.TextBoxFor(Model => Model.Edad, null, new { @class = "form-control", placeholder = "Edad", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Edad, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+                                <select id="GenderTypeDropdown" name="Sexo" class="form-control" data-val="true" data-val-required="Género obligatorio" required="required">
+                                    <option value="" selected>-- Elegir Género --</option>
+                                    <option value="F">Femenino</option>
+                                    <option value="M">Masculino</option>
+                                </select>
+                                @Html.ValidationMessageFor(model => model.Sexo, "", new { @class = "text-danger" })
+                            </div>
+
+                            @Html.TextBoxFor(Model => Model.Telefono, null, new { @class = "form-control", placeholder = "Teléfono", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+
+                            @Html.TextAreaFor(Model => Model.Direccion, new { @class = "form-control", placeholder = "Dirección", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+
+                            @Html.TextBoxFor(Model => Model.Correo, new { @class = "form-control", placeholder = "Correo", required = "required", type = "email" })
+                            @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
+
+                            @Html.TextBoxFor(Model => Model.Contrasena, new { @class = "form-control", id = "Contrasena", placeholder = "Contraseña", type = "password", required = "required" })
+                            @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+
+                        </div>
+                        <button type="submit" id="submit" class="boton-IS">Crear Cuenta</button>
+                        <button class="boton-RG" onclick="document.location.href = '@Url.Content("~/Login/Index")'">Regresar</button>
+
+                        <div class="col-md-9"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+</body>
+
+</html>
