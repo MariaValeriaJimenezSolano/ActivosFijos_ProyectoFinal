@@ -15,6 +15,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
        /* public ActionResult Index()
         {
        hola
+       adios parte 3 
             return View();
         }
        */
