@@ -14,6 +14,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         // GET: Admin
        /* public ActionResult Index()
         {
+       hola
             return View();
         }
        */
