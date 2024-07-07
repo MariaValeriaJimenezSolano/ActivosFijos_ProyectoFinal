@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\",
+  "WorkspaceRootPath": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\50688\\onedrive\\escritorio\\proyecto_servicios_web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,17 +22,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\AdminController.cs",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-07T22:42:20.644Z",
               "EditorCaption": ""
@@ -41,21 +49,22 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
+              "DocumentMoniker": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Web.config",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
+              "ToolTip": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Web.config",
               "ViewState": "AQIAAEgAAAAAAAAAAAAAAFgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-07-07T22:42:09.26Z"
+              "WhenOpened": "2024-07-07T22:42:09.26Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

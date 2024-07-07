@@ -16,8 +16,8 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         {
        hola
        adios parte 3 
-       no se pudo
-            return View();
+       no se pudoasdfasdfasdfasdfsadfasdfa
+       Ya me cansefasdfasdf            return View();
         }
        */
         public ActionResult Index(string precio)
