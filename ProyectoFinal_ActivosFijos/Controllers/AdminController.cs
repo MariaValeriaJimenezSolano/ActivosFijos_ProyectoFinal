@@ -16,6 +16,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         {
        hola
        adios parte 3 
+       no se pudo
             return View();
         }
        */
