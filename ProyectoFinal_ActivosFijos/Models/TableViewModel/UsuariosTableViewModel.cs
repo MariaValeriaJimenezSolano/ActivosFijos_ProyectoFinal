@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Xml.Linq;
 
 namespace ProyectoFinal_ActivosFijos.Models.TableViewModel
 {
@@ -11,7 +13,11 @@ namespace ProyectoFinal_ActivosFijos.Models.TableViewModel
         public int Id { get; set; }
         public int Cedula { get; set; }
         public string Nombre { get; set; }
+
+        [Display(Name = "Primer Apellido")]
         public string PrimerApellido { get; set; }
+
+        [Display(Name = "Segundo Apellido")]
         public string SegundoApellido { get; set; }
         public int Edad { get; set; }
         public int Telefono { get; set; }

@@ -1,0 +1,176 @@
+﻿@model ProyectoFinal_ActivosFijos.Models.TableViewModel.CarrosTableViewModel
+
+<style>
+    body {
+        background-color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .container-add {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    input[type="submit"],
+    input[type="button"] {
+        width: auto;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        input[type="submit"].btn-primary {
+            background-color: #28a745;
+            color: white;
+        }
+
+        input[type="button"].btn-outline-danger {
+            background-color: transparent;
+            border: 2px solid #dc3545;
+            color: #dc3545;
+        }
+
+            input[type="button"].btn-outline-danger:hover {
+                background-color: #dc3545;
+                color: white;
+            }
+</style>
+
+<h2>Agregar un nuevo Vehiculo</h2>
+
+<div class="container-add">
+    @using (Html.BeginForm("Add", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {       
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Marca, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Marca, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Marca, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Modelo, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Modelo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Modelo, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Anio, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Anio, new { @class = "form-control", type = "text" })
+                    @Html.ValidationMessageFor(model => model.Anio, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Precio, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Precio, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CantidadEnStock, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.CantidadEnStock, new { htmlAttributes = new { @class = "form-control", type = "text" } })
+                    @Html.ValidationMessageFor(model => model.CantidadEnStock, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Transmision, htmlAttributes: new { @class = "control-label" })
+                    <select id="TransmisionTypeDropdown" name="Transmision" class="form-control" data-val="true" data-val-required="Tipo de transmision obligatoria">
+                        <option value="" selected>-- Elegir Transmision --</option>
+                        <option value="Transmisión Automática">Transmisión Automática</option>
+                        <option value="Transmisión Manual">Transmisión Manual</option>
+                        <option value="Transmisión Continuamente Variable">Transmisión Continuamente Variable</option>
+                        <option value="Transmisión Automática de Doble Embrague">Transmisión Automática de Doble Embrague</option>
+                    </select>
+                    @Html.ValidationMessageFor(model => model.Transmision, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Combustible, htmlAttributes: new { @class = "control-label" })
+                    <select id="GasTypeDropdown" name="Combustible" class="form-control" data-val="true" data-val-required="Tipo de combustible obligatorio">
+                        <option value="" selected>-- Elegir Combustible --</option>
+                        <option value="Gasolina">Gasolina</option>
+                        <option value="Diésel">Diésel</option>
+                        <option value="Electricidad">Electricidad</option>
+                    </select>
+                    @Html.ValidationMessageFor(model => model.Combustible, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Imagen1, "Imagen")
+                    <input type="file" name="ImagenFile" id="ImagenFile" class="form-control" onchange="previewImage(this, 'previewImagen')" />
+                    <img id="previewImagen" style="max-width: 200px; max-height: 200px; margin-top: 10px;" />
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Imagen2, "Imagen2")
+                    <input type="file" name="ImagenFile2" id="ImagenFile2" class="form-control" onchange="previewImage(this, 'previewImagen2')" />
+                    <img id="previewImagen2" style="max-width: 200px; max-height: 200px; margin-top: 10px;" />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+                <input type="button" class="btn btn-outline-danger" value="Regresar" onclick="document.location.href = '@Url.Content("~/Admin/Index")'" />
+            </div>
+        </div>
+    }
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function previewImage(input, previewId) {
+        var preview = document.getElementById(previewId);
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+    }
+</script>

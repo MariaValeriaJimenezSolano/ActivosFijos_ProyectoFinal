@@ -265,6 +265,8 @@
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Comprador\Index.cshtml" />
+    <Content Include="Views\Admin\Add.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

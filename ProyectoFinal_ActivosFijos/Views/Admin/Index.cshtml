@@ -10,7 +10,7 @@
         flex: 1 1 auto;
         padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
         color: var(--bs-card-color);
-        height: 520px;
+        height: 480px;
     }
 
 
@@ -52,12 +52,6 @@
             border-bottom: 10px solid transparent;
             transition: opacity 0.6s ease;
         }
-
-
-
-
-
-
 
 
     /*Lo que sigue controla que todas las imagenes tengan el mismo tamaño y un width ya heredado de 100%*/
@@ -201,15 +195,52 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-3 mt-5">
+
                 <div class="contenedor-filtros">
+
                     <form method="get" action="@Url.Action("Index", "Admin")">
+
                         <div class="mb-3">
-                            <label for="Categoria" class="form-label">Categoría:</label>
-                            <input type="text" class="form-control" id="Categoria" name="Categoria" placeholder="Cualquier tipo">
+                            <label for="Modelo" class="form-label">Modelo:</label>
+                            <input type="text" class="form-control" id="Modelo" name="Modelo" placeholder="-- Cualquier modelo --" value="@ViewBag.ModeloSeleccionado" />
                         </div>
+
+                        <div class="mb-3">
+                            <label for="Anio" class="form-label">Año:</label>
+                            <input type="text" class="form-control" id="Anio" name="Anio" placeholder="-- Cualquier año --" value="@ViewBag.AnioSeleccionado" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="precioMax" class="form-label">Precio Máximo:</label>
+                            <input type="range" class="form-range" id="precioMax" name="precioMax" min="1" max="1000000" step="10" value="@ViewBag.PrecioMaxSeleccionado" />
+                            <output for="precioMax" id="precioMaxOutput">$@ViewBag.PrecioMaxSeleccionado</output>
+                        </div>
+
                         <button type="submit" class="btn btn-success">Buscar</button>
+
+                        <a href="@Url.Action("Index", "Admin")" class="btn btn-secondary">Limpiar</a>
+
                     </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
+
+
+
+
+
             </div>
             <div class="col-lg-8">
                 <h2 class="mb-2 text-center">Lista de Tours</h2>
@@ -219,11 +250,12 @@
                 <div class="row">
                     @foreach (var carro in Model)
                     {
-                        <div class="col-md-4 col-lg-4 mb-4">
+                        <div class="col-md-3 col-lg-4 mb-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="height:100px !important">@carro.Modelo</h5>
-                                    <p class="card-text" style="height:35px !important">@carro.Anio </p>
+                                    <h5 class="card-title">@carro.Modelo - @carro.Anio</h5>
+                                    <p class="card-text"> </p>
+                                    <p class="card-text"> Transmision: @carro.Transmision </p>
                                     <p class="card-text"><strong>Precio: @string.Format("${0:N2}", carro.Precio) | @carro.CantidadEnStock Disponibles</strong></p>
 
                                     <!-- Carrusel de imágenes -->
@@ -259,6 +291,7 @@
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Anterior</span>
                                         </button>
+
                                         <button class="carousel-control-next" type="button" data-bs-target="#carouselcarro@(carro.Id)"
                                                 data-bs-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -267,8 +300,12 @@
                                     </div>
 
 
-                                   
-
+                                    <!-- Acciones -->
+                                    <div class="mt-3">
+                                        <a class="btn btn-success" href="@Url.Action("Edit", new { CarroID = @carro.Id })">Editar</a>
+                                        <a class="btn btn-danger" href="@Url.Action("Delete", new { CarroID = @carro.Id })"
+                                           onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?');">Eliminar</a>
+                                    </div>
 
 
                                 </div>
@@ -280,7 +317,7 @@
         </div>
     </div>
 </main>
-<a href="@Url.Action("Index", "Home")" class="btn btn-success">Regresar al menú principal</a>
+
 <script>
     // Inicializar los carruseles al cargar la página
     @foreach (var carro in Model)
@@ -290,6 +327,7 @@
         </text>
     }
 </script>
+
 
 
 <!-- Agregar Font Awesome y Bootstrap (popper.js y bootstrap.js) -->
