@@ -16,21 +16,52 @@
     <Property Name="Imagen2" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="CantidadEnStock" Type="Int32" />
   </EntityType>
-  <EntityType Name="Repuestos">
+  <EntityType Name="Comentarios">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Anio" Type="Int32" />
-    <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="CantidadEnStock" Type="Int32" />
-    <Property Name="Imagen1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdProducto" Type="Int32" Nullable="false" />
+    <Property Name="Comentario" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Comentarios_Productos" FromRole="Comentarios" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Hoteles">
+    <Key>
+      <PropertyRef Name="IDHotel" />
+    </Key>
+    <Property Name="IDHotel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoDeHabitacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CantidadDePersonas" Type="Int32" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="NombreHotel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="Imagen2" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Imagen3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="web" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ComentarioHotel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CalificacionHotel" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="ProductoID" />
+    </Key>
+    <Property Name="ProductoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Lugar" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Categoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Personas" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CantidadEnStock" Type="Int32" />
+    <Property Name="Comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Calificacion" Type="Int32" />
+    <Property Name="Proveedor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Vendedor" Type="Int32" />
+    <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Imagen2" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Imagen3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Comentarios" Relationship="Self.FK_Comentarios_Productos" FromRole="Productos" ToRole="Comentarios" />
   </EntityType>
   <EntityType Name="TipoUsuario">
     <Key>
@@ -39,6 +70,37 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TipoUsuario1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_TipoUsuario" FromRole="TipoUsuario" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cedula" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PrimerApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SegundoApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Edad" Type="Int32" />
+    <Property Name="Telefono" Type="Int32" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoDeUsuario" Type="Int32" />
+    <Property Name="Contrasena" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MarcaVendedor" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="ProductosEnCarrito" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="socialMediaID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PreguntaSeguridad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RespuestaPreguntaSeguridad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserType" Relationship="Self.FK_Users_UserType" FromRole="Users" ToRole="UserType" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_UserType" FromRole="UserType" ToRole="Users" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -59,6 +121,20 @@
     <Property Name="ProductosEnCarrito" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="TipoUsuario" Relationship="Self.FK_Usuarios_TipoUsuario" FromRole="Usuarios" ToRole="TipoUsuario" />
   </EntityType>
+  <Association Name="FK_Comentarios_Productos">
+    <End Role="Productos" Type="Self.Productos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Comentarios" Type="Self.Comentarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="ProductoID" />
+      </Principal>
+      <Dependent Role="Comentarios">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Usuarios_TipoUsuario">
     <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="0..1" />
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -71,14 +147,38 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Users_UserType">
+    <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="TipoDeUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ActivosFijosBDEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Carros" EntityType="Self.Carros" />
-    <EntitySet Name="Repuestos" EntityType="Self.Repuestos" />
+    <EntitySet Name="Comentarios" EntityType="Self.Comentarios" />
+    <EntitySet Name="Hoteles" EntityType="Self.Hoteles" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" />
     <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="UserType" EntityType="Self.UserType" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <AssociationSet Name="FK_Comentarios_Productos" Association="Self.FK_Comentarios_Productos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="Comentarios" EntitySet="Comentarios" />
+    </AssociationSet>
     <AssociationSet Name="FK_Usuarios_TipoUsuario" Association="Self.FK_Usuarios_TipoUsuario">
       <End Role="TipoUsuario" EntitySet="TipoUsuario" />
       <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_UserType" Association="Self.FK_Users_UserType">
+      <End Role="UserType" EntitySet="UserType" />
+      <End Role="Users" EntitySet="Users" />
     </AssociationSet>
     <FunctionImport Name="DeleteUserbyId">
       <Parameter Name="var_Id" Mode="In" Type="Int32" />
@@ -95,7 +195,7 @@
     <FunctionImport Name="obtenerComentariosPorProducto">
       <Parameter Name="IdProducto" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="ShowProducts" />
+    <FunctionImport Name="ShowProducts" ReturnType="Collection(String)" />
     <FunctionImport Name="UpdateUser">
       <Parameter Name="Id" Mode="In" Type="Int32" />
       <Parameter Name="Cedula" Mode="In" Type="Int32" />
@@ -120,10 +220,10 @@
     <FunctionImport Name="VerifyUserCedula" ReturnType="Collection(ActivosFijosBDModel.VerifyUserCedula_Result)">
       <Parameter Name="var_cedula" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="VerifyUserGmail">
+    <FunctionImport Name="VerifyUserGmail" ReturnType="Collection(ActivosFijosBDModel.VerifyUserGmail_Result)">
       <Parameter Name="var_correo" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="VerifyUserSocialMedia">
+    <FunctionImport Name="VerifyUserSocialMedia" ReturnType="Collection(ActivosFijosBDModel.VerifyUserSocialMedia_Result)">
       <Parameter Name="var_socialMediaID" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
@@ -156,5 +256,43 @@
     <Property Type="Int32" Name="TipoDeUsuario" Nullable="true" />
     <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="20" />
     <Property Type="String" Name="ProductosEnCarrito" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="VerifyUserGmail_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Cedula" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PrimerApellido" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SegundoApellido" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Edad" Nullable="true" />
+    <Property Type="Int32" Name="Telefono" Nullable="true" />
+    <Property Type="String" Name="Correo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Sexo" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Direccion" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TipoDeUsuario" Nullable="true" />
+    <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MarcaVendedor" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ProductosEnCarrito" Nullable="true" />
+    <Property Type="String" Name="socialMediaID" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PreguntaSeguridad" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RespuestaPreguntaSeguridad" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="VerifyUserSocialMedia_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Cedula" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="PrimerApellido" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SegundoApellido" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Edad" Nullable="true" />
+    <Property Type="Int32" Name="Telefono" Nullable="true" />
+    <Property Type="String" Name="Correo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Sexo" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Direccion" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TipoDeUsuario" Nullable="true" />
+    <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MarcaVendedor" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="ProductosEnCarrito" Nullable="true" />
+    <Property Type="String" Name="socialMediaID" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PreguntaSeguridad" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RespuestaPreguntaSeguridad" Nullable="true" MaxLength="100" />
   </ComplexType>
 </Schema>

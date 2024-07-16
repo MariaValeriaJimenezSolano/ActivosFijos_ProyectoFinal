@@ -10,9 +10,8 @@
 namespace ProyectoFinal_ActivosFijos.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Usuarios
+    public partial class VerifyUserSocialMedia_Result
     {
         public int Id { get; set; }
         public int Cedula { get; set; }
@@ -26,8 +25,10 @@ namespace ProyectoFinal_ActivosFijos.Models
         public string Direccion { get; set; }
         public Nullable<int> TipoDeUsuario { get; set; }
         public string Contrasena { get; set; }
+        public string MarcaVendedor { get; set; }
         public string ProductosEnCarrito { get; set; }
-    
-        public virtual TipoUsuario TipoUsuario { get; set; }
+        public string socialMediaID { get; set; }
+        public string PreguntaSeguridad { get; set; }
+        public string RespuestaPreguntaSeguridad { get; set; }
     }
 }

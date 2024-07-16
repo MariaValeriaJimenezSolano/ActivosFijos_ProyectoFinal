@@ -12,18 +12,19 @@ namespace ProyectoFinal_ActivosFijos.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Carros
+    public partial class Hoteles
     {
-        public int Id { get; set; }
-        public string Marca { get; set; }
-        public string Modelo { get; set; }
-        public Nullable<int> Anio { get; set; }
-        public Nullable<decimal> Precio { get; set; }
-        public string Transmision { get; set; }
-        public string Combustible { get; set; }
+        public int IDHotel { get; set; }
+        public string TipoDeHabitacion { get; set; }
+        public Nullable<int> CantidadDePersonas { get; set; }
         public string Descripcion { get; set; }
-        public byte[] Imagen1 { get; set; }
+        public Nullable<decimal> Precio { get; set; }
+        public string NombreHotel { get; set; }
+        public byte[] Imagen { get; set; }
         public byte[] Imagen2 { get; set; }
-        public Nullable<int> CantidadEnStock { get; set; }
+        public byte[] Imagen3 { get; set; }
+        public string web { get; set; }
+        public string ComentarioHotel { get; set; }
+        public Nullable<int> CalificacionHotel { get; set; }
     }
 }

@@ -12,18 +12,12 @@ namespace ProyectoFinal_ActivosFijos.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TipoUsuario
+    public partial class Comentarios
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TipoUsuario()
-        {
-            this.Usuarios = new HashSet<Usuarios>();
-        }
-    
         public int Id { get; set; }
-        public string TipoUsuario1 { get; set; }
+        public int IdProducto { get; set; }
+        public string Comentario { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuarios> Usuarios { get; set; }
+        public virtual Productos Productos { get; set; }
     }
 }
