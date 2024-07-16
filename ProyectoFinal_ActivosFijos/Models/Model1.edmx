@@ -21,50 +21,21 @@
           <Property Name="Imagen2" Type="varbinary(max)" />
           <Property Name="CantidadEnStock" Type="int" />
         </EntityType>
-        <EntityType Name="Comentarios">
+        <EntityType Name="Repuestos">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IdProducto" Type="int" Nullable="false" />
-          <Property Name="Comentario" Type="varchar" MaxLength="255" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Hoteles">
-          <Key>
-            <PropertyRef Name="IDHotel" />
-          </Key>
-          <Property Name="IDHotel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TipoDeHabitacion" Type="varchar" MaxLength="100" />
-          <Property Name="CantidadDePersonas" Type="int" />
-          <Property Name="Descripcion" Type="varchar(max)" />
-          <Property Name="Precio" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="NombreHotel" Type="varchar" MaxLength="100" />
-          <Property Name="Imagen" Type="varbinary(max)" />
-          <Property Name="Imagen2" Type="varbinary(max)" />
-          <Property Name="Imagen3" Type="varbinary(max)" />
-          <Property Name="web" Type="varchar(max)" />
-          <Property Name="ComentarioHotel" Type="varchar" MaxLength="100" />
-          <Property Name="CalificacionHotel" Type="int" />
-        </EntityType>
-        <EntityType Name="Productos">
-          <Key>
-            <PropertyRef Name="ProductoID" />
-          </Key>
-          <Property Name="ProductoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="255" />
-          <Property Name="Lugar" Type="varchar" MaxLength="55" />
-          <Property Name="Descripcion" Type="text" />
-          <Property Name="Precio" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="Categoria" Type="varchar" MaxLength="100" />
-          <Property Name="Personas" Type="varchar" MaxLength="100" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="nvarchar(max)" />
+          <Property Name="Marca" Type="nvarchar" MaxLength="50" />
+          <Property Name="Modelo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Anio" Type="int" />
+          <Property Name="Precio" Type="decimal" Precision="18" Scale="2" />
           <Property Name="CantidadEnStock" Type="int" />
-          <Property Name="Comentario" Type="text" />
-          <Property Name="Calificacion" Type="int" />
-          <Property Name="Proveedor" Type="varchar" MaxLength="100" />
-          <Property Name="Vendedor" Type="int" />
-          <Property Name="Imagen" Type="varbinary(max)" />
+          <Property Name="Imagen1" Type="varbinary(max)" />
           <Property Name="Imagen2" Type="varbinary(max)" />
-          <Property Name="Imagen3" Type="varbinary(max)" />
+          <Property Name="Estado" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TipoUsuario">
           <Key>
@@ -72,35 +43,6 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TipoUsuario" Type="varchar" MaxLength="15" />
-        </EntityType>
-        <EntityType Name="Users">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Cedula" Type="int" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="20" />
-          <Property Name="PrimerApellido" Type="varchar" MaxLength="20" />
-          <Property Name="SegundoApellido" Type="varchar" MaxLength="20" />
-          <Property Name="Edad" Type="int" />
-          <Property Name="Telefono" Type="int" />
-          <Property Name="Correo" Type="varchar" MaxLength="50" />
-          <Property Name="Sexo" Type="varchar" MaxLength="1" />
-          <Property Name="Direccion" Type="varchar" MaxLength="50" />
-          <Property Name="TipoDeUsuario" Type="int" />
-          <Property Name="Contrasena" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="MarcaVendedor" Type="varchar" MaxLength="40" />
-          <Property Name="ProductosEnCarrito" Type="nvarchar(max)" />
-          <Property Name="socialMediaID" Type="varchar" MaxLength="100" />
-          <Property Name="PreguntaSeguridad" Type="varchar" MaxLength="100" />
-          <Property Name="RespuestaPreguntaSeguridad" Type="varchar" MaxLength="100" />
-        </EntityType>
-        <EntityType Name="UserType">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UserStatus" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -120,32 +62,6 @@
           <Property Name="Contrasena" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ProductosEnCarrito" Type="nvarchar(max)" />
         </EntityType>
-        <Association Name="FK_Comentarios_Productos">
-          <End Role="Productos" Type="Self.Productos" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Comentarios" Type="Self.Comentarios" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Productos">
-              <PropertyRef Name="ProductoID" />
-            </Principal>
-            <Dependent Role="Comentarios">
-              <PropertyRef Name="IdProducto" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Users_UserType">
-          <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
-          <End Role="Users" Type="Self.Users" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="UserType">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="TipoDeUsuario" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Usuarios_TipoUsuario">
           <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="0..1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -206,21 +122,9 @@
         </Function>
         <EntityContainer Name="ActivosFijosBDModelStoreContainer">
           <EntitySet Name="Carros" EntityType="Self.Carros" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Comentarios" EntityType="Self.Comentarios" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Hoteles" EntityType="Self.Hoteles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Repuestos" EntityType="Self.Repuestos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Comentarios_Productos" Association="Self.FK_Comentarios_Productos">
-            <End Role="Productos" EntitySet="Productos" />
-            <End Role="Comentarios" EntitySet="Comentarios" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users_UserType" Association="Self.FK_Users_UserType">
-            <End Role="UserType" EntitySet="UserType" />
-            <End Role="Users" EntitySet="Users" />
-          </AssociationSet>
           <AssociationSet Name="FK_Usuarios_TipoUsuario" Association="Self.FK_Usuarios_TipoUsuario">
             <End Role="TipoUsuario" EntitySet="TipoUsuario" />
             <End Role="Usuarios" EntitySet="Usuarios" />
@@ -247,52 +151,21 @@
           <Property Name="Imagen2" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="CantidadEnStock" Type="Int32" />
         </EntityType>
-        <EntityType Name="Comentarios">
+        <EntityType Name="Repuestos">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdProducto" Type="Int32" Nullable="false" />
-          <Property Name="Comentario" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK_Comentarios_Productos" FromRole="Comentarios" ToRole="Productos" />
-        </EntityType>
-        <EntityType Name="Hoteles">
-          <Key>
-            <PropertyRef Name="IDHotel" />
-          </Key>
-          <Property Name="IDHotel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TipoDeHabitacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CantidadDePersonas" Type="Int32" />
-          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Precio" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="NombreHotel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="Imagen2" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="Imagen3" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="web" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="ComentarioHotel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CalificacionHotel" Type="Int32" />
-        </EntityType>
-        <EntityType Name="Productos">
-          <Key>
-            <PropertyRef Name="ProductoID" />
-          </Key>
-          <Property Name="ProductoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Lugar" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
-          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Precio" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="Categoria" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Personas" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Anio" Type="Int32" />
+          <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="CantidadEnStock" Type="Int32" />
-          <Property Name="Comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Calificacion" Type="Int32" />
-          <Property Name="Proveedor" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Vendedor" Type="Int32" />
-          <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Imagen1" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Imagen2" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="Imagen3" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Comentarios" Relationship="Self.FK_Comentarios_Productos" FromRole="Productos" ToRole="Comentarios" />
+          <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TipoUsuario">
           <Key>
@@ -301,37 +174,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TipoUsuario1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_TipoUsuario" FromRole="TipoUsuario" ToRole="Usuarios" />
-        </EntityType>
-        <EntityType Name="Users">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Cedula" Type="Int32" Nullable="false" />
-          <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="PrimerApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="SegundoApellido" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Edad" Type="Int32" />
-          <Property Name="Telefono" Type="Int32" />
-          <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TipoDeUsuario" Type="Int32" />
-          <Property Name="Contrasena" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MarcaVendedor" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <Property Name="ProductosEnCarrito" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="socialMediaID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PreguntaSeguridad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="RespuestaPreguntaSeguridad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="UserType" Relationship="Self.FK_Users_UserType" FromRole="Users" ToRole="UserType" />
-        </EntityType>
-        <EntityType Name="UserType">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_Users_UserType" FromRole="UserType" ToRole="Users" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -352,20 +194,6 @@
           <Property Name="ProductosEnCarrito" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TipoUsuario" Relationship="Self.FK_Usuarios_TipoUsuario" FromRole="Usuarios" ToRole="TipoUsuario" />
         </EntityType>
-        <Association Name="FK_Comentarios_Productos">
-          <End Role="Productos" Type="Self.Productos" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Comentarios" Type="Self.Comentarios" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Productos">
-              <PropertyRef Name="ProductoID" />
-            </Principal>
-            <Dependent Role="Comentarios">
-              <PropertyRef Name="IdProducto" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Usuarios_TipoUsuario">
           <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="0..1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -378,38 +206,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Users_UserType">
-          <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
-          <End Role="Users" Type="Self.Users" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="UserType">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Users">
-              <PropertyRef Name="TipoDeUsuario" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="ActivosFijosBDEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Carros" EntityType="Self.Carros" />
-          <EntitySet Name="Comentarios" EntityType="Self.Comentarios" />
-          <EntitySet Name="Hoteles" EntityType="Self.Hoteles" />
-          <EntitySet Name="Productos" EntityType="Self.Productos" />
+          <EntitySet Name="Repuestos" EntityType="Self.Repuestos" />
           <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" />
-          <EntitySet Name="Users" EntityType="Self.Users" />
-          <EntitySet Name="UserType" EntityType="Self.UserType" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
-          <AssociationSet Name="FK_Comentarios_Productos" Association="Self.FK_Comentarios_Productos">
-            <End Role="Productos" EntitySet="Productos" />
-            <End Role="Comentarios" EntitySet="Comentarios" />
-          </AssociationSet>
           <AssociationSet Name="FK_Usuarios_TipoUsuario" Association="Self.FK_Usuarios_TipoUsuario">
             <End Role="TipoUsuario" EntitySet="TipoUsuario" />
             <End Role="Usuarios" EntitySet="Usuarios" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Users_UserType" Association="Self.FK_Users_UserType">
-            <End Role="UserType" EntitySet="UserType" />
-            <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <FunctionImport Name="DeleteUserbyId">
             <Parameter Name="var_Id" Mode="In" Type="Int32" />
@@ -426,7 +230,7 @@
           <FunctionImport Name="obtenerComentariosPorProducto">
             <Parameter Name="IdProducto" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="ShowProducts" ReturnType="Collection(String)" />
+          <FunctionImport Name="ShowProducts" />
           <FunctionImport Name="UpdateUser">
             <Parameter Name="Id" Mode="In" Type="Int32" />
             <Parameter Name="Cedula" Mode="In" Type="Int32" />
@@ -451,10 +255,10 @@
           <FunctionImport Name="VerifyUserCedula" ReturnType="Collection(ActivosFijosBDModel.VerifyUserCedula_Result)">
             <Parameter Name="var_cedula" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="VerifyUserGmail" ReturnType="Collection(ActivosFijosBDModel.VerifyUserGmail_Result)">
+          <FunctionImport Name="VerifyUserGmail">
             <Parameter Name="var_correo" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="VerifyUserSocialMedia" ReturnType="Collection(ActivosFijosBDModel.VerifyUserSocialMedia_Result)">
+          <FunctionImport Name="VerifyUserSocialMedia">
             <Parameter Name="var_socialMediaID" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
@@ -488,44 +292,6 @@
           <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="20" />
           <Property Type="String" Name="ProductosEnCarrito" Nullable="true" />
         </ComplexType>
-        <ComplexType Name="VerifyUserGmail_Result">
-          <Property Type="Int32" Name="Id" Nullable="false" />
-          <Property Type="Int32" Name="Cedula" Nullable="false" />
-          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="PrimerApellido" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="SegundoApellido" Nullable="true" MaxLength="20" />
-          <Property Type="Int32" Name="Edad" Nullable="true" />
-          <Property Type="Int32" Name="Telefono" Nullable="true" />
-          <Property Type="String" Name="Correo" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Sexo" Nullable="true" MaxLength="1" />
-          <Property Type="String" Name="Direccion" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="TipoDeUsuario" Nullable="true" />
-          <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="20" />
-          <Property Type="String" Name="MarcaVendedor" Nullable="true" MaxLength="40" />
-          <Property Type="String" Name="ProductosEnCarrito" Nullable="true" />
-          <Property Type="String" Name="socialMediaID" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="PreguntaSeguridad" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="RespuestaPreguntaSeguridad" Nullable="true" MaxLength="100" />
-        </ComplexType>
-        <ComplexType Name="VerifyUserSocialMedia_Result">
-          <Property Type="Int32" Name="Id" Nullable="false" />
-          <Property Type="Int32" Name="Cedula" Nullable="false" />
-          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="PrimerApellido" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="SegundoApellido" Nullable="true" MaxLength="20" />
-          <Property Type="Int32" Name="Edad" Nullable="true" />
-          <Property Type="Int32" Name="Telefono" Nullable="true" />
-          <Property Type="String" Name="Correo" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="Sexo" Nullable="true" MaxLength="1" />
-          <Property Type="String" Name="Direccion" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="TipoDeUsuario" Nullable="true" />
-          <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="20" />
-          <Property Type="String" Name="MarcaVendedor" Nullable="true" MaxLength="40" />
-          <Property Type="String" Name="ProductosEnCarrito" Nullable="true" />
-          <Property Type="String" Name="socialMediaID" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="PreguntaSeguridad" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="RespuestaPreguntaSeguridad" Nullable="true" MaxLength="100" />
-        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -549,51 +315,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Comentarios">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.Comentarios">
-              <MappingFragment StoreEntitySet="Comentarios">
+          <EntitySetMapping Name="Repuestos">
+            <EntityTypeMapping TypeName="ActivosFijosBDModel.Repuestos">
+              <MappingFragment StoreEntitySet="Repuestos">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
-                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Hoteles">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.Hoteles">
-              <MappingFragment StoreEntitySet="Hoteles">
-                <ScalarProperty Name="IDHotel" ColumnName="IDHotel" />
-                <ScalarProperty Name="TipoDeHabitacion" ColumnName="TipoDeHabitacion" />
-                <ScalarProperty Name="CantidadDePersonas" ColumnName="CantidadDePersonas" />
-                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-                <ScalarProperty Name="Precio" ColumnName="Precio" />
-                <ScalarProperty Name="NombreHotel" ColumnName="NombreHotel" />
-                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
-                <ScalarProperty Name="Imagen2" ColumnName="Imagen2" />
-                <ScalarProperty Name="Imagen3" ColumnName="Imagen3" />
-                <ScalarProperty Name="web" ColumnName="web" />
-                <ScalarProperty Name="ComentarioHotel" ColumnName="ComentarioHotel" />
-                <ScalarProperty Name="CalificacionHotel" ColumnName="CalificacionHotel" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Productos">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.Productos">
-              <MappingFragment StoreEntitySet="Productos">
-                <ScalarProperty Name="ProductoID" ColumnName="ProductoID" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Lugar" ColumnName="Lugar" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Anio" ColumnName="Anio" />
                 <ScalarProperty Name="Precio" ColumnName="Precio" />
-                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
-                <ScalarProperty Name="Personas" ColumnName="Personas" />
                 <ScalarProperty Name="CantidadEnStock" ColumnName="CantidadEnStock" />
-                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
-                <ScalarProperty Name="Calificacion" ColumnName="Calificacion" />
-                <ScalarProperty Name="Proveedor" ColumnName="Proveedor" />
-                <ScalarProperty Name="Vendedor" ColumnName="Vendedor" />
-                <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+                <ScalarProperty Name="Imagen1" ColumnName="Imagen1" />
                 <ScalarProperty Name="Imagen2" ColumnName="Imagen2" />
-                <ScalarProperty Name="Imagen3" ColumnName="Imagen3" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -602,37 +337,6 @@
               <MappingFragment StoreEntitySet="TipoUsuario">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TipoUsuario1" ColumnName="TipoUsuario" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.Users">
-              <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
-                <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
-                <ScalarProperty Name="Edad" ColumnName="Edad" />
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-                <ScalarProperty Name="Correo" ColumnName="Correo" />
-                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
-                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
-                <ScalarProperty Name="TipoDeUsuario" ColumnName="TipoDeUsuario" />
-                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
-                <ScalarProperty Name="MarcaVendedor" ColumnName="MarcaVendedor" />
-                <ScalarProperty Name="ProductosEnCarrito" ColumnName="ProductosEnCarrito" />
-                <ScalarProperty Name="socialMediaID" ColumnName="socialMediaID" />
-                <ScalarProperty Name="PreguntaSeguridad" ColumnName="PreguntaSeguridad" />
-                <ScalarProperty Name="RespuestaPreguntaSeguridad" ColumnName="RespuestaPreguntaSeguridad" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UserType">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.UserType">
-              <MappingFragment StoreEntitySet="UserType">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -700,52 +404,8 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="VerifyUserGmail" FunctionName="ActivosFijosBDModel.Store.VerifyUserGmail">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ActivosFijosBDModel.VerifyUserGmail_Result">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
-                <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
-                <ScalarProperty Name="Edad" ColumnName="Edad" />
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-                <ScalarProperty Name="Correo" ColumnName="Correo" />
-                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
-                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
-                <ScalarProperty Name="TipoDeUsuario" ColumnName="TipoDeUsuario" />
-                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
-                <ScalarProperty Name="MarcaVendedor" ColumnName="MarcaVendedor" />
-                <ScalarProperty Name="ProductosEnCarrito" ColumnName="ProductosEnCarrito" />
-                <ScalarProperty Name="socialMediaID" ColumnName="socialMediaID" />
-                <ScalarProperty Name="PreguntaSeguridad" ColumnName="PreguntaSeguridad" />
-                <ScalarProperty Name="RespuestaPreguntaSeguridad" ColumnName="RespuestaPreguntaSeguridad" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="VerifyUserSocialMedia" FunctionName="ActivosFijosBDModel.Store.VerifyUserSocialMedia">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="ActivosFijosBDModel.VerifyUserSocialMedia_Result">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
-                <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
-                <ScalarProperty Name="Edad" ColumnName="Edad" />
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-                <ScalarProperty Name="Correo" ColumnName="Correo" />
-                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
-                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
-                <ScalarProperty Name="TipoDeUsuario" ColumnName="TipoDeUsuario" />
-                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
-                <ScalarProperty Name="MarcaVendedor" ColumnName="MarcaVendedor" />
-                <ScalarProperty Name="ProductosEnCarrito" ColumnName="ProductosEnCarrito" />
-                <ScalarProperty Name="socialMediaID" ColumnName="socialMediaID" />
-                <ScalarProperty Name="PreguntaSeguridad" ColumnName="PreguntaSeguridad" />
-                <ScalarProperty Name="RespuestaPreguntaSeguridad" ColumnName="RespuestaPreguntaSeguridad" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VerifyUserGmail" FunctionName="ActivosFijosBDModel.Store.VerifyUserGmail" />
+          <FunctionImportMapping FunctionImportName="VerifyUserSocialMedia" FunctionName="ActivosFijosBDModel.Store.VerifyUserSocialMedia" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -763,7 +423,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

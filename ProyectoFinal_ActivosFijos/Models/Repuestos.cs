@@ -10,21 +10,20 @@
 namespace ProyectoFinal_ActivosFijos.Models
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class VerifyUserCedula_Result
+    public partial class Repuestos
     {
         public int Id { get; set; }
-        public int Cedula { get; set; }
         public string Nombre { get; set; }
-        public string PrimerApellido { get; set; }
-        public string SegundoApellido { get; set; }
-        public Nullable<int> Edad { get; set; }
-        public Nullable<int> Telefono { get; set; }
-        public string Correo { get; set; }
-        public string Sexo { get; set; }
-        public string Direccion { get; set; }
-        public Nullable<int> TipoDeUsuario { get; set; }
-        public string Contrasena { get; set; }
-        public string ProductosEnCarrito { get; set; }
+        public string Descripcion { get; set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public Nullable<int> Anio { get; set; }
+        public Nullable<decimal> Precio { get; set; }
+        public Nullable<int> CantidadEnStock { get; set; }
+        public byte[] Imagen1 { get; set; }
+        public byte[] Imagen2 { get; set; }
+        public string Estado { get; set; }
     }
 }

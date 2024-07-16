@@ -16,50 +16,21 @@
     <Property Name="Imagen2" Type="varbinary(max)" />
     <Property Name="CantidadEnStock" Type="int" />
   </EntityType>
-  <EntityType Name="Comentarios">
+  <EntityType Name="Repuestos">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdProducto" Type="int" Nullable="false" />
-    <Property Name="Comentario" Type="varchar" MaxLength="255" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Hoteles">
-    <Key>
-      <PropertyRef Name="IDHotel" />
-    </Key>
-    <Property Name="IDHotel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TipoDeHabitacion" Type="varchar" MaxLength="100" />
-    <Property Name="CantidadDePersonas" Type="int" />
-    <Property Name="Descripcion" Type="varchar(max)" />
-    <Property Name="Precio" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="NombreHotel" Type="varchar" MaxLength="100" />
-    <Property Name="Imagen" Type="varbinary(max)" />
-    <Property Name="Imagen2" Type="varbinary(max)" />
-    <Property Name="Imagen3" Type="varbinary(max)" />
-    <Property Name="web" Type="varchar(max)" />
-    <Property Name="ComentarioHotel" Type="varchar" MaxLength="100" />
-    <Property Name="CalificacionHotel" Type="int" />
-  </EntityType>
-  <EntityType Name="Productos">
-    <Key>
-      <PropertyRef Name="ProductoID" />
-    </Key>
-    <Property Name="ProductoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="255" />
-    <Property Name="Lugar" Type="varchar" MaxLength="55" />
-    <Property Name="Descripcion" Type="text" />
-    <Property Name="Precio" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="Categoria" Type="varchar" MaxLength="100" />
-    <Property Name="Personas" Type="varchar" MaxLength="100" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="Marca" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="2" />
     <Property Name="CantidadEnStock" Type="int" />
-    <Property Name="Comentario" Type="text" />
-    <Property Name="Calificacion" Type="int" />
-    <Property Name="Proveedor" Type="varchar" MaxLength="100" />
-    <Property Name="Vendedor" Type="int" />
-    <Property Name="Imagen" Type="varbinary(max)" />
+    <Property Name="Imagen1" Type="varbinary(max)" />
     <Property Name="Imagen2" Type="varbinary(max)" />
-    <Property Name="Imagen3" Type="varbinary(max)" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TipoUsuario">
     <Key>
@@ -67,35 +38,6 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TipoUsuario" Type="varchar" MaxLength="15" />
-  </EntityType>
-  <EntityType Name="Users">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Cedula" Type="int" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="20" />
-    <Property Name="PrimerApellido" Type="varchar" MaxLength="20" />
-    <Property Name="SegundoApellido" Type="varchar" MaxLength="20" />
-    <Property Name="Edad" Type="int" />
-    <Property Name="Telefono" Type="int" />
-    <Property Name="Correo" Type="varchar" MaxLength="50" />
-    <Property Name="Sexo" Type="varchar" MaxLength="1" />
-    <Property Name="Direccion" Type="varchar" MaxLength="50" />
-    <Property Name="TipoDeUsuario" Type="int" />
-    <Property Name="Contrasena" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="MarcaVendedor" Type="varchar" MaxLength="40" />
-    <Property Name="ProductosEnCarrito" Type="nvarchar(max)" />
-    <Property Name="socialMediaID" Type="varchar" MaxLength="100" />
-    <Property Name="PreguntaSeguridad" Type="varchar" MaxLength="100" />
-    <Property Name="RespuestaPreguntaSeguridad" Type="varchar" MaxLength="100" />
-  </EntityType>
-  <EntityType Name="UserType">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserStatus" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuarios">
     <Key>
@@ -115,32 +57,6 @@
     <Property Name="Contrasena" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ProductosEnCarrito" Type="nvarchar(max)" />
   </EntityType>
-  <Association Name="FK_Comentarios_Productos">
-    <End Role="Productos" Type="Self.Productos" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Comentarios" Type="Self.Comentarios" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Productos">
-        <PropertyRef Name="ProductoID" />
-      </Principal>
-      <Dependent Role="Comentarios">
-        <PropertyRef Name="IdProducto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Users_UserType">
-    <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
-    <End Role="Users" Type="Self.Users" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UserType">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Users">
-        <PropertyRef Name="TipoDeUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Usuarios_TipoUsuario">
     <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="0..1" />
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -201,21 +117,9 @@
   </Function>
   <EntityContainer Name="ActivosFijosBDModelStoreContainer">
     <EntitySet Name="Carros" EntityType="Self.Carros" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Comentarios" EntityType="Self.Comentarios" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Hoteles" EntityType="Self.Hoteles" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Repuestos" EntityType="Self.Repuestos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Comentarios_Productos" Association="Self.FK_Comentarios_Productos">
-      <End Role="Productos" EntitySet="Productos" />
-      <End Role="Comentarios" EntitySet="Comentarios" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Users_UserType" Association="Self.FK_Users_UserType">
-      <End Role="UserType" EntitySet="UserType" />
-      <End Role="Users" EntitySet="Users" />
-    </AssociationSet>
     <AssociationSet Name="FK_Usuarios_TipoUsuario" Association="Self.FK_Usuarios_TipoUsuario">
       <End Role="TipoUsuario" EntitySet="TipoUsuario" />
       <End Role="Usuarios" EntitySet="Usuarios" />
