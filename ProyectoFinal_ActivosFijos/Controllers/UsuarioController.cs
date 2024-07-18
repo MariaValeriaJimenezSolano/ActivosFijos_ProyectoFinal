@@ -11,7 +11,7 @@ using System.Web.Mvc;
 namespace ProyectoFinal_ActivosFijos.Controllers
 {
     public class UsuarioController : Controller
-    {        
+    {
         public ActionResult Index()
         {
             List<UsuariosTableViewModel> lstUsuarios = new List<UsuariosTableViewModel>();
@@ -29,8 +29,10 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                                 Edad = (int)u.Edad,
                                 Telefono = (int)u.Telefono,
                                 Correo = u.Correo,
+                                Direccion = u.Direccion,
                                 TipoDeUsuario = (int)u.TipoDeUsuario,
                                 Contrasena = u.Contrasena,
+                                Sexo = u.Sexo,
 
                             };
                 lstUsuarios = query.ToList();
@@ -62,6 +64,8 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                     Edad = model.Edad,
                     Telefono = model.Telefono,
                     Correo = model.Correo,
+                    Direccion = model.Direccion,
+                    Sexo = model.Sexo,
                     TipoDeUsuario = model.TipoDeUsuario,
                     Contrasena = model.Contrasena,
                 };
@@ -97,8 +101,11 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                     Edad = (int)usuario.Edad,
                     Telefono = (int)usuario.Telefono,
                     Correo = usuario.Correo,
+                    Direccion = usuario.Direccion,
                     TipoDeUsuario = (int)usuario.TipoDeUsuario,
                     Contrasena = usuario.Contrasena,
+                    Sexo = usuario.Sexo,
+
                 };
                 return View(model);
             }
@@ -120,8 +127,11 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 usuarioTO.Edad = model.Edad;
                 usuarioTO.Telefono = model.Telefono;
                 usuarioTO.Correo = model.Correo;
+                usuarioTO.Direccion = model.Direccion;
                 usuarioTO.TipoDeUsuario = model.TipoDeUsuario;
                 usuarioTO.Contrasena = model.Contrasena;
+                usuarioTO.Sexo = model.Sexo;
+
 
                 db.SaveChanges();
 
@@ -131,22 +141,31 @@ namespace ProyectoFinal_ActivosFijos.Controllers
 
 
         // --------------------------------------------  DELETE  -----------------------------------------------
-        [HttpGet]
+        [HttpPost]
         public ActionResult Delete(int id)
         {
-            using (var db = new ActivosFijosBDEntities())
+            try
             {
-                var usuarioTO = db.Usuarios.Find(id);
-
-                if (usuarioTO == null)
+                using (var db = new ActivosFijosBDEntities())
                 {
-                    return HttpNotFound();
+                    var usuarioTO = db.Usuarios.Find(id);
+
+                    if (usuarioTO == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    db.Usuarios.Remove(usuarioTO);
+                    db.SaveChanges();
                 }
-                db.Usuarios.Remove(usuarioTO);
-                db.SaveChanges();
             }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, "Ocurrió un error al eliminar el usuario.");
+            }
+
             return RedirectToAction("Index");
         }
 
     }
 }
+

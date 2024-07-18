@@ -1,5 +1,8 @@
 ﻿@model ProyectoFinal_ActivosFijos.Models.TableViewModel.CarrosTableViewModel
-
+@{
+    ViewBag.Title = "Add Carros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <style>
     body {
         background-color: white;
@@ -63,8 +66,8 @@
 <h2>Agregar un nuevo Vehiculo</h2>
 
 <div class="container-add">
-    @using (Html.BeginForm("Add", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {       
+    @using (Html.BeginForm("Add", "Carros", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
 
         <div class="row">
             <div class="col-md-6">
@@ -102,7 +105,7 @@
             </div>
 
             <div class="col-md-6">
-                
+
                 <div class="form-group">
                     @Html.LabelFor(model => model.Transmision, htmlAttributes: new { @class = "control-label" })
                     <select id="TransmisionTypeDropdown" name="Transmision" class="form-control" data-val="true" data-val-required="Tipo de transmision obligatoria">
@@ -150,7 +153,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Agregar" class="btn btn-primary" />
-                <input type="button" class="btn btn-outline-danger" value="Regresar" onclick="document.location.href = '@Url.Content("~/Admin/Index")'" />
+                <input type="button" class="btn btn-outline-danger" value="Regresar" onclick="document.location.href = '@Url.Content("~/Carros/Index")'" />
             </div>
         </div>
     }

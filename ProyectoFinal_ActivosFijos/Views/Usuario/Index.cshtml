@@ -1,5 +1,8 @@
 ﻿@model  List<ProyectoFinal_ActivosFijos.Models.TableViewModel.UsuariosTableViewModel>
-
+@{
+    ViewBag.Title = "Add Usuario";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
 <div class="container mt-4">
 
     <h2 class="mb-4">Lista de Usuarios</h2>
@@ -17,32 +20,31 @@
                     <th>Edad</th>
                     <th>Telefono</th>
                     <th>Correo</th>
-                    
                     <th>Direccion</th>
-                    <th>Tipo Usuario</th>
+                    <th>TipoDeUsuario</th>
+                    <th>Sexo</th>
+
                 </tr>
             </thead>
             <tbody>
-                @foreach (var users in Model)
+                @foreach (var Usuarios in Model)
                 {
                     <tr>
-                        <td hidden>@users.Id</td>
+                        <td hidden>@Usuarios.Id</td>
 
-                        <td>@users.Cedula</td>
-                        <td>@users.Nombre</td>
-                        <td>@users.PrimerApellido</td>
-                        <td>@users.SegundoApellido</td>
-                        <td>@users.Edad</td>
-                        <td>@users.Telefono</td>
-                        <td>@users.Correo</td>
-                        
-                        <td>@users.TipoDeUsuario</td>
-
-                        <td style="max-height: 100px; overflow-y: auto;">@users.Direccion</td>
-
+                        <td>@Usuarios.Cedula</td>
+                        <td>@Usuarios.Nombre</td>
+                        <td>@Usuarios.PrimerApellido</td>
+                        <td>@Usuarios.SegundoApellido</td>
+                        <td>@Usuarios.Edad</td>
+                        <td>@Usuarios.Telefono</td>
+                        <td>@Usuarios.Correo</td>
+                        <td>@Usuarios.Direccion</td>
+                        <td>@Usuarios.TipoDeUsuario</td>
+                        <td>@Usuarios.Sexo</td>
                         <td>
-                            <button class="btn btn-warning" onclick="document.location.href = '@Url.Content("~/Admin/Edit/")@users.Id'">Editar</button>
-                            <button class="btn btn-danger" onclick="eliminarUser(@users.Id)"> Borrar </button>
+                            <button class="btn btn-warning" onclick="document.location.href = '@Url.Content("~/Usuario/Edit/")@Usuarios.Id'">Editar</button>
+                            <button class="btn btn-danger" onclick="document.location.href = '@Url.Content("~/Usuario/Delete/")@Usuarios.Id'"> Borrar </button>
                         </td>
                     </tr>
                 }
@@ -50,11 +52,11 @@
         </table>
     </div>
 </div>
-<a href="@Url.Action("Index", "Usuario")" class="btn btn-success">Regresar al menú principal</a>
+<a href="@Url.Action("Index", "Carros")" class="btn btn-success">Regresar al menú principal</a>
 
 
 <script>
-        function eliminarUser(Id) {
+        function Delete(Id) {
             if (confirm("Desea eliminar el registro?")) {
                 let url = "@Url.Content("~/Usuario/Delete/")" + Id;
 

@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\50688\\onedrive\\escritorio\\proyecto_servicios_web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\50688\\onedrive\\escritorio\\proyecto_servicios_web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\50688\\onedrive\\escritorio\\proyecto_servicios_web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
+              "ToolTip": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAADUAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-18T00:43:26.764Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-18T01:24:55.137Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\50688\\OneDrive\\Escritorio\\proyecto_servicios_web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAewJcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T01:00:07.592Z",
+              "EditorCaption": ""
             }
           ]
         }

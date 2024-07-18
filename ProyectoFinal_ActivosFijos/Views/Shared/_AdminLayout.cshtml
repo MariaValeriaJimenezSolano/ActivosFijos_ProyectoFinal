@@ -1,26 +1,32 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Toyota</title>
+    <title>@ViewBag.Title - Toyota Admin</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
-            @Html.ActionLink("Toyota", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Toyota", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Ejemplo", "Index", "Ejemplo", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Ejemplo ", "Index", "Ejemplo", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Ejemplo ", "Index", "Ejemplo", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">
+                        <button class="btn btn-link nav-link" onclick="location.href='@Url.Action("Index", "Usuario")'">CRUD USUARIO</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-link nav-link" onclick="location.href='@Url.Action("Index", "Repuesto")'">CRUD REPUESTO</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-link nav-link" onclick="location.href='@Url.Action("Index", "Carros")'">CRUD CARROS</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -38,3 +44,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
