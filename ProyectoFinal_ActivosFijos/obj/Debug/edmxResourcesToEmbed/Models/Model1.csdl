@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="ActivosFijosBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="ActivosFijosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Carros">
     <Key>
       <PropertyRef Name="Id" />
@@ -108,7 +108,7 @@
       <Parameter Name="Direccion" Mode="In" Type="String" />
       <Parameter Name="Sexo" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="VerificarUsuario" ReturnType="Collection(ActivosFijosBDModel.VerificarUsuario_Result)">
+    <FunctionImport Name="VerificarUsuario" ReturnType="Collection(ActivosFijosDBModel.VerificarUsuario_Result)">
       <Parameter Name="var_cedula" Mode="In" Type="Int32" />
       <Parameter Name="var_contrasena" Mode="In" Type="String" />
     </FunctionImport>
@@ -117,7 +117,7 @@
       <Parameter Name="Contrasena" Mode="In" Type="String" />
       <Parameter Name="Autenticado" Mode="InOut" Type="Boolean" />
     </FunctionImport>
-    <FunctionImport Name="VerifyUserCedula" ReturnType="Collection(ActivosFijosBDModel.VerifyUserCedula_Result)">
+    <FunctionImport Name="VerifyUserCedula" ReturnType="Collection(ActivosFijosDBModel.VerifyUserCedula_Result)">
       <Parameter Name="var_cedula" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="VerifyUserGmail">

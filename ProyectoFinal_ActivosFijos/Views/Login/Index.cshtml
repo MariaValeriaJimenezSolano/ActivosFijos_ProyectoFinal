@@ -4,9 +4,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<h2>Index</h2>
-
 <style>
 
     body {
@@ -17,43 +14,43 @@
         background-image: url('../../content/Images/art.png');
         background-size: cover;
         background-position: center;
-        background-color: black;
+        background-color: white;        
     }
 
     .container-login {
-        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     .login-form {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(255, 255, 255, 0.9);
         padding: 30px;
         border-radius: 10px;
         text-align: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 100%;
     }
 
     .form-control {
-        background-color: transparent;
-        border: 1px solid white;
-        color: white;
+        background-color: #f8f9fa;
+        border: 1px solid #ced4da;
+        color: #495057;
         padding: 10px;
         margin-bottom: 20px;
-        font-family: Staatliches;
         border-radius: 25px;
     }
 
         .form-control::placeholder {
-            color: white;
+            color: #6c757d;
         }
 
-    .boton-IS,
-    .boton-RG {
-        background-color: transparent;
-        border: 2px solid white;
+    .boton-IS, .boton-RG {
+        background-color: #007bff;
+        border: none;
         border-radius: 25px;
-        font-family: Staatliches;
         color: white;
         padding: 10px 20px;
         cursor: pointer;
@@ -64,19 +61,19 @@
         letter-spacing: 1px;
         margin-top: 10px;
         display: inline-block;
+        width: 100%;
     }
 
-        .boton-IS:hover,
-        .boton-RG:hover {
-            background-color: white;
-            color: black;
+        .boton-IS:hover, .boton-RG:hover {
+            background-color: #0056b3;
         }
 
     #olvidadoContrasena {
-        color: white;
+        color: #007bff;
         text-decoration: underline;
         margin-top: 10px;
         display: inline-block;
+        cursor: pointer;
     }
 
     .social-login-buttons {
@@ -86,36 +83,27 @@
     .google-signin-button {
         color: #757575;
         border: none;
-        border-radius: 5px;
+        border-radius: 25px;
         font-size: 16px;
         padding: 10px 20px;
         cursor: pointer;
         transition: all 0.3s ease;
         margin-left: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
 
-
-
-    .facebook-login-button {
-        background-color: #3b5998;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-        .facebook-login-button:hover {
-            background-color: #2d4373;
+        .google-signin-button:hover {
+            background-color: #f1f1f1;
         }
+
+
 </style>
 
 <div class="container-login">
     <div class="login-form">
         <form action="@Url.Action("Index", "Login")" method="post">
-            <h2>Iniciar sesión</h2>
+            <h2 style="background-color: darkblue;">Iniciar sesión</h2>
 
             <input type="text" id="username" name="username" class="form-control" placeholder="Cedula Usuario" required>
             <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>

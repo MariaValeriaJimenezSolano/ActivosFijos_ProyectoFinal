@@ -42,9 +42,12 @@
                         <td>@Usuarios.Direccion</td>
                         <td>@Usuarios.TipoDeUsuario</td>
                         <td>@Usuarios.Sexo</td>
-                        <td>
-                            <button class="btn btn-warning" onclick="document.location.href = '@Url.Content("~/Usuario/Edit/")@Usuarios.Id'">Editar</button>
-                            <button class="btn btn-danger" onclick="document.location.href = '@Url.Content("~/Usuario/Delete/")@Usuarios.Id'"> Borrar </button>
+                        <td>                            
+                            
+                                <a class="btn btn-success" href="@Url.Action("Edit", new { ID = @Usuarios.Id })">Editar</a>
+                                <a class="btn btn-danger" href="@Url.Action("Delete", new { ID = @Usuarios.Id })"
+                                   onclick="return confirm('¿Estás seguro de que deseas eliminar este carro?');">Eliminar</a>
+                           
                         </td>
                     </tr>
                 }

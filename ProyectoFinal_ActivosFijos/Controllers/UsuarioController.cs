@@ -141,7 +141,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
 
 
         // --------------------------------------------  DELETE  -----------------------------------------------
-        [HttpPost]
+        /*[HttpPost]
         public ActionResult Delete(int id)
         {
             try
@@ -165,6 +165,26 @@ namespace ProyectoFinal_ActivosFijos.Controllers
 
             return RedirectToAction("Index");
         }
+        */
+        [HttpGet]
+        public ActionResult Delete(int Id)
+        {
+            using (var db = new ActivosFijosBDEntities())
+            {
+                var usuarioTO = db.Usuarios.Find(Id);
+
+                if (usuarioTO == null)
+                {
+                    return HttpNotFound();
+                }
+
+                db.Usuarios.Remove(usuarioTO);
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
+
 
     }
 }

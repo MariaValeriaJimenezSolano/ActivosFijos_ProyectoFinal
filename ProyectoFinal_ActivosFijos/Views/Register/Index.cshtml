@@ -7,8 +7,76 @@
 <head>
     <title>Registro de Usuario</title>
 
+    <style>
+        body {
+            background-color: #0d6efd;
+            font-family: Arial, sans-serif;
+        }
+
+        .background-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+            .form-container h2 {
+                margin-bottom: 20px;
+                font-family: 'Staatliches', cursive;
+                text-align: center;
+                color: #343a40;
+            }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .text-danger {
+            margin-bottom: 15px;
+        }
+
+        .boton-IS, .boton-RG {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .boton-IS {
+            background-color: #007bff;
+            color: white;
+        }
+
+            .boton-IS:hover {
+                background-color: #0056b3;
+            }
+
+        .boton-RG {
+            background-color: #6c757d;
+            color: white;
+        }
+
+            .boton-RG:hover {
+                background-color: #5a6268;
+            }
+    </style>
+
+
 </head>
-<body style="background-color: black;">
+<body style="background-color: #0d6efd;">
     @if (TempData["Mensaje"] != null)
     {
         <script>
@@ -21,7 +89,7 @@
     {
         <div class="background-container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-12">
                     <div class="container form-container" style="color: white;">
                         <h2 style="display: flex; font-family: Staatliches; color: black; justify-content: center">Crear una cuenta</h2>
                         <div id="paso1" class="form-step-active" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">

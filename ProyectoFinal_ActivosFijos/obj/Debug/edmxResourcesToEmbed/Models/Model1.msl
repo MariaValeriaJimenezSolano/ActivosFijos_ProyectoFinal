@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ActivosFijosBDModelStoreContainer" CdmEntityContainer="ActivosFijosBDEntities">
+  <EntityContainerMapping StorageEntityContainer="ActivosFijosDBModelStoreContainer" CdmEntityContainer="ActivosFijosBDEntities">
     <EntitySetMapping Name="Carros">
-      <EntityTypeMapping TypeName="ActivosFijosBDModel.Carros">
+      <EntityTypeMapping TypeName="ActivosFijosDBModel.Carros">
         <MappingFragment StoreEntitySet="Carros">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Marca" ColumnName="Marca" />
@@ -19,7 +19,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Repuestos">
-      <EntityTypeMapping TypeName="ActivosFijosBDModel.Repuestos">
+      <EntityTypeMapping TypeName="ActivosFijosDBModel.Repuestos">
         <MappingFragment StoreEntitySet="Repuestos">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -36,7 +36,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoDeUsuario">
-      <EntityTypeMapping TypeName="ActivosFijosBDModel.TipoDeUsuario">
+      <EntityTypeMapping TypeName="ActivosFijosDBModel.TipoDeUsuario">
         <MappingFragment StoreEntitySet="TipoDeUsuario">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="TipoDeUsuario1" ColumnName="TipoDeUsuario" />
@@ -44,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Usuarios">
-      <EntityTypeMapping TypeName="ActivosFijosBDModel.Usuarios">
+      <EntityTypeMapping TypeName="ActivosFijosDBModel.Usuarios">
         <MappingFragment StoreEntitySet="Usuarios">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />
@@ -62,15 +62,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="DeleteUserbyId" FunctionName="ActivosFijosBDModel.Store.DeleteUserbyId" />
-    <FunctionImportMapping FunctionImportName="FilterProduct" FunctionName="ActivosFijosBDModel.Store.FilterProduct" />
-    <FunctionImportMapping FunctionImportName="GuardarComentarios" FunctionName="ActivosFijosBDModel.Store.GuardarComentarios" />
-    <FunctionImportMapping FunctionImportName="obtenerComentariosPorProducto" FunctionName="ActivosFijosBDModel.Store.obtenerComentariosPorProducto" />
-    <FunctionImportMapping FunctionImportName="ShowProducts" FunctionName="ActivosFijosBDModel.Store.ShowProducts" />
-    <FunctionImportMapping FunctionImportName="UpdateUser" FunctionName="ActivosFijosBDModel.Store.UpdateUser" />
-    <FunctionImportMapping FunctionImportName="VerificarUsuario" FunctionName="ActivosFijosBDModel.Store.VerificarUsuario">
+    <FunctionImportMapping FunctionImportName="DeleteUserbyId" FunctionName="ActivosFijosDBModel.Store.DeleteUserbyId" />
+    <FunctionImportMapping FunctionImportName="FilterProduct" FunctionName="ActivosFijosDBModel.Store.FilterProduct" />
+    <FunctionImportMapping FunctionImportName="GuardarComentarios" FunctionName="ActivosFijosDBModel.Store.GuardarComentarios" />
+    <FunctionImportMapping FunctionImportName="obtenerComentariosPorProducto" FunctionName="ActivosFijosDBModel.Store.obtenerComentariosPorProducto" />
+    <FunctionImportMapping FunctionImportName="ShowProducts" FunctionName="ActivosFijosDBModel.Store.ShowProducts" />
+    <FunctionImportMapping FunctionImportName="UpdateUser" FunctionName="ActivosFijosDBModel.Store.UpdateUser" />
+    <FunctionImportMapping FunctionImportName="VerificarUsuario" FunctionName="ActivosFijosDBModel.Store.VerificarUsuario">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ActivosFijosBDModel.VerificarUsuario_Result">
+        <ComplexTypeMapping TypeName="ActivosFijosDBModel.VerificarUsuario_Result">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -87,10 +87,10 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="VerifyPassword" FunctionName="ActivosFijosBDModel.Store.VerifyPassword" />
-    <FunctionImportMapping FunctionImportName="VerifyUserCedula" FunctionName="ActivosFijosBDModel.Store.VerifyUserCedula">
+    <FunctionImportMapping FunctionImportName="VerifyPassword" FunctionName="ActivosFijosDBModel.Store.VerifyPassword" />
+    <FunctionImportMapping FunctionImportName="VerifyUserCedula" FunctionName="ActivosFijosDBModel.Store.VerifyUserCedula">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="ActivosFijosBDModel.VerifyUserCedula_Result">
+        <ComplexTypeMapping TypeName="ActivosFijosDBModel.VerifyUserCedula_Result">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -107,7 +107,7 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="VerifyUserGmail" FunctionName="ActivosFijosBDModel.Store.VerifyUserGmail" />
-    <FunctionImportMapping FunctionImportName="VerifyUserSocialMedia" FunctionName="ActivosFijosBDModel.Store.VerifyUserSocialMedia" />
+    <FunctionImportMapping FunctionImportName="VerifyUserGmail" FunctionName="ActivosFijosDBModel.Store.VerifyUserGmail" />
+    <FunctionImportMapping FunctionImportName="VerifyUserSocialMedia" FunctionName="ActivosFijosDBModel.Store.VerifyUserSocialMedia" />
   </EntityContainerMapping>
 </Mapping>

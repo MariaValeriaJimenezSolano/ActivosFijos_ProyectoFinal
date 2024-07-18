@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ActivosFijosBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ActivosFijosDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Carros">
           <Key>
             <PropertyRef Name="Id" />
@@ -120,7 +120,7 @@
         <Function Name="VerifyUserSocialMedia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="var_socialMediaID" Type="nvarchar" Mode="In" />
         </Function>
-        <EntityContainer Name="ActivosFijosBDModelStoreContainer">
+        <EntityContainer Name="ActivosFijosDBModelStoreContainer">
           <EntitySet Name="Carros" EntityType="Self.Carros" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Repuestos" EntityType="Self.Repuestos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoDeUsuario" EntityType="Self.TipoDeUsuario" Schema="dbo" store:Type="Tables" />
@@ -130,10 +130,11 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ActivosFijosBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ActivosFijosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Carros">
           <Key>
             <PropertyRef Name="Id" />
@@ -215,7 +216,7 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
           <FunctionImport Name="DeleteUserbyId">
-          <Parameter Name="var_Id" Mode="In" Type="Int32" />
+            <Parameter Name="var_Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="FilterProduct">
             <Parameter Name="var_genero" Mode="In" Type="String" />
@@ -227,7 +228,7 @@
             <Parameter Name="Comentario" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="obtenerComentariosPorProducto">
-          <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ShowProducts" />
           <FunctionImport Name="UpdateUser">
@@ -242,7 +243,7 @@
             <Parameter Name="Direccion" Mode="In" Type="String" />
             <Parameter Name="Sexo" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="VerificarUsuario" ReturnType="Collection(ActivosFijosBDModel.VerificarUsuario_Result)">
+          <FunctionImport Name="VerificarUsuario" ReturnType="Collection(ActivosFijosDBModel.VerificarUsuario_Result)">
             <Parameter Name="var_cedula" Mode="In" Type="Int32" />
             <Parameter Name="var_contrasena" Mode="In" Type="String" />
           </FunctionImport>
@@ -251,14 +252,14 @@
             <Parameter Name="Contrasena" Mode="In" Type="String" />
             <Parameter Name="Autenticado" Mode="InOut" Type="Boolean" />
           </FunctionImport>
-          <FunctionImport Name="VerifyUserCedula" ReturnType="Collection(ActivosFijosBDModel.VerifyUserCedula_Result)">
-          <Parameter Name="var_cedula" Mode="In" Type="String" />
+          <FunctionImport Name="VerifyUserCedula" ReturnType="Collection(ActivosFijosDBModel.VerifyUserCedula_Result)">
+            <Parameter Name="var_cedula" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="VerifyUserGmail">
-          <Parameter Name="var_correo" Mode="In" Type="String" />
+            <Parameter Name="var_correo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="VerifyUserSocialMedia">
-          <Parameter Name="var_socialMediaID" Mode="In" Type="String" />
+            <Parameter Name="var_socialMediaID" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="VerificarUsuario_Result">
@@ -296,9 +297,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ActivosFijosBDModelStoreContainer" CdmEntityContainer="ActivosFijosBDEntities">
+        <EntityContainerMapping StorageEntityContainer="ActivosFijosDBModelStoreContainer" CdmEntityContainer="ActivosFijosBDEntities">
           <EntitySetMapping Name="Carros">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.Carros">
+            <EntityTypeMapping TypeName="ActivosFijosDBModel.Carros">
               <MappingFragment StoreEntitySet="Carros">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Marca" ColumnName="Marca" />
@@ -315,7 +316,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Repuestos">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.Repuestos">
+            <EntityTypeMapping TypeName="ActivosFijosDBModel.Repuestos">
               <MappingFragment StoreEntitySet="Repuestos">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -332,7 +333,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TipoDeUsuario">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.TipoDeUsuario">
+            <EntityTypeMapping TypeName="ActivosFijosDBModel.TipoDeUsuario">
               <MappingFragment StoreEntitySet="TipoDeUsuario">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TipoDeUsuario1" ColumnName="TipoDeUsuario" />
@@ -340,7 +341,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuarios">
-            <EntityTypeMapping TypeName="ActivosFijosBDModel.Usuarios">
+            <EntityTypeMapping TypeName="ActivosFijosDBModel.Usuarios">
               <MappingFragment StoreEntitySet="Usuarios">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Cedula" ColumnName="Cedula" />
@@ -358,15 +359,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="DeleteUserbyId" FunctionName="ActivosFijosBDModel.Store.DeleteUserbyId" />
-          <FunctionImportMapping FunctionImportName="FilterProduct" FunctionName="ActivosFijosBDModel.Store.FilterProduct" />
-          <FunctionImportMapping FunctionImportName="GuardarComentarios" FunctionName="ActivosFijosBDModel.Store.GuardarComentarios" />
-          <FunctionImportMapping FunctionImportName="obtenerComentariosPorProducto" FunctionName="ActivosFijosBDModel.Store.obtenerComentariosPorProducto" />
-          <FunctionImportMapping FunctionImportName="ShowProducts" FunctionName="ActivosFijosBDModel.Store.ShowProducts" />
-          <FunctionImportMapping FunctionImportName="UpdateUser" FunctionName="ActivosFijosBDModel.Store.UpdateUser" />
-          <FunctionImportMapping FunctionImportName="VerificarUsuario" FunctionName="ActivosFijosBDModel.Store.VerificarUsuario">
+          <FunctionImportMapping FunctionImportName="DeleteUserbyId" FunctionName="ActivosFijosDBModel.Store.DeleteUserbyId" />
+          <FunctionImportMapping FunctionImportName="FilterProduct" FunctionName="ActivosFijosDBModel.Store.FilterProduct" />
+          <FunctionImportMapping FunctionImportName="GuardarComentarios" FunctionName="ActivosFijosDBModel.Store.GuardarComentarios" />
+          <FunctionImportMapping FunctionImportName="obtenerComentariosPorProducto" FunctionName="ActivosFijosDBModel.Store.obtenerComentariosPorProducto" />
+          <FunctionImportMapping FunctionImportName="ShowProducts" FunctionName="ActivosFijosDBModel.Store.ShowProducts" />
+          <FunctionImportMapping FunctionImportName="UpdateUser" FunctionName="ActivosFijosDBModel.Store.UpdateUser" />
+          <FunctionImportMapping FunctionImportName="VerificarUsuario" FunctionName="ActivosFijosDBModel.Store.VerificarUsuario">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ActivosFijosBDModel.VerificarUsuario_Result">
+              <ComplexTypeMapping TypeName="ActivosFijosDBModel.VerificarUsuario_Result">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Cedula" ColumnName="Cedula" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -383,10 +384,10 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="VerifyPassword" FunctionName="ActivosFijosBDModel.Store.VerifyPassword" />
-          <FunctionImportMapping FunctionImportName="VerifyUserCedula" FunctionName="ActivosFijosBDModel.Store.VerifyUserCedula">
+          <FunctionImportMapping FunctionImportName="VerifyPassword" FunctionName="ActivosFijosDBModel.Store.VerifyPassword" />
+          <FunctionImportMapping FunctionImportName="VerifyUserCedula" FunctionName="ActivosFijosDBModel.Store.VerifyUserCedula">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="ActivosFijosBDModel.VerifyUserCedula_Result">
+              <ComplexTypeMapping TypeName="ActivosFijosDBModel.VerifyUserCedula_Result">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Cedula" ColumnName="Cedula" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -403,8 +404,8 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="VerifyUserGmail" FunctionName="ActivosFijosBDModel.Store.VerifyUserGmail" />
-          <FunctionImportMapping FunctionImportName="VerifyUserSocialMedia" FunctionName="ActivosFijosBDModel.Store.VerifyUserSocialMedia" />
+          <FunctionImportMapping FunctionImportName="VerifyUserGmail" FunctionName="ActivosFijosDBModel.Store.VerifyUserGmail" />
+          <FunctionImportMapping FunctionImportName="VerifyUserSocialMedia" FunctionName="ActivosFijosDBModel.Store.VerifyUserSocialMedia" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -422,7 +423,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
