@@ -82,8 +82,6 @@ namespace ProyectoFinal_ActivosFijos.Controllers
        
                                // Aqui estamos pasando los parametros del form en ADD donde estan los repuestos model y algo especial para las imagenes 1 2 y 3
         public ActionResult Add(RepuestosTableViewModel model, HttpPostedFileBase ImagenFile, HttpPostedFileBase ImagenFile2)
-
-
         {
             if (!ModelState.IsValid) return View(model);
 

@@ -13,5 +13,10 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         {
             return View();
         }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }
