@@ -40,14 +40,29 @@
                         <td>@Usuarios.Telefono</td>
                         <td>@Usuarios.Correo</td>
                         <td>@Usuarios.Direccion</td>
-                        <td>@Usuarios.TipoDeUsuario</td>
+
+                        <td>
+                            @if (Usuarios.TipoDeUsuario == 1)
+                            {
+                                @:Administrador
+                            }
+                            else if (Usuarios.TipoDeUsuario == 2)
+                            {
+                                @:Cliente
+                            }
+                            else
+                            {
+                                @:Rol desconocido
+                            }
+                        </td>
+
                         <td>@Usuarios.Sexo</td>
-                        <td>                            
-                            
-                                <a class="btn btn-success" href="@Url.Action("Edit", new { ID = @Usuarios.Id })">Editar</a>
-                                <a class="btn btn-danger" href="@Url.Action("Delete", new { ID = @Usuarios.Id })"
-                                   onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">Eliminar</a>
-                           
+                        <td>
+
+                            <a class="btn btn-success" href="@Url.Action("Edit", new { ID = @Usuarios.Id })">Editar</a>
+                            <a class="btn btn-danger" href="@Url.Action("Delete", new { ID = @Usuarios.Id })"
+                               onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">Eliminar</a>
+
                         </td>
                     </tr>
                 }

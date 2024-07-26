@@ -7,12 +7,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProyectoFinal_ActivosFijos.Models.ViewModel;
+using ProyectoFinal_ActivosFijos.Filters;
 
 namespace ProyectoFinal_ActivosFijos.Controllers
 {
     public class LoginController : Controller
     {
-        // GET: Login
         [HttpGet]
         public ActionResult Index()
         {
@@ -46,10 +46,12 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 {                    
                     if (user.TipoDeUsuario == 1)
                     {
+                        Session["UsuarioActual"] = user;
                         return RedirectToAction("Index", "Admin");
                     }
                     else if (user.TipoDeUsuario == 2)  
                     {
+                        Session["UsuarioActual"] = user;
                         return RedirectToAction("Index", "Comprador");
                     }
                 }

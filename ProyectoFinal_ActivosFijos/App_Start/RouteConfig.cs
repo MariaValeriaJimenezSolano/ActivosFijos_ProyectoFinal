@@ -16,7 +16,7 @@ namespace ProyectoFinal_ActivosFijos
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional }
             );
 
             // Ruta para el dashboard de administración

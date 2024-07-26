@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal_ActivosFijos.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
 {
     public class CompradorController : Controller
     {
+        [VerifySession]
         // GET: Comprador
         public ActionResult Index()
         {

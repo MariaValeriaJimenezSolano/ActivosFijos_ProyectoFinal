@@ -1,4 +1,5 @@
-﻿using ProyectoFinal_ActivosFijos.Models;
+﻿using ProyectoFinal_ActivosFijos.Filters;
+using ProyectoFinal_ActivosFijos.Models;
 using ProyectoFinal_ActivosFijos.Models.TableViewModel;
 using ProyectoFinal_ActivosFijos.Models.ViewModel;
 using System;
@@ -13,10 +14,12 @@ using System.Web.Mvc;
 
 namespace ProyectoFinal_ActivosFijos.Controllers
 {
+    [VerifySession]
     public class CarrosController : Controller
     {      
         public ActionResult Index(string modelo, int? anio, string transmision, string combustible, decimal? precioMin, decimal? precioMax)
         {
+            var usuarioActual = Session["UsuarioActual"] as UsuariosViewModel;
             List<CarrosTableViewModel> lstCarros = new List<CarrosTableViewModel>();
 
             using (ActivosFijosBDEntities db = new ActivosFijosBDEntities())
@@ -163,7 +166,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
 
         [HttpPost]
         public ActionResult Edit(CarrosTableViewModel model, HttpPostedFileBase NuevaImagen1, HttpPostedFileBase NuevaImagen2, HttpPostedFileBase NuevaImagen3, string action)
-        {
+        {            
             if (!ModelState.IsValid) return View(model);
 
             using (var db = new ActivosFijosBDEntities())
@@ -229,6 +232,60 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 db.SaveChanges();
             }
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult VistaVehiculos(string modelo, int? anio, string transmision, string combustible, decimal? precioMin, decimal? precioMax)
+        {
+            var usuarioActual = Session["UsuarioActual"] as UsuariosViewModel;
+            List<CarrosTableViewModel> lstCarros = new List<CarrosTableViewModel>();
+
+            using (ActivosFijosBDEntities db = new ActivosFijosBDEntities())
+            {
+                var query = from c in db.Carros
+                            select new CarrosTableViewModel
+                            {
+                                Id = c.Id,
+                                Marca = c.Marca,
+                                Modelo = c.Modelo,
+                                Anio = c.Anio ?? 0,
+                                Precio = c.Precio ?? 0,
+                                Transmision = c.Transmision,
+                                Combustible = c.Combustible,
+                                CantidadEnStock = c.CantidadEnStock ?? 0,
+                                Descripcion = c.Descripcion,
+                                Imagen1 = c.Imagen1,
+                                Imagen2 = c.Imagen2
+                            };
+
+
+                if (!string.IsNullOrEmpty(modelo))
+                {
+                    query = query.Where(c => c.Modelo.Contains(modelo));
+                }
+
+                if (anio.HasValue)
+                {
+                    query = query.Where(c => c.Anio == anio.Value);
+                }
+
+                if (precioMin.HasValue)
+                {
+                    query = query.Where(c => c.Precio >= precioMin.Value);
+                }
+
+                if (precioMax.HasValue)
+                {
+                    query = query.Where(c => c.Precio <= precioMax.Value);
+                }
+
+                ViewBag.ModeloSeleccionado = modelo;
+                ViewBag.AnioSeleccionado = anio;
+                ViewBag.PrecioMaxSeleccionado = precioMax ?? 1000000;
+
+                lstCarros = query.ToList();
+            }
+            return View(lstCarros);
         }
 
     }

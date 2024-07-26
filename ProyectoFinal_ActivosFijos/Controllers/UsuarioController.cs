@@ -1,4 +1,5 @@
-﻿using ProyectoFinal_ActivosFijos.Models;
+﻿using ProyectoFinal_ActivosFijos.Filters;
+using ProyectoFinal_ActivosFijos.Models;
 using ProyectoFinal_ActivosFijos.Models.TableViewModel;
 using ProyectoFinal_ActivosFijos.Models.ViewModel;
 using System;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace ProyectoFinal_ActivosFijos.Controllers
 {
+    [VerifySession]
     public class UsuarioController : Controller
     {
         public ActionResult Index()
@@ -40,7 +42,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             return View(lstUsuarios);
         }
 
-        // --------------------------------------------  ADD  -----------------------------------------------
+        //AGREGAR
         [HttpGet]
         public ActionResult Add()
         {
@@ -77,8 +79,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             }
         }
 
-
-        // --------------------------------------------  EDIT  -----------------------------------------------
+        //EDITAR
         [HttpGet]
         public ActionResult Edit(int Id)
         {
@@ -132,40 +133,13 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 usuarioTO.Contrasena = model.Contrasena;
                 usuarioTO.Sexo = model.Sexo;
 
-
                 db.SaveChanges();
 
                 return Redirect(Url.Content("~/Usuario/Index"));
             }
         }
 
-
-        // --------------------------------------------  DELETE  -----------------------------------------------
-        /*[HttpPost]
-        public ActionResult Delete(int id)
-        {
-            try
-            {
-                using (var db = new ActivosFijosBDEntities())
-                {
-                    var usuarioTO = db.Usuarios.Find(id);
-
-                    if (usuarioTO == null)
-                    {
-                        return HttpNotFound();
-                    }
-                    db.Usuarios.Remove(usuarioTO);
-                    db.SaveChanges();
-                }
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError(string.Empty, "Ocurrió un error al eliminar el usuario.");
-            }
-
-            return RedirectToAction("Index");
-        }
-        */
+        //BORRAR        
         [HttpGet]
         public ActionResult Delete(int Id)
         {
@@ -183,8 +157,6 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             }
             return RedirectToAction("Index");
         }
-
-
 
     }
 }
