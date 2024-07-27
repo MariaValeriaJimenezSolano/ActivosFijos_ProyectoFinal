@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Carros";
+    ViewBag.Title = "Repuestos";
     Layout = "~/Views/Shared/_Layout.cshtml"; // Utiliza el diseño específico para cliente
 }
 
@@ -205,7 +205,7 @@
 
                 <div class="contenedor-filtros">
 
-                    <form method="get" action="@Url.Action("VistaVehiculos", "Carros")">
+                    <form method="get" action="@Url.Action("VistaRepuestos", "Repuesto")">
 
                         <div class="mb-3">
                             <label for="Modelo" class="form-label">Modelo:</label>
@@ -213,8 +213,8 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="Anio" class="form-label">Año:</label>
-                            <input type="text" class="form-control" id="Anio" name="Anio" placeholder="-- Cualquier año --" value="@ViewBag.AnioSeleccionado" />
+                            <label for="Nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="-- Cualquier nombre --" value="@ViewBag.NombreSeleccionado" />
                         </div>
 
                         <div class="mb-3">
@@ -225,43 +225,43 @@
 
                         <button type="submit" class="btn btn-success">Buscar</button>
 
-                        <a href="@Url.Action("VistaVehiculos", "Carros")" class="btn btn-secondary">Limpiar</a>
+                        <a href="@Url.Action("VistaRepuestos", "Repuesto")" class="btn btn-secondary">Limpiar</a>
                     </form>
                 </div>
             </div>
             <div class="col-lg-8">
-                <h2 class="mb-2 text-center">Lista de Carros</h2>
-                      
+                <h2 class="mb-2 text-center">Lista de repuestos</h2>
+
                 <div class="row">
-                    @foreach (var carro in Model)
+                    @foreach (var repuesto in Model)
                     {
                         <div class="col-md-3 col-lg-4 mb-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">@carro.Modelo - @carro.Anio</h5>
+                                    <h5 class="card-title">@repuesto.Modelo - @repuesto.Anio</h5>
                                     <p class="card-text"> </p>
-                                    <p class="card-text"> Transmision: @carro.Transmision </p>
-                                    <p class="card-text"><strong>Precio: @string.Format("${0:N2}", carro.Precio) | @carro.CantidadEnStock Disponibles</strong></p>
+                                    <p class="card-text"> Transmision: @repuesto.Nombre </p>
+                                    <p class="card-text"><strong>Precio: @string.Format("${0:N2}", repuesto.Precio) | @repuesto.CantidadEnStock Disponibles</strong></p>
 
                                     <!-- Carrusel de imágenes -->
-                                    <div id="carouselcarro@(carro.Id)" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+                                    <div id="carouselrepuesto@(repuesto.Id)" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
                                         <div class="carousel-inner">
                                             @for (int i = 0; i < 2; i++)
                                             {
                                                 <div class="carousel-item @(i == 0 ? "active" : "")">
-                                                    @if (i == 0 && carro.Imagen1 != null && carro.Imagen1.Length > 0)
+                                                    @if (i == 0 && repuesto.Imagen1 != null && repuesto.Imagen1.Length > 0)
                                                     {
-                                                        <img src="data:image/png;base64,@Convert.ToBase64String(carro.Imagen1)" alt="Imagen del carro" class="img-fluid">
+                                                        <img src="data:image/png;base64,@Convert.ToBase64String(repuesto.Imagen1)" alt="Imagen del repuesto" class="img-fluid">
                                                     }
 
-                                                    @if (i == 1 && carro.Imagen2 != null && carro.Imagen2.Length > 0)
+                                                    @if (i == 1 && repuesto.Imagen2 != null && repuesto.Imagen2.Length > 0)
                                                     {
-                                                        <img src="data:image/png;base64,@Convert.ToBase64String(carro.Imagen2)" alt="Segunda Imagen del carro" class="img-fluid">
+                                                        <img src="data:image/png;base64,@Convert.ToBase64String(repuesto.Imagen2)" alt="Segunda Imagen del repuesto" class="img-fluid">
                                                     }
 
                                                     <!-- Cuando no hay imagen -->
-                                                    @if ((i == 0 && (carro.Imagen1 == null || carro.Imagen1.Length == 0)) ||
-                                                        (i == 1 && (carro.Imagen2 == null || carro.Imagen2.Length == 0)))
+                                                    @if ((i == 0 && (repuesto.Imagen1 == null || repuesto.Imagen1.Length == 0)) ||
+                                                        (i == 1 && (repuesto.Imagen2 == null || repuesto.Imagen2.Length == 0)))
                                                     {
                                                         <div class="img-container">
                                                             <p class="text-center" style="font-size: larger; color: #0d6efd;">Sin Imagen [@i]</p>
@@ -271,13 +271,13 @@
                                             }
                                         </div>
                                         <!-- Controles del carrusel -->
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselcarro@(carro.Id)"
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselrepuesto@(repuesto.Id)"
                                                 data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Anterior</span>
                                         </button>
 
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselcarro@(carro.Id)"
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselrepuesto@(repuesto.Id)"
                                                 data-bs-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Siguiente</span>
@@ -287,8 +287,8 @@
 
                                     <!-- Acciones -->
                                     <div class="mt-3">
-                                        <a class="btn btn-success" href="@Url.Action("MostrarVehiculoIndividual", new { Id =  @carro.Id })">Ver articulo</a>
-                                       
+                                        <a class="btn btn-success" href="@Url.Action("MostrarVehiculoIndividual", new { Id =  @repuesto.Id })">Ver articulo</a>
+
                                     </div>
 
 
@@ -304,10 +304,10 @@
 
 <script>
     // Inicializar los carruseles al cargar la página
-    @foreach (var carro in Model)
+    @foreach (var repuesto in Model)
     {
         <text>
-        var carouselcarro@(carro.Id) = new bootstrap.Carousel(document.getElementById('carouselcarro@(carro.Id)'));
+        var carouselrepuesto@(repuesto.Id) = new bootstrap.Carousel(document.getElementById('carouselrepuesto@(repuesto.Id)'));
         </text>
     }
 </script>

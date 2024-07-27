@@ -3,7 +3,9 @@ using ProyectoFinal_ActivosFijos.Models;
 using ProyectoFinal_ActivosFijos.Models.TableViewModel;
 using ProyectoFinal_ActivosFijos.Models.ViewModel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -14,7 +16,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
     public class RepuestoController : Controller
     {
         [VerifySession]
-        public ActionResult Index(string estado, string modelo,  string descripcion, string nombre,string marca)
+        public ActionResult Index(string estado, string modelo, string descripcion, string nombre, string marca)
         {
             var usuarioActual = Session["UsuarioActual"] as UsuariosViewModel;
 
@@ -23,14 +25,15 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             using (ActivosFijosBDEntities db = new ActivosFijosBDEntities())
             {
                 var query = from r in db.Repuestos
-                            select new RepuestosTableViewModel { 
-                            
+                            select new RepuestosTableViewModel
+                            {
+
                                 Id = r.Id,
                                 Nombre = r.Nombre,
                                 Estado = r.Estado,
                                 Marca = r.Marca,
                                 Modelo = r.Modelo,
-                                Anio= (int)r.Anio,
+                                Anio = (int)r.Anio,
                                 Descripcion = r.Descripcion,
                                 Precio = (decimal)r.Precio,
                                 CantidadEnStock = (int)r.CantidadEnStock,
@@ -75,10 +78,10 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             if (!ModelState.IsValid) return View(model);
 
             using (var db = new ActivosFijosBDEntities())
-            {                   
+            {
                 byte[] imagenBytes = null;
                 byte[] imagenBytes2 = null;
-                
+
                 if (ImagenFile != null && ImagenFile.ContentLength > 0)
                 {
                     using (var binaryReader = new BinaryReader(ImagenFile.InputStream))
@@ -86,7 +89,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                         imagenBytes = binaryReader.ReadBytes(ImagenFile.ContentLength);
                     }
                 }
-                                
+
                 if (ImagenFile2 != null && ImagenFile2.ContentLength > 0)
                 {
                     using (var binaryReader = new BinaryReader(ImagenFile2.InputStream))
@@ -96,10 +99,10 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 }
 
                 Repuestos repuestosTO = new Repuestos
-                {   
+                {
                     Id = model.Id,
                     Nombre = model.Nombre,
-                    Estado =model.Estado,
+                    Estado = model.Estado,
                     Marca = model.Marca,
                     Modelo = model.Modelo,
                     Anio = (int)model.Anio,
@@ -108,7 +111,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                     CantidadEnStock = (int)model.CantidadEnStock,
                     // Agregar el campo de imagen
                     Imagen1 = model.Imagen1,
-                    Imagen2 = model.Imagen2,                
+                    Imagen2 = model.Imagen2,
                 };
 
                 db.Repuestos.Add(repuestosTO);
@@ -124,7 +127,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         {
             using (var db = new ActivosFijosBDEntities())
             {
-                var repuesto = db.Repuestos.Find(Id); 
+                var repuesto = db.Repuestos.Find(Id);
 
                 //ViewBag.repuestoNombre = repuesto.Nombre; // SALVAMOS EL NOMBRE DEL repuesto EN UN VIEWBAG PARA USARLO LUEGO EN LA VISTA DE EDIT
 
@@ -145,7 +148,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                     CantidadEnStock = (int)repuesto.CantidadEnStock,
                     Imagen1 = repuesto.Imagen1,
                     Imagen2 = repuesto.Imagen2,
-                  
+
                 };
 
                 return View(model);
@@ -158,7 +161,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             if (!ModelState.IsValid) return View(model);
 
             using (var db = new ActivosFijosBDEntities())
-            {                
+            {
                 var repuestoTO = db.Repuestos.Find(model.Id);
 
                 repuestoTO.Id = model.Id;
@@ -168,9 +171,9 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 repuestoTO.Estado = model.Estado;
                 repuestoTO.Anio = model.Anio;
                 repuestoTO.CantidadEnStock = model.CantidadEnStock;
-                               
+
                 if (NuevaImagen != null && NuevaImagen.ContentLength > 0)
-                {                    
+                {
                     using (var binaryReader = new BinaryReader(NuevaImagen.InputStream))
                     {
                         repuestoTO.Imagen1 = binaryReader.ReadBytes(NuevaImagen.ContentLength);
@@ -198,13 +201,13 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                         repuestoTO.Imagen2 = binaryReader.ReadBytes(NuevaImagen2.ContentLength);
                     }
                 }
-           
+
                 db.SaveChanges();
 
                 return Redirect(Url.Content("~/Repuesto/Index"));
             }
         }
-        
+
         //BORRAR
         [HttpGet]
         public ActionResult Delete(int Id)
@@ -232,6 +235,90 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             }
             return RedirectToAction("Index");
         }
+
+
+
+
+        [HttpGet]
+        public ActionResult VistaRepuestos(string nombre, string modelo, decimal? precioMin, decimal? precioMax)
+        {
+            var usuarioActual = Session["UsuarioActual"] as UsuariosViewModel;
+            List<RepuestosTableViewModel> lstRepuestos = new List<RepuestosTableViewModel>();
+
+            using (ActivosFijosBDEntities db = new ActivosFijosBDEntities())
+            {
+                var query = from r in db.Repuestos
+                            select new RepuestosTableViewModel
+                            {
+                                Id = r.Id,
+                                Nombre = r.Nombre,
+                                Descripcion = r.Descripcion,
+                                Precio = (decimal)r.Precio,
+                                Estado = r.Estado,
+                                Anio = (int)r.Anio,
+                                CantidadEnStock = (int)r.CantidadEnStock,
+                                Modelo = r.Modelo,
+                                Marca = r.Marca,
+                                Imagen1 = r.Imagen1,
+                                Imagen2 = r.Imagen2
+                            };
+
+                if (!string.IsNullOrEmpty(modelo))
+                {
+                    query = query.Where(r => r.Modelo.Contains(modelo));
+                }
+
+                if (!string.IsNullOrEmpty(nombre))
+                {
+                    query = query.Where(r => r.Nombre.Contains(nombre));
+                }
+
+                if (precioMin.HasValue)
+                {
+                    query = query.Where(r => r.Precio >= precioMin.Value);
+                }
+
+                if (precioMax.HasValue)
+                {
+                    query = query.Where(r => r.Precio <= precioMax.Value);
+                }
+
+                ViewBag.ModeloSeleccionado = modelo;
+                ViewBag.NombreSeleccionado = nombre;
+                ViewBag.PrecioMaxSeleccionado = precioMax ?? 1000000;
+
+                lstRepuestos = query.ToList();
+            }
+
+            return View(lstRepuestos);
+        }
+
+
+      /*  public ActionResult MostrarVehiculoIndividual(int Id)
+        {
+            CarrosViewModel model = new CarrosViewModel();
+            using (var db = new ActivosFijosBDEntities())
+            {
+                var carroTO = db.Carros.Find(Id);
+
+                model.Id = carroTO.Id;
+                model.Marca = carroTO.Marca;
+                model.Modelo = carroTO.Modelo;
+                model.Anio = carroTO.Anio;
+                model.Precio = carroTO.Precio;
+                model.Transmision = carroTO.Transmision;
+                model.Combustible = carroTO.Combustible;
+                model.CantidadEnStock = carroTO.CantidadEnStock;
+                model.Descripcion = carroTO.Descripcion;
+                model.Imagen1 = carroTO.Imagen1;
+                model.Imagen2 = carroTO.Imagen2;
+            }
+            return View(model);
+        }
+      */
+
+
+
     }
 }
 

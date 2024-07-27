@@ -265,6 +265,8 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Comprador\Edit.cshtml" />
     <Content Include="Views\Carros\VistaVehiculos.cshtml" />
+    <Content Include="Views\Carros\MostrarVehiculoIndividual.cshtml" />
+    <Content Include="Views\Repuesto\VistaRepuestos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

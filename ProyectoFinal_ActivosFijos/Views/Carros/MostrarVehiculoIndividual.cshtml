@@ -1,0 +1,126 @@
+﻿@model ProyectoFinal_ActivosFijos.Models.ViewModel.CarrosViewModel
+
+@{
+    ViewBag.Title = "MostrarInformacionCarros";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del Vehiculo</title>
+
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .hotel-details {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            color: black;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hotel-images {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+            .hotel-images .no-image {
+                display: flex;
+                justify-content: center; /* Centra el contenido horizontalmente */
+                align-items: center; /* Centra el contenido verticalmente */
+                margin-bottom: 25px;
+            }
+
+            .hotel-images img {
+                max-width: 400px;
+                height: auto;
+                margin-right: 20px;
+                transition: transform 0.3s ease;
+                cursor: pointer;
+            }
+
+                .hotel-images img:hover {
+                    transform: scale(1.1); /* Hacer zoom al pasar el cursor sobre la imagen */
+                }
+
+        .hotel-info p {
+            margin-bottom: 10px;
+        }
+
+        .regresar {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hotel-details">
+        <h1 style="text-align: center;">@Html.DisplayFor(model => model.Modelo)</h1>
+
+        <div class="hotel-images">
+            <div>
+                @if (Model.Imagen1 != null)
+                {
+                    <img id="main-image" src="data:image/png;base64,@Convert.ToBase64String(Model.Imagen1)" alt="Imagen del Hotel" class="img-fluid" />
+                }
+                else
+                {
+                    <img class="no-image" src="~/Images/No-image-found.jpg" alt="Imagen del Hotel" />
+                }
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                @if (Model.Imagen2 != null)
+                {
+                    <img src="data:image/png;base64,@Convert.ToBase64String(Model.Imagen2)" alt="Segunda Imagen del Hotel" class="img-fluid" style="max-width: 200px; height: auto; margin-bottom: 10px;" onclick="swapImages(this)" />
+                }
+            </div>
+        </div>
+
+        <div class="hotel-info">
+            <p><strong>Año:</strong> @Html.DisplayFor(model => model.Id)</p>
+
+            <p><strong>Año:</strong> @Html.DisplayFor(model => model.Anio)</p>
+            <p><strong>Combustible tipo:</strong> @Html.DisplayFor(model => model.Combustible)</p>
+            <p><strong>Transmision:</strong> @Html.DisplayFor(model => model.Transmision)</p>
+
+
+            <p><strong>Descripción:</strong> @Html.DisplayFor(model => model.Descripcion)</p>
+            <p><strong>Precio:</strong> @Html.DisplayFor(model => model.Precio)</p>
+
+            <input type="button" class="btn btn-outline-danger" value="Regresar" onclick="document.location.href = '@Url.Content("~/Carros/VistaVehiculos")'" />
+
+        </div>
+    </div>
+    <!-- Scripts JavaScript -->
+    <script>
+        function swapImages(img) {
+            var mainImage = document.getElementById('main-image');
+            var clickedSrc = img.src;
+            var mainSrc = mainImage.src;
+            mainImage.src = clickedSrc;
+            img.src = mainSrc;
+            mainImage.style.maxWidth = '400px';
+            mainImage.style.marginRight = '20px';
+            img.style.maxWidth = '200px';
+            img.style.marginRight = '0';
+        }
+    </script>
+
+</body>
+</html>
