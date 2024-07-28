@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CarritoController.cs" />
     <Compile Include="Controllers\CarrosController.cs" />
     <Compile Include="Controllers\CompradorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -267,6 +268,8 @@
     <Content Include="Views\Carros\VistaVehiculos.cshtml" />
     <Content Include="Views\Carros\MostrarVehiculoIndividual.cshtml" />
     <Content Include="Views\Repuesto\VistaRepuestos.cshtml" />
+    <Content Include="Views\Comprador\Perfil.cshtml" />
+    <Content Include="Views\Carrito\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

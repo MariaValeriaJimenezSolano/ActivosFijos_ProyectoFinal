@@ -20,5 +20,11 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         {
             return View();
         }
+
+        public ActionResult Perfil()
+        {
+            return View();
+        }
+
     }
 }
