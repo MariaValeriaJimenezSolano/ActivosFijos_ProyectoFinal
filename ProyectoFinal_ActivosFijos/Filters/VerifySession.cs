@@ -9,7 +9,7 @@ using System.Web.Mvc;
 namespace ProyectoFinal_ActivosFijos.Filters
 {
     public class VerifySession : ActionFilterAttribute
-    {
+    {  
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             // Verifica si el usuario está autenticado
