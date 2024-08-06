@@ -4,35 +4,7 @@
 
 <h2>CheckOut</h2>
 
-@if (TempData["Message"] != null)
-{
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        $(document).ready(function () {
-            Swal.fire({
-                icon: 'success',
-                title: '¡Compra realizada!',
-                text: '@TempData["Message"]',
-                confirmButtonText: 'Aceptar'
-            });
-        });
-    </script>
-}
 
-@if (TempData["ErrorMessage"] != null)
-{
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        $(document).ready(function () {
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: '@TempData["ErrorMessage"]',
-                confirmButtonText: 'Aceptar'
-            });
-        });
-    </script>
-}
 
 @using (Html.BeginForm("CheckOut", "Carrito", FormMethod.Post))
 {
@@ -48,5 +20,35 @@
         <label for="cvv">CVV</label>
         <input type="text" class="form-control" id="cvv" name="cvv" required minlength="3" maxlength="3" pattern="\d{3}" title="CVV debe tener 3 dígitos." />
     </div>
-    <button type="submit" class="btn btn-primary">Confirmar Compra</button>
+    <button type="submit" class="btn btn-primary">Confirmar Compra
+        @if (TempData["Message"] != null)
+        {
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+        $(document).ready(function () {
+            Swal.fire({
+                icon: 'success',
+                title: '¡Compra realizada!',
+                text: '@TempData["Message"]',
+                confirmButtonText: 'Aceptar'
+            });
+        });
+            </script>
+        }
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+        $(document).ready(function () {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '@TempData["ErrorMessage"]',
+                confirmButtonText: 'Aceptar'
+            });
+        });
+            </script>
+        }
+    </button>
 }

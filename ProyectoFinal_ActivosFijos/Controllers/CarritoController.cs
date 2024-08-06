@@ -57,7 +57,6 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             var carro = db.Carros.Find(carroId);
             if (carro == null || carro.CantidadEnStock <= 0)
             {
-                // Opcional: Mostrar mensaje si el producto no está disponible
                 TempData["Message"] = "El vehículo no está disponible en stock";
                 return RedirectToAction("Index");
             }
@@ -92,7 +91,6 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             var repuesto = db.Repuestos.Find(repuestoId);
             if (repuesto == null || repuesto.CantidadEnStock <= 0)
             {
-                // Opcional: Mostrar mensaje si el producto no está disponible
                 TempData["Message"] = "El repuesto no está disponible en stock";
                 return RedirectToAction("Index");
             }
@@ -160,7 +158,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 // Convertir el productoId a entero
                 if (int.TryParse(productoIdStr.ToString(), out int productoId))
                 {
-                    // Primero intentamos encontrar el producto en Repuestos
+                    // Encontrar el producto en Repuestos
                     var repuesto = db.Repuestos.Find(productoId);
                     if (repuesto != null)
                     {

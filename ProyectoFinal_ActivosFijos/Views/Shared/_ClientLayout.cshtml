@@ -22,7 +22,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Perfil
+                        <img src="~/images/profile-icon.png" alt="Perfil" style="width: 24px; height: 24px;" />
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="@Url.Action("Edit", "Comprador", new { id = (Session["UsuarioActual"] as ProyectoFinal_ActivosFijos.Models.ViewModel.UsuariosViewModel)?.Id })">Gestion de Perfil</a>
