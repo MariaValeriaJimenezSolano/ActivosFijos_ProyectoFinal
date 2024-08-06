@@ -1,6 +1,7 @@
-﻿@{
+﻿@model  List<ProyectoFinal_ActivosFijos.Models.TableViewModel.CarrosTableViewModel>
+@{
     ViewBag.Title = "Carros";
-    Layout = "~/Views/Shared/_ClientLayout.cshtml"; // Utiliza el diseño específico para cliente
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Utiliza el diseño específico para cliente
 }
 
 <h2>Vehiculos Disponibles</h2>
@@ -231,7 +232,7 @@
             </div>
             <div class="col-lg-8">
                 <h2 class="mb-2 text-center">Lista de Carros</h2>
-                      
+
                 <div class="row">
                     @foreach (var carro in Model)
                     {
@@ -270,6 +271,12 @@
                                                 </div>
                                             }
                                         </div>
+                                        <!-- Botón de agregar al carrito -->
+                                        <form action="@Url.Action("AgregarVehiculoAlCarrito", "Carrito")" method="post">
+                                            <input type="hidden" name="carroId" value="@carro.Id" />
+                                            <button type="submit" class="btn btn-primary">Agregar al Carrito</button>
+                                        </form>
+
                                         <!-- Controles del carrusel -->
                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselcarro@(carro.Id)"
                                                 data-bs-slide="prev">
@@ -288,7 +295,7 @@
                                     <!-- Acciones -->
                                     <div class="mt-3">
                                         <a class="btn btn-success" href="@Url.Action("MostrarVehiculoIndividual", new { Id =  @carro.Id })">Ver articulo</a>
-                                       
+
                                     </div>
 
 

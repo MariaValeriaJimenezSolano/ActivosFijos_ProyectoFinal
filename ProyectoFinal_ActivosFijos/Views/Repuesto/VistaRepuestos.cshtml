@@ -1,6 +1,7 @@
-﻿@{
+﻿@model  List<ProyectoFinal_ActivosFijos.Models.TableViewModel.RepuestosTableViewModel>
+@{
     ViewBag.Title = "Repuestos";
-    Layout = "~/Views/Shared/_ClientLayout.cshtml"; // Utiliza el diseño específico para cliente
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Utiliza el diseño específico para cliente
 }
 
 <h2>Vehiculos Disponibles</h2>
@@ -267,9 +268,15 @@
                                                             <p class="text-center" style="font-size: larger; color: #0d6efd;">Sin Imagen [@i]</p>
                                                         </div>
                                                     }
+
                                                 </div>
                                             }
                                         </div>
+                                        <!-- Botón de agregar al carrito -->
+                                        <form action="@Url.Action("AgregarRepuestoAlCarrito", "Carrito")" method="post">
+                                            <input type="hidden" name="repuestoId" value="@repuesto.Id" />
+                                            <button type="submit" class="btn btn-primary">Agregar al Carrito</button>
+                                        </form>
                                         <!-- Controles del carrusel -->
                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselrepuesto@(repuesto.Id)"
                                                 data-bs-slide="prev">

@@ -1,7 +1,80 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Carrito de Compras";
 }
 
-<h2>Index</h2>
+<h2>Carrito de Compras</h2>
+
+<h3>Carros</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.Carros != null && ((List<ProyectoFinal_ActivosFijos.Models.Carros>)ViewBag.Carros).Any())
+        {
+            var carros = (List<ProyectoFinal_ActivosFijos.Models.Carros>)ViewBag.Carros;
+            foreach (var item in carros)
+            {
+                <tr>
+                    <td>@item.Modelo</td>
+                    <td>@(item.Precio.HasValue ? item.Precio.Value.ToString("C") : "No disponible")</td>
+                    <td>
+                        @using (Html.BeginForm("EliminarDelCarrito", "Carrito", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", item.Id)
+                            @Html.Hidden("tipo", "carro")
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="3">No hay carros en el carrito.</td></tr>
+        }
+    </tbody>
+</table>
+
+<h3>Repuestos</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.Repuestos != null && ((List<ProyectoFinal_ActivosFijos.Models.Repuestos>)ViewBag.Repuestos).Any())
+        {
+            var repuestos = (List<ProyectoFinal_ActivosFijos.Models.Repuestos>)ViewBag.Repuestos;
+            foreach (var item in repuestos)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@(item.Precio.HasValue ? item.Precio.Value.ToString("C") : "No disponible")</td>
+                    <td>
+                        @using (Html.BeginForm("EliminarDelCarrito", "Carrito", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", item.Id)
+                            @Html.Hidden("tipo", "repuesto")
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="3">No hay repuestos en el carrito.</td></tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("CheckOut", "Carrito")" class="btn btn-success">Proceder al Pago</a>
 
