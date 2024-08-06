@@ -15,7 +15,12 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         {
             var usuarioActual = Session["UsuarioActual"] as UsuariosViewModel;
             return View();
-        }      
+        }
+
+        public ActionResult AccesoBloqueado()
+        {
+            return View();
+        }
 
     }
 }

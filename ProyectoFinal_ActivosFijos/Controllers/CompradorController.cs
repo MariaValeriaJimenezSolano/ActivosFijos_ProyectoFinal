@@ -84,5 +84,10 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             return RedirectToAction("Index", "Login");
         }
 
+        public ActionResult AccesoBloqueado()
+        {
+            return View();
+        }
+
     }
 }

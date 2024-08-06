@@ -22,11 +22,40 @@ namespace ProyectoFinal_ActivosFijos.Filters
                 return;
             }
 
+            if (usuarioActual != null)
+            {
+                string controlador = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName;
+                string accion = filterContext.ActionDescriptor.ActionName;
+
+                //Administrador
+                if (usuarioActual.TipoDeUsuario == 1)
+                {
+                    if ((controlador == "Comprador" || controlador == "Carrito") ||
+                        (controlador == "Carros" && (accion.Contains("VistaVehiculos") || accion.Contains("MostrarVehiculoIndividual"))) ||
+                        (controlador == "Repuesto" && (accion.Contains("VistaRepuestos") || accion.Contains("MostrarRepuestoIndividual"))))
+                    {
+                        filterContext.Result = new RedirectResult("~/Admin/AccesoBloqueado");
+                        return;
+                    }
+                }
+                //Cliente
+                else if (usuarioActual.TipoDeUsuario == 2)
+                {                    
+                    if ((controlador == "Admin" || controlador == "Usuario") ||
+                        (controlador == "Carros" && !(accion.Contains("VistaVehiculos") || accion.Contains("MostrarVehiculoIndividual"))) ||
+                        (controlador == "Repuesto" && !(accion.Contains("VistaRepuestos") || accion.Contains("MostrarRepuestoIndividual"))))
+                    {
+                        filterContext.Result = new RedirectResult("~/Comprador/AccesoBloqueado");
+                        return;
+                    }
+                }               
+                else
+                {
+                    
+                }
+            }
             base.OnActionExecuting(filterContext);
         }
 
     }
 }
-
-
-

@@ -294,28 +294,12 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         }
 
 
-      /*  public ActionResult MostrarVehiculoIndividual(int Id)
-        {
-            CarrosViewModel model = new CarrosViewModel();
-            using (var db = new ActivosFijosBDEntities())
-            {
-                var carroTO = db.Carros.Find(Id);
-
-                model.Id = carroTO.Id;
-                model.Marca = carroTO.Marca;
-                model.Modelo = carroTO.Modelo;
-                model.Anio = carroTO.Anio;
-                model.Precio = carroTO.Precio;
-                model.Transmision = carroTO.Transmision;
-                model.Combustible = carroTO.Combustible;
-                model.CantidadEnStock = carroTO.CantidadEnStock;
-                model.Descripcion = carroTO.Descripcion;
-                model.Imagen1 = carroTO.Imagen1;
-                model.Imagen2 = carroTO.Imagen2;
-            }
-            return View(model);
-        }
-      */
+      public ActionResult MostrarRepuestoIndividual(int Id)
+      {
+            //pendiente codigo
+            var a = "";
+            return View(a);
+      }
 
 
 

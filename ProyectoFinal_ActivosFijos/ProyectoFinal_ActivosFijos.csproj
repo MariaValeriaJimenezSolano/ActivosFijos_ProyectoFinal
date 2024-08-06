@@ -271,6 +271,9 @@
     <Content Include="Views\Comprador\Perfil.cshtml" />
     <Content Include="Views\Carrito\Index.cshtml" />
     <Content Include="Views\Carrito\CheckOut.cshtml" />
+    <Content Include="Views\Shared\_ClientLayout.cshtml" />
+    <Content Include="Views\Comprador\AccesoBloqueado.cshtml" />
+    <Content Include="Views\Admin\AccesoBloqueado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
