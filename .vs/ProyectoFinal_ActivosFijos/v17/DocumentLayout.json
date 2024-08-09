@@ -1,101 +1,77 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\",
+  "WorkspaceRootPath": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\comprador\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\comprador\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\shared\\_clientlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\shared\\_clientlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\comprador\\perfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\comprador\\perfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\carrito\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carrito\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\repuesto\\vistarepuestos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\repuesto\\vistarepuestos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\carros\\vistavehiculos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carros\\vistavehiculos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\filters\\verifysession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\filters\\verifysession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\comprador\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\maria\\onedrive\\documents\\github\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\shared\\_clientlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\shared\\_clientlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\carros\\vistavehiculos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carros\\vistavehiculos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\maria\\onedrive\\documents\\github\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\register\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\register\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\repuesto\\vistarepuestos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\repuesto\\vistarepuestos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\comprador\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\comprador\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\comprador\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\comprador\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\compradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\compradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\compradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\models\\viewmodel\\usuariosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\models\\viewmodel\\usuariosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\models\\viewmodel\\usuariosviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\models\\tableviewmodel\\usuariostableviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\models\\tableviewmodel\\usuariostableviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\models\\tableviewmodel\\usuariostableviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\usuario\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\usuario\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\usuario\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -106,239 +82,162 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Index.cshtml",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAcwFEAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-18T00:43:26.764Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ClientLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAGwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-09T23:35:03.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Register\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Register\\Index.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Register\\Index.cshtml",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Register\\Index.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAsAAAD/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-09T04:30:23.628Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "_ClientLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAB4AAAAVAAAA",
+              "Title": "VistaRepuestos.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAL0AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T08:02:40.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Perfil.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Perfil.cshtml",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Comprador\\Perfil.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Perfil.cshtml",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Comprador\\Perfil.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T07:40:10.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Login\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Login\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Login\\Index.cshtml",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Login\\Index.cshtml",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAAAwAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T07:39:35.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAAAFoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T16:52:11.392Z",
+              "WhenOpened": "2024-08-09T14:11:03.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carrito\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Carrito\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carrito\\Index.cshtml",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Carrito\\Index.cshtml",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAcwE0AAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Login\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T03:43:10.907Z",
+              "WhenOpened": "2024-08-06T07:39:35.652Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CheckOut.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carrito\\CheckOut.cshtml",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Carrito\\CheckOut.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carrito\\CheckOut.cshtml",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Carrito\\CheckOut.cshtml",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAABYAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T03:43:01.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "VistaRepuestos.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
-              "ViewState": "AQIAAAoBAAAAAAAAAAAAAAoBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-06T03:42:19.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "VistaVehiculos.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
-              "ViewState": "AQIAAAkBAAAAAAAAAAAAAAkBAAATAAAA",
+              "ViewState": "AQIAAKQAAAAALDMzMzMLwAkBAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-06T03:41:19.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CarritoController.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CarritoController.cs",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\CarritoController.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CarritoController.cs",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\CarritoController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAhwCMAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T03:40:34.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "VerifySession.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Filters\\VerifySession.cs",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Filters\\VerifySession.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Filters\\VerifySession.cs",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Filters\\VerifySession.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAADwvyAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T17:08:46.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FilterConfig.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\App_Start\\FilterConfig.cs",
-              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\App_Start\\FilterConfig.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\App_Start\\FilterConfig.cs",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\App_Start\\FilterConfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T17:08:35.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABEAAAAAAAAAAAAcwCQAAAAVAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-30T16:49:47.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Edit.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Comprador\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Edit.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Comprador\\Edit.cshtml",
               "ViewState": "AQIAAFEAAAAAAAAAAAAcwGIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-30T16:43:57.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T16:43:57.892Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Index.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Comprador\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Index.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Index.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Comprador\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-21T16:48:38.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-21T16:48:38.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "CompradorController.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CompradorController.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CompradorController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\CompradorController.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CompradorController.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CompradorController.cs",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\CompradorController.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAAACgAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T16:44:26.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-21T16:44:26.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Model1.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\Model1.edmx",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\Model1.edmx",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Models\\Model1.edmx",
               "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\Model1.edmx [Diagram1]",
-              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\Model1.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
               "WhenOpened": "2024-07-21T16:30:37.888Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 15,
               "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Web.config",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Web.config",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Web.config",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Web.config",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Web.config",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Web.config",
               "ViewState": "AQIAABoAAAAAAAAAAAAAACAAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -346,11 +245,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 16,
               "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Add.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Add.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Add.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Add.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Add.cshtml",
               "ViewState": "AQIAABQBAAAAAAAAAAAAABQBAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -358,11 +257,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 12,
               "Title": "UsuariosViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\ViewModel\\UsuariosViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\ViewModel\\UsuariosViewModel.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Models\\ViewModel\\UsuariosViewModel.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\ViewModel\\UsuariosViewModel.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\ViewModel\\UsuariosViewModel.cs",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Models\\ViewModel\\UsuariosViewModel.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAAACgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -370,11 +269,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 14,
               "Title": "UsuariosTableViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\TableViewModel\\UsuariosTableViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\TableViewModel\\UsuariosTableViewModel.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Models\\TableViewModel\\UsuariosTableViewModel.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\TableViewModel\\UsuariosTableViewModel.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\TableViewModel\\UsuariosTableViewModel.cs",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Models\\TableViewModel\\UsuariosTableViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -382,11 +281,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
               "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Web.config",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Web.config",
               "ViewState": "AQIAAEsAAAAAAAAAAAAAAE8AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -395,11 +294,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 17,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Edit.cshtml",
               "ViewState": "AQIAAEQAAAAAAAAAAAAgwFIAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -407,11 +306,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 13,
               "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Documents\\GitHub\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
               "ViewState": "AQIAAH8AAAAAAAAAAAAUwI8AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

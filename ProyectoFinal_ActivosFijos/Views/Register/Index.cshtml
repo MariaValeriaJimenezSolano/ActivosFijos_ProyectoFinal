@@ -9,8 +9,11 @@
 
     <style>
         body {
-            background-color: #0d6efd;
-            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/particle-view-modern-luxury-white-car-parked-indoors-daytime_146671-16450.jpg?t=st=1723180057~exp=1723183657~hmac=10394f5939ad50260d3334714553c0e84262786f710b1d6e7f4f26f6c5f837ff&w=1380');
+            background-size: cover;
+            background-position: center;
+            background-color: white;
+            font-family: Roboto, sans-serif;
         }
 
         .background-container {
@@ -18,21 +21,24 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 25px;
         }
 
         .form-container {
-            background-color: white;
+            position: relative;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
             width: 100%;
         }
 
             .form-container h2 {
                 margin-bottom: 20px;
-                font-family: 'Staatliches', cursive;
+                font-family: Roboto, sans-serif;
                 text-align: center;
                 color: #343a40;
             }
@@ -56,21 +62,21 @@
         }
 
         .boton-IS {
-            background-color: #007bff;
+            background-color: #078EBD;
             color: white;
         }
 
             .boton-IS:hover {
-                background-color: #0056b3;
+                background-color: #005696;
             }
 
         .boton-RG {
-            background-color: #6c757d;
+            background-color: #042f5c;
             color: white;
         }
 
             .boton-RG:hover {
-                background-color: #5a6268;
+                background-color: #022040;
             }
     </style>
 
@@ -91,7 +97,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="container form-container" style="color: white;">
-                        <h2 style="display: flex; font-family: Staatliches; color: black; justify-content: center">Crear una cuenta</h2>
+                        <h2 style="display: flex; justify-content: center">Crear una cuenta</h2>
                         <div id="paso1" class="form-step-active" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
 
                             @Html.TextBoxFor(Model => Model.Cedula, null, new { @class = "form-control", placeholder = "Cédula", required = "required" })
