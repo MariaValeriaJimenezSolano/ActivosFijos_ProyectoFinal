@@ -288,6 +288,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             return View(lstCarros);
         }
 
+        [HttpGet]
         public ActionResult MostrarVehiculoIndividual(int Id)
         {
            CarrosViewModel model = new CarrosViewModel();

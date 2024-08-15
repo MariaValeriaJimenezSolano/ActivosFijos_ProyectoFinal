@@ -1,79 +1,144 @@
 ﻿@{
     ViewBag.Title = "Carrito de Compras";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml"; // Utiliza el diseño específico para cliente
 }
 
-<h3>Carros</h3>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (ViewBag.Carros != null && ((List<ProyectoFinal_ActivosFijos.Models.Carros>)ViewBag.Carros).Any())
-        {
-            var carros = (List<ProyectoFinal_ActivosFijos.Models.Carros>)ViewBag.Carros;
-            foreach (var item in carros)
-            {
+<div class="shopping-cart-container">
+    <h2 class="text-center">🛒 Carrito de Compras</h2>
+
+    <!-- Sección de Carros -->
+    <div class="cart-section">
+        <h3>Carros</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
                 <tr>
-                    <td>@item.Modelo</td>
-                    <td>@(item.Precio.HasValue ? item.Precio.Value.ToString("C") : "No disponible")</td>
-                    <td>
-                        @using (Html.BeginForm("EliminarDelCarrito", "Carrito", FormMethod.Post))
-                        {
-                            @Html.Hidden("id", item.Id)
-                            @Html.Hidden("tipo", "carro")
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
-                        }
-                    </td>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
                 </tr>
-            }
-        }
-        else
-        {
-            <tr><td colspan="3">No hay carros en el carrito.</td></tr>
-        }
-    </tbody>
-</table>
+            </thead>
+            <tbody>
+                @if (ViewBag.Carros != null && ((List<ProyectoFinal_ActivosFijos.Models.Carros>)ViewBag.Carros).Any())
+                {
+                    var carros = (List<ProyectoFinal_ActivosFijos.Models.Carros>)ViewBag.Carros;
+                    foreach (var item in carros)
+                    {
+                        <tr>
+                            <td>@item.Modelo</td>
+                            <td>@(item.Precio.HasValue ? item.Precio.Value.ToString("C") : "No disponible")</td>
+                            <td>
+                                @using (Html.BeginForm("EliminarDelCarrito", "Carrito", FormMethod.Post))
+                                {
+                                    @Html.Hidden("id", item.Id)
+                                    @Html.Hidden("tipo", "carro")
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Eliminar</button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="3" class="text-center text-muted">No hay carros en el carrito.</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
-<h3>Repuestos</h3>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (ViewBag.Repuestos != null && ((List<ProyectoFinal_ActivosFijos.Models.Repuestos>)ViewBag.Repuestos).Any())
-        {
-            var repuestos = (List<ProyectoFinal_ActivosFijos.Models.Repuestos>)ViewBag.Repuestos;
-            foreach (var item in repuestos)
-            {
+    <!-- Sección de Repuestos -->
+    <div class="cart-section">
+        <h3>Repuestos</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
                 <tr>
-                    <td>@item.Nombre</td>
-                    <td>@(item.Precio.HasValue ? item.Precio.Value.ToString("C") : "No disponible")</td>
-                    <td>
-                        @using (Html.BeginForm("EliminarDelCarrito", "Carrito", FormMethod.Post))
-                        {
-                            @Html.Hidden("id", item.Id)
-                            @Html.Hidden("tipo", "repuesto")
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
-                        }
-                    </td>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                @if (ViewBag.Repuestos != null && ((List<ProyectoFinal_ActivosFijos.Models.Repuestos>)ViewBag.Repuestos).Any())
+                {
+                    var repuestos = (List<ProyectoFinal_ActivosFijos.Models.Repuestos>)ViewBag.Repuestos;
+                    foreach (var item in repuestos)
+                    {
+                        <tr>
+                            <td>@item.Nombre</td>
+                            <td>@(item.Precio.HasValue ? item.Precio.Value.ToString("C") : "No disponible")</td>
+                            <td>
+                                @using (Html.BeginForm("EliminarDelCarrito", "Carrito", FormMethod.Post))
+                                {
+                                    @Html.Hidden("id", item.Id)
+                                    @Html.Hidden("tipo", "repuesto")
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Eliminar</button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="3" class="text-center text-muted">No hay repuestos en el carrito.</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Botón de proceder al pago -->
+    <div class="checkout-container text-center mt-4">
+        <a href="@Url.Action("CheckOut", "Carrito")" class="btn btn-success btn-lg w-100">Proceder al Pago</a>
+    </div>
+</div>
+
+<!-- CSS para mejorar el diseño -->
+<style>
+    .shopping-cart-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+        .shopping-cart-container h2 {
+            font-family: 'Arial', sans-serif;
+            color: #343a40;
+            margin-bottom: 20px;
         }
-        else
-        {
-            <tr><td colspan="3">No hay repuestos en el carrito.</td></tr>
+
+    .cart-section {
+        margin-bottom: 30px;
+    }
+
+    .table {
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .thead-dark th {
+        background-color: #343a40;
+        color: #ffffff;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .btn-outline-danger {
+        border: 1px solid #dc3545;
+        color: #dc3545;
+    }
+
+        .btn-outline-danger:hover {
+            background-color: #dc3545;
+            color: #ffffff;
         }
-    </tbody>
-</table>
 
-<a href="@Url.Action("CheckOut", "Carrito")" class="btn btn-success">Proceder al Pago</a>
-
-
+    .checkout-container a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+</style>
