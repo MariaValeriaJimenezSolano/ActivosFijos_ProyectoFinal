@@ -9,6 +9,7 @@ using System.Data.Entity.Infrastructure;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 namespace ProyectoFinal_ActivosFijos.Controllers
@@ -296,12 +297,25 @@ namespace ProyectoFinal_ActivosFijos.Controllers
 
       public ActionResult MostrarRepuestoIndividual(int Id)
       {
-            //pendiente codigo
-            var a = "";
-            return View(a);
-      }
+            RepuestosViewModel model = new RepuestosViewModel();
+            using (var db = new ActivosFijosBDEntities())
+            {
+                var repuestoTO = db.Repuestos.Find(Id);
 
-
+                model.Id = repuestoTO.Id;
+                model.Marca = repuestoTO.Marca;
+                model.Modelo = repuestoTO.Modelo;
+                model.Anio = repuestoTO.Anio;
+                model.Precio = repuestoTO.Precio;
+                model.Nombre = repuestoTO.Nombre;
+                model.Estado = repuestoTO.Estado;
+                model.CantidadEnStock = repuestoTO.CantidadEnStock;
+                model.Descripcion = repuestoTO.Descripcion;
+                model.Imagen1 = repuestoTO.Imagen1;
+                model.Imagen2 = repuestoTO.Imagen2;
+            }
+            return View(model);
+        }
 
     }
 }

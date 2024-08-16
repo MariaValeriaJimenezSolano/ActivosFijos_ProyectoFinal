@@ -143,7 +143,7 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title text-center">@repuesto.Nombre - @repuesto.Modelo</h5>
-                            <p class="card-text"><strong>Precio: @string.Format("${0:N2}", repuesto.Precio) | @repuesto.CantidadEnStock Disponibles</strong></p>
+                            <p class="card-text"><strong>Precio: @string.Format("₡{0:N2}", repuesto.Precio) | @repuesto.CantidadEnStock Disponibles</strong></p>
 
                             <!-- Carrusel de imágenes -->
                             <div id="carouselrepuesto@(repuesto.Id)" class="carousel slide" data-bs-ride="carousel">

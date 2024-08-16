@@ -329,16 +329,11 @@
 
 <body>
 
-
-
-
-
-
-
     <!-- .................Nav................. -->
     <nav>
-        <div class="container nav-container">
-            <a href="" class="logo"><h3>Toyota</h3></a>
+        <div class="container nav-container">            
+            <a href="@Url.Action("Index", "Comprador")" class="logo"><h3>Toyota</h3></a>
+
 
             <ul class="nav-link">
                 <li><a href="" class="active">@Html.ActionLink("Home", "Index", "Comprador", new { area = "" }, new { @class = "nav-link" })</a></li>
@@ -367,12 +362,6 @@
         </div>
     </nav>
 
-
-
-
-
-
-
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -384,4 +373,3 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
-
