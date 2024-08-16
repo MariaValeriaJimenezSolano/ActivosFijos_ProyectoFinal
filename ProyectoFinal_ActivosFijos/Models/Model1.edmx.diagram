@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6ebf2b059d114caabd4b724e19f6cbc7" Name="Diagram1">
-        <EntityTypeShape EntityType="ActivosFijosBDModel.Carros" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivosFijosBDModel.Repuestos" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivosFijosBDModel.TipoDeUsuario" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivosFijosBDModel.Usuarios" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="ActivosFijosBDModel.FK_Usuarios_TipoUsuario" ManuallyRouted="false" />
+      <Diagram DiagramId="585d8c9a64074bc58d0a4633d88b2a7c" Name="Diagram1">
+        <EntityTypeShape EntityType="ActivosFijosDBModel.Carro" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosDBModel.Repuesto" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosDBModel.TipoDeUsuario" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosDBModel.Usuario" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ActivosFijosDBModel.FK_Usuarios_TipoUsuario" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

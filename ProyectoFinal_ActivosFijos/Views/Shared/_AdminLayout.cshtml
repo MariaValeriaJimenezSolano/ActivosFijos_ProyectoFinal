@@ -1,15 +1,104 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    @*<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />*@
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Toyota Admin</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        :root {
+            --color-primary: #a30606;
+            --color-white: #eaeaea;
+            --color-dark: #333;
+            --color-black: #222;
+        }
+        .btn{
+            display: inline-block;
+            width: fit-content;
+            padding: 12px 28px;
+            background: var(--color-primary);
+            border: 2px solid var(--color-primary);
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: var(--color-white);
+            letter-spacing: .4px;
+            font-weight: 600;
+            transition: .4s ease;
+        }
+        .btn:hover{
+            background: transparent;
+            color: var(--color-primary)
+        }
+        .container{
+            max-width: 1620px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        nav{
+            width: 100%;
+            height: 5rem;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            display: grid;
+            place-items: center;
+        }
+        .nav-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-container ul{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .logo{
+            font-size: 25px;
+            color: var(--color-black);
+        }
+        .nav-link a{
+            color: var(--color-black);
+            font-size: 17px;
+            transition: .4s ease;
+        }
+        .nave-link li a:hover{
+            color: var(--color-primary);
+        }
+        .nav-link li .active{
+            color: var(--color-primary);
+        }
+
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+    <nav>
+        <div class="container nav-container">
+
+            <a href="" class="logo"<h3>Toyota </h3></a>
+            <ul class="nav-link">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="" >Usuarios</a></li>
+                <li><a href="">Repuestos</a></li>
+                <li><a href="">Carros</a></li>
+            </ul>
+        </div>
+    </nav>
+   @*@ <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
             @Html.ActionLink("Toyota", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
@@ -20,6 +109,7 @@
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
                         <button class="btn btn-link nav-link" onclick="location.href='@Url.Action("Index", "Usuario")'">CRUD USUARIO</button>
+                        <i class="fa-solid fa-users"></i>
                     </li>
                     <li class="nav-item">
                         <button class="btn btn-link nav-link" onclick="location.href='@Url.Action("Index", "Repuesto")'">CRUD REPUESTO</button>
@@ -30,7 +120,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>*@
     <div class="container body-content">
         @RenderBody()
         <hr />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="ActivosFijosBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Carros">
+<Schema Namespace="ActivosFijosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Carro">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -16,7 +16,7 @@
     <Property Name="Imagen2" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="CantidadEnStock" Type="Int32" />
   </EntityType>
-  <EntityType Name="Repuestos">
+  <EntityType Name="Repuesto">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -40,7 +40,7 @@
     <Property Name="TipoDeUsuario1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_TipoUsuario" FromRole="TipoDeUsuario" ToRole="Usuarios" />
   </EntityType>
-  <EntityType Name="Usuarios">
+  <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -61,7 +61,7 @@
   </EntityType>
   <Association Name="FK_Usuarios_TipoUsuario">
     <End Role="TipoDeUsuario" Type="Self.TipoDeUsuario" Multiplicity="0..1" />
-    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoDeUsuario">
         <PropertyRef Name="Id" />
@@ -72,12 +72,12 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ActivosFijosBDEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Carros" EntityType="Self.Carros" />
-    <EntitySet Name="Repuestos" EntityType="Self.Repuestos" />
-    <EntitySet Name="TipoDeUsuario" EntityType="Self.TipoDeUsuario" />
-    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <EntitySet Name="Carros" EntityType="Self.Carro" />
+    <EntitySet Name="Repuestos" EntityType="Self.Repuesto" />
+    <EntitySet Name="TipoDeUsuarios" EntityType="Self.TipoDeUsuario" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
     <AssociationSet Name="FK_Usuarios_TipoUsuario" Association="Self.FK_Usuarios_TipoUsuario">
-      <End Role="TipoDeUsuario" EntitySet="TipoDeUsuario" />
+      <End Role="TipoDeUsuario" EntitySet="TipoDeUsuarios" />
       <End Role="Usuarios" EntitySet="Usuarios" />
     </AssociationSet>
     <FunctionImport Name="DeleteUserbyId">
@@ -108,7 +108,7 @@
       <Parameter Name="Direccion" Mode="In" Type="String" />
       <Parameter Name="Sexo" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="VerificarUsuario" ReturnType="Collection(ActivosFijosBDModel.VerificarUsuario_Result)">
+    <FunctionImport Name="VerificarUsuario" ReturnType="Collection(ActivosFijosDBModel.VerificarUsuario_Result)">
       <Parameter Name="var_cedula" Mode="In" Type="Int32" />
       <Parameter Name="var_contrasena" Mode="In" Type="String" />
     </FunctionImport>
@@ -117,7 +117,7 @@
       <Parameter Name="Contrasena" Mode="In" Type="String" />
       <Parameter Name="Autenticado" Mode="InOut" Type="Boolean" />
     </FunctionImport>
-    <FunctionImport Name="VerifyUserCedula" ReturnType="Collection(ActivosFijosBDModel.VerifyUserCedula_Result)">
+    <FunctionImport Name="VerifyUserCedula" ReturnType="Collection(ActivosFijosDBModel.VerifyUserCedula_Result)">
       <Parameter Name="var_cedula" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="VerifyUserGmail">

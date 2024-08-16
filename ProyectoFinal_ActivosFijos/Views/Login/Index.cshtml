@@ -9,9 +9,9 @@
     body {
         margin: 0;
         padding: 0;
-        color: #003b57; /* Cambia el color del texto a blanco */
+        color: #f8f9fa; /* Cambia el color del texto a blanco */
         overflow: hidden; /* Evita el scroll en la vista */
-        background-image: url('https://img.freepik.com/free-photo/particle-view-modern-luxury-white-car-parked-indoors-daytime_146671-16450.jpg?t=st=1723180057~exp=1723183657~hmac=10394f5939ad50260d3334714553c0e84262786f710b1d6e7f4f26f6c5f837ff&w=1380');
+        background-image: url('https://img.freepik.com/free-vector/gradient-liquid-abstract-background_23-2148917280.jpg?w=1380&t=st=1723601297~exp=1723601897~hmac=1d08567b37b1e8a1be391fecb690827a90b729a01434515f3d0fa434f5a79af9');
         background-size: cover;
         background-position: center;
         background-color: white;
@@ -19,10 +19,18 @@
     }
 
     .container-login {
-        display: flex;
+        @*display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;*@
+        position:absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 101;
+        max-width: 320px;
         width: 100%;
+
     }
 
     .login-form {
@@ -53,7 +61,7 @@
     .boton-IS, .boton-RG {
         width: 100%;
         height: 45px;
-        background:#078EBD;
+        background:#bcbcbc;
         border: none;
         border-radius: 25px;
         color: white;
@@ -67,7 +75,7 @@
     }
 
         .boton-IS:hover, .boton-RG:hover {
-            background-color: #005696;
+            background-color: #969696;
         }
 
     #olvidadoContrasena {
@@ -81,23 +89,6 @@
     .social-login-buttons {
         margin-top: 20px;
     }
-
-    .google-signin-button {
-        color: #757575;
-        border: none;
-        border-radius: 25px;
-        font-size: 16px;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-left: 10px;
-        background-color: #ffffff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-        .google-signin-button:hover {
-            background-color: #f1f1f1;
-        }
 
 
 </style>
@@ -116,10 +107,7 @@
 
             <br>
             
-            <div class="social-login-buttons">
-                <div id="google-signin-button" class="google-signin-button"></div>
-                <div class="fb-login-button" data-width="150" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();"></div>
-            </div>
+
 
             <p style="color: red;">
                 @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))

@@ -2,26 +2,96 @@
     ViewBag.Title = "Admin";
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; // Utiliza el diseño específico para administración
 }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    :root {
+        --color-primary: #a30606;
+        --color-white: #eaeaea;
+        --color-dark: #333;
+        --color-black: #222;
+    }
+    header{
+        width: 100;
+        height: 100vh;
+        display:flex;
+        align-items: center;
+    }
+
+    .header-left{
+        max-width: 630px;
+        position: relative;
+    }
+    .header-left h1{
+        font-size: 40px;
+        font-weight: 400;
+        color: var(--color-black);
+        margin-top: .5rem;
+    }
+    .header-left p{
+        margin: 15px 0 30px;
+        line-height: 150%;
+        font-size: 16px;
+    }
+    .header-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        height: 100%;
+    }
+    .header-right{
+        position: relative;
+        width: 450px;
+        height: 450px; 
+        margin:auto;
+    }
+    .sq-box{
+        height: 100%;
+        width:100%;
+        border:25px solid var(--color-primary); 
+        background: var(--color-white)
+    }
+</style>
 <main>
-    <section class="row" aria-labelledby="toyotaTitle">
-        <h1 id="title">Bienvenido al mundo de Toyota</h1>
-        <p class="lead">Toyota es una empresa líder en la fabricación de automóviles que se enfoca en la innovación y la calidad.</p>
-        <p><a href="https://toyota.com" class="btn btn-primary btn-md">Descubre más &raquo;</a></p>
-    </section>
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Gestionar Usuario </h2>            
-            <p><a class="btn btn-outline-dark"href="@Url.Action("Index", "Usuario")"> Ir &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="modelsTitle">
-            <h2 id="modelsTitle">Gestionar Carros</h2>
-            <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Carros")"> Ir &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="findDealerTitle">
-            <h2 id="findDealerTitle">Gestionar Repuesto</h2>
-            <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Repuesto")"> Ir &raquo;</a></p>
-        </section>
-    </div>
+    <header>
+        <div class="container header-container">
+            <section class="header-left" aria-labelledby="toyotaTitle">
+                <h1 id="title">Bienvenido al mundo de Toyota</h1>
+                <p class="lead">Toyota es una empresa líder en la fabricación de automóviles que se enfoca en la innovación y la calidad.</p>
+                <p><a href="https://toyota.com" class="btn btn-primary btn-md">Descubre más &raquo;</a></p>
+            </section>
+
+            <div class="header-right">
+                <div class="sq-box">
+
+                </div>
+            </div>
+
+            <div class="row">
+                <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+                    <h2 id="gettingStartedTitle">Gestionar Usuario </h2>
+                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Usuario")"> Ir &raquo;</a></p>
+                </section>
+                <section class="col-md-4" aria-labelledby="modelsTitle">
+                    <h2 id="modelsTitle">Gestionar Carros</h2>
+                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Carros")"> Ir &raquo;</a></p>
+                </section>
+                <section class="col-md-4" aria-labelledby="findDealerTitle">
+                    <h2 id="findDealerTitle">Gestionar Repuesto</h2>
+                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Repuesto")"> Ir &raquo;</a></p>
+                </section>
+            </div>
+        </div>
+
+
+    </header>
+
+
 </main>
 
 

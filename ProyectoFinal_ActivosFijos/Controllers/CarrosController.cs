@@ -109,7 +109,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                         }
                     }
 
-                    Carros carroTO = new Carros
+                    Carro carroTO = new Carro
                     {
                         Marca = model.Marca,
                         Modelo = model.Modelo,
