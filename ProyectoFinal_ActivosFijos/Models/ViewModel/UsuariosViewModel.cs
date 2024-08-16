@@ -17,9 +17,11 @@ namespace ProyectoFinal_ActivosFijos.Models.ViewModel
         public string Nombre { get; set; }
 
         [RegularExpression(@"^[A-Za-z]+$", ErrorMessage = "El primer apellido debe contener solo letras")]
+        [Display(Name = "Primer Apellido")]
         public string PrimerApellido { get; set; }
 
         [RegularExpression(@"^[A-Za-z]+$", ErrorMessage = "El segundo apellido debe contener solo letras")]
+        [Display(Name = "Segundo Apellido")]
         public string SegundoApellido { get; set; }
 
         [RegularExpression(@"^\d{1,2}$", ErrorMessage = "La edad debe ser un número con máximo 2 dígitos")]

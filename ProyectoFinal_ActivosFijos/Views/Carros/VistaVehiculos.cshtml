@@ -1,25 +1,17 @@
-﻿@model  List<ProyectoFinal_ActivosFijos.Models.TableViewModel.CarrosTableViewModel>
+﻿@model List<ProyectoFinal_ActivosFijos.Models.TableViewModel.CarrosTableViewModel>
 @{
     ViewBag.Title = "Carros";
-    Layout = "~/Views/Shared/_Layout.cshtml"; // Utiliza el diseño específico para cliente
+    Layout = "~/Views/Shared/_ClientLayout.cshtml"; // Utiliza el diseño específico para cliente
 }
 
-<h2>Vehiculos Disponibles</h2>
-<script>
-    // Ejecuta la función al cargar la página
-    document.addEventListener('DOMContentLoaded', actualizarContadorCarrito);
-</script>
-
-
 <style>
-
     .card-body {
-        flex: 1 1 auto;
-        padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-        color: var(--bs-card-color);
-        height: 480px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f5f5f5;
     }
-
 
     .carousel-item {
         text-align: center;
@@ -32,285 +24,197 @@
             object-fit: cover;
         }
 
-    .carousel-indicators {
-        bottom: 10px;
-    }
-
-        .carousel-indicators button {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-
-        .carousel-indicators [data-bs-target] {
-            box-sizing: content-box;
-            flex: 0 1 auto;
-            width: 12px;
-            height: 18px;
-            padding: 0;
-            margin-right: 3px;
-            margin-left: 3px;
-            text-indent: -999px;
-            cursor: pointer;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 0;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            transition: opacity 0.6s ease;
-        }
-
-
-    /*Lo que sigue controla que todas las imagenes tengan el mismo tamaño y un width ya heredado de 100%*/
     .img-container {
-        height: 232px; /* Altura deseada */
+        height: 232px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ddd; /* Color de fondo si no hay imagen */
+        background-color: #ddd;
     }
 
-    .img-fluid {
-        height: 232px;
-        object-fit: cover;
-    }
-
-    button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
-        cursor: pointer;
-        opacity: 1;
-    }
-
-
-    .contenedor-filtros {
-        /* border: solid 1px; */
-        display: table;
-        color: white;
-        align-items: center;
-        padding: 30px;
-        width: 98%;
-        margin: auto;
-        background: #4098d6;
-        box-shadow: 0px 94px 277px -6px #ffffff;
-    }
-
-
-    body {
-        /*background-image: url('/Content/images/fondoPrincipal.jpg');*/
-        background-color: #fff
-    }
-
-
-
-    .button-85 {
-        padding: 0.6em 2em;
-        border: none;
-        outline: none;
-        color: rgb(255, 255, 255);
-        background: #111;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        border-radius: 10px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-    }
-
-        .button-85:before {
-            content: "";
-            background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000 );
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            background-size: 400%;
-            z-index: -1;
-            filter: blur(5px);
-            -webkit-filter: blur(5px);
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            animation: glowing-button-85 20s linear infinite;
-            transition: opacity 0.3s ease-in-out;
-            border-radius: 10px;
-        }
-
-    @@keyframes glowing-button-85 {
-        0% {
-            background-position: 0 0;
-        }
-
-        50% {
-            background-position: 400% 0;
-        }
-
-        100% {
-            background-position: 0 0;
-        }
-    }
-
-    .button-85:after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #222;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-    }
-
-    .button-29 {
-        align-items: center;
-        appearance: none;
-        background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-        border: 0;
-        border-radius: 6px;
-        box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-        box-sizing: border-box;
-        color: #fff;
-        cursor: pointer;
-        display: inline-flex;
-        font-family: "JetBrains Mono",monospace;
-        height: 48px;
-        justify-content: center;
-        line-height: 1;
-        list-style: none;
-        overflow: hidden;
-        padding-left: 16px;
-        padding-right: 16px;
-        position: relative;
-        text-align: left;
-        text-decoration: none;
-        transition: box-shadow .15s,transform .15s;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        white-space: nowrap;
-        will-change: box-shadow,transform;
-        font-size: 18px;
+    .container.mt-4 {
+        margin-top: 30px;
     }
 
     .card:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         transform: scale(1.02);
         transition: all 0.3s ease;
     }
+        
+    .contenedor-filtros {
+        background: black;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 25px;
+    }
+
+        .contenedor-filtros .form-label {
+            margin-bottom: 10px;
+        }
+
+        .contenedor-filtros .form-control,
+        .contenedor-filtros .form-range {
+            margin-bottom: 15px;
+        }
+               
+        .contenedor-filtros .btn {
+            border-radius: 20px;
+            padding: 10px; 
+            font-size: 16px;
+        }
+               
+        .contenedor-filtros .form-range {
+            width: 100%;
+        }
+               
+        .contenedor-filtros #precioMaxOutput {
+            display: block;
+            text-align: right;
+            margin-top: 5px;
+        }
+               
+        .contenedor-filtros .btn-secondary {
+            background-color: black; 
+            border: 2px solid black;
+        }
+                    
+            .contenedor-filtros .btn-secondary:hover {
+                background-color: black;
+                border-color: black;
+            }
+
+    .custom-btn {
+        border: 2px solid black !important;
+        color: black;
+        background-color: transparent;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+        .custom-btn:hover {
+            border: 2px solid black !important;
+            background-color: black !important;
+            color: white !important;
+        }
+
 </style>
 
-
 <main>
+    <h2 class="text-center mb-4" style="margin-top: 20px; margin-bottom: 20px; color: #ff2d2d;">Vehículos Disponibles</h2>
 
+    <!-- Fila para los filtros -->
     <div class="container mt-4">
-        <div class="row">
-            <div class="col-lg-3 mt-5">
-
-                <div class="contenedor-filtros">
-
-                    <form method="get" action="@Url.Action("VistaVehiculos", "Carros")">
-
-                        <div class="mb-3">
+        <div class="row mb-4">
+            <div class="col-lg-12">
+                <div class="contenedor-filtros p-3">
+                    <form method="get" action="@Url.Action("VistaVehiculos", "Carros")" class="row g-3" style="background-color:black;">
+                        <div class="col-md-4">
                             <label for="Modelo" class="form-label">Modelo:</label>
                             <input type="text" class="form-control" id="Modelo" name="Modelo" placeholder="-- Cualquier modelo --" value="@ViewBag.ModeloSeleccionado" />
                         </div>
-
-                        <div class="mb-3">
+                        <div class="col-md-4">
                             <label for="Anio" class="form-label">Año:</label>
                             <input type="text" class="form-control" id="Anio" name="Anio" placeholder="-- Cualquier año --" value="@ViewBag.AnioSeleccionado" />
                         </div>
-
-                        <div class="mb-3">
+                        <div class="col-md-4">
                             <label for="precioMax" class="form-label">Precio Máximo:</label>
-                            <input type="range" class="form-range" id="precioMax" name="precioMax" min="1" max="1000000" step="10" value="@ViewBag.PrecioMaxSeleccionado" />
+                            <input type="range" class="form-range" id="precioMax" name="precioMax" min="1" max="1000000" step="10" value="@ViewBag.PrecioMaxSeleccionado" /> <br />
                             <output for="precioMax" id="precioMaxOutput">$@ViewBag.PrecioMaxSeleccionado</output>
                         </div>
 
-                        <button type="submit" class="btn btn-success">Buscar</button>
 
-                        <a href="@Url.Action("VistaVehiculos", "Carros")" class="btn btn-secondary">Limpiar</a>
+
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-danger w-50" style="margin-left: 160px; margin-top:10px;">Buscar</button>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="@Url.Action("VistaVehiculos", "Carros")" class="btn btn-danger w-50" style="margin-left: 160px; margin-top: 10px;">Limpiar</a>
+                        </div>
+
+
+
                     </form>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <h2 class="mb-2 text-center">Lista de Carros</h2>
+        </div>
+    </div>
 
-                <div class="row">
-                    @foreach (var carro in Model)
-                    {
-                        <div class="col-md-3 col-lg-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">@carro.Modelo - @carro.Anio</h5>
-                                    <p class="card-text"> </p>
-                                    <p class="card-text"> Transmision: @carro.Transmision </p>
-                                    <p class="card-text"><strong>Precio: @string.Format("${0:N2}", carro.Precio) | @carro.CantidadEnStock Disponibles</strong></p>
+    <div class="container mt-4">
+        <div class="row">
+            @foreach (var carro in Model)
+            {
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">@carro.Modelo - @carro.Anio</h5>
+                            <p class="card-text">Transmisión: @carro.Transmision</p>
+                            <p class="card-text"><strong>Precio: @string.Format("₡{0:N2}", carro.Precio) | @carro.CantidadEnStock Disponibles</strong></p>
 
-                                    <!-- Carrusel de imágenes -->
-                                    <div id="carouselcarro@(carro.Id)" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
-                                        <div class="carousel-inner">
-                                            @for (int i = 0; i < 2; i++)
+                            <!-- Carrusel de imágenes -->
+                            <div id="carouselcarro@(carro.Id)" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    @for (int i = 0; i < 2; i++)
+                                    {
+                                        <div class="carousel-item @(i == 0 ? "active" : "")">
+                                            @if (i == 0 && carro.Imagen1 != null && carro.Imagen1.Length > 0)
                                             {
-                                                <div class="carousel-item @(i == 0 ? "active" : "")">
-                                                    @if (i == 0 && carro.Imagen1 != null && carro.Imagen1.Length > 0)
-                                                    {
-                                                        <img src="data:image/png;base64,@Convert.ToBase64String(carro.Imagen1)" alt="Imagen del carro" class="img-fluid">
-                                                    }
-
-                                                    @if (i == 1 && carro.Imagen2 != null && carro.Imagen2.Length > 0)
-                                                    {
-                                                        <img src="data:image/png;base64,@Convert.ToBase64String(carro.Imagen2)" alt="Segunda Imagen del carro" class="img-fluid">
-                                                    }
-
-                                                    <!-- Cuando no hay imagen -->
-                                                    @if ((i == 0 && (carro.Imagen1 == null || carro.Imagen1.Length == 0)) ||
-                                                        (i == 1 && (carro.Imagen2 == null || carro.Imagen2.Length == 0)))
-                                                    {
-                                                        <div class="img-container">
-                                                            <p class="text-center" style="font-size: larger; color: #0d6efd;">Sin Imagen [@i]</p>
-                                                        </div>
-                                                    }
+                                                <img src="data:image/png;base64,@Convert.ToBase64String(carro.Imagen1)" alt="Imagen del carro" class="img-fluid">
+                                            }
+                                            @if (i == 1 && carro.Imagen2 != null && carro.Imagen2.Length > 0)
+                                            {
+                                                <img src="data:image/png;base64,@Convert.ToBase64String(carro.Imagen2)" alt="Segunda Imagen del carro" class="img-fluid">
+                                            }
+                                            @if ((i == 0 && (carro.Imagen1 == null || carro.Imagen1.Length == 0)) ||
+                                                (i == 1 && (carro.Imagen2 == null || carro.Imagen2.Length == 0)))
+                                            {
+                                                <div class="img-container">
+                                                    <p class="text-center" style="font-size: larger; color: #0d6efd;">Sin Imagen [@i]</p>
                                                 </div>
                                             }
                                         </div>
-                                        <!-- Botón de agregar al carrito -->
-                                        <form action="@Url.Action("AgregarVehiculoAlCarrito", "Carrito")" method="post">
-                                            <input type="hidden" name="carroId" value="@carro.Id" />
-                                            <button type="submit" class="btn btn-primary">Agregar al Carrito</button>
-                                        </form>
-
-                                        <!-- Controles del carrusel -->
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselcarro@(carro.Id)"
-                                                data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Anterior</span>
-                                        </button>
-
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselcarro@(carro.Id)"
-                                                data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Siguiente</span>
-                                        </button>
-                                    </div>
-
-
-                                    <!-- Acciones -->
-                                    <div class="mt-3">
-                                        <a class="btn btn-success" href="@Url.Action("MostrarVehiculoIndividual", new { Id =  @carro.Id })">Ver articulo</a>
-
-                                    </div>
-
-
+                                    }
                                 </div>
+                                <!-- Controles del carrusel -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselcarro@(carro.Id)" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselcarro@(carro.Id)" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+
+
+                            <!-- Botón de agregar al carrito / mensaje de no disponible -->
+                            @if (carro.CantidadEnStock > 0)
+                            {
+                                <form action="@Url.Action("AgregarVehiculoAlCarrito", "Carrito")" method="post" class="mt-3">
+                                    <input type="hidden" name="carroId" value="@carro.Id" />
+                                    <button type="submit" class="btn btn-danger w-100">Agregar al Carrito</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <p class="text-center text-danger mt-3">No disponible</p>
+                            }
+
+                            <!-- Acción adicional -->
+                            <div class="mt-3">
+                                <a class="btn custom-btn" href="@Url.Action("MostrarVehiculoIndividual", new { Id = @carro.Id })">Ver artículo</a>
                             </div>
                         </div>
-                    }
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 </main>
 
 <script>
-    // Inicializar los carruseles al cargar la página
     @foreach (var carro in Model)
     {
         <text>
@@ -319,33 +223,7 @@
     }
 </script>
 
-
-
-<!-- Agregar Font Awesome y Bootstrap (popper.js y bootstrap.js) -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-
-<style>
-    .floating-buttons {
-        position: fixed;
-        bottom: 50%;
-        right: 20px;
-        transform: translateY(50%);
-    }
-
-        .floating-buttons a {
-            display: block;
-            margin-bottom: 10px;
-        }
-</style>
-
-<script>
-    // Inicializar tooltips de Bootstrap
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-</script>
-

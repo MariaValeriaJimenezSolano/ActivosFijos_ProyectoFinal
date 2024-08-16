@@ -1,8 +1,65 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "AccesoBloqueado";
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; // Utiliza el diseño específico para administración
 }
 
-<h2>Acceso Bloqueado, restringido a las funciones de administrador unicamente</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        .access-denied-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            text-align: center;
+            color: #343a40;
+            font-family: 'Arial', sans-serif;
+        }
 
+            .access-denied-container h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+            .access-denied-container p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
+
+            .access-denied-container .btn-back-home {
+                background-color: #28a745;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: background-color 0.3s ease;
+            }
+
+                .access-denied-container .btn-back-home:hover {
+                    background-color: #218838;
+                }
+
+        .access-denied-icon {
+            font-size: 4rem;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="access-denied-container">
+        <div class="access-denied-icon">🚫</div>
+        <h2>Acceso Bloqueado</h2>
+        <p>Este contenido está restringido y solo es accesible para usuarios externos</p>
+        <a href="@Url.Action("Index", "Admin")" class="btn-back-home">Volver a la página principal</a>
+    </div>
+
+</body>
+</html>
