@@ -3,8 +3,8 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; // Utiliza el diseño específico para administración
 }
 
-<h2>Repuesto Page</h2>
-<p>Esta es la página de Repuesto.</p>
+<h2>Repuestos</h2>
+<p>Esta es la página de Repuesto</p>
 
 
 <script>
@@ -12,16 +12,14 @@
     document.addEventListener('DOMContentLoaded', actualizarContadorCarrito);
 </script>
 
-
 <style>
-
     .card-body {
-        flex: 1 1 auto;
-        padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-        color: var(--bs-card-color);
-        height: 480px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f5f5f5;
     }
-
 
     .carousel-item {
         text-align: center;
@@ -34,280 +32,368 @@
             object-fit: cover;
         }
 
-    .carousel-indicators {
-        bottom: 10px;
-    }
-
-        .carousel-indicators button {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-
-        .carousel-indicators [data-bs-target] {
-            box-sizing: content-box;
-            flex: 0 1 auto;
-            width: 12px;
-            height: 18px;
-            padding: 0;
-            margin-right: 3px;
-            margin-left: 3px;
-            text-indent: -999px;
-            cursor: pointer;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 0;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            transition: opacity 0.6s ease;
-        }
-
-
-    /*Lo que sigue controla que todas las imagenes tengan el mismo tamaño y un width ya heredado de 100%*/
     .img-container {
-        height: 232px; /* Altura deseada */
+        height: 232px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ddd; /* Color de fondo si no hay imagen */
+        background-color: #ddd;
     }
 
-    .img-fluid {
-        height: 232px;
-        object-fit: cover;
-    }
-
-    button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
-        cursor: pointer;
-        opacity: 1;
-    }
-
-
-    .contenedor-filtros {
-        /* border: solid 1px; */
-        display: table;
-        color: white;
-        align-items: center;
-        padding: 30px;
-        width: 98%;
-        margin: auto;
-        background: #4098d6;
-        box-shadow: 0px 94px 277px -6px #ffffff;
-    }
-
-
-    body {
-        /*background-image: url('/Content/images/fondoPrincipal.jpg');*/
-        background-color: #fff
-    }
-
-
-
-    .button-85 {
-        padding: 0.6em 2em;
-        border: none;
-        outline: none;
-        color: rgb(255, 255, 255);
-        background: #111;
-        cursor: pointer;
-        position: relative;
-        z-index: 0;
-        border-radius: 10px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-    }
-
-        .button-85:before {
-            content: "";
-            background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000 );
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            background-size: 400%;
-            z-index: -1;
-            filter: blur(5px);
-            -webkit-filter: blur(5px);
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            animation: glowing-button-85 20s linear infinite;
-            transition: opacity 0.3s ease-in-out;
-            border-radius: 10px;
-        }
-
-    @@keyframes glowing-button-85 {
-        0% {
-            background-position: 0 0;
-        }
-
-        50% {
-            background-position: 400% 0;
-        }
-
-        100% {
-            background-position: 0 0;
-        }
-    }
-
-    .button-85:after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #222;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-    }
-
-    .button-29 {
-        align-items: center;
-        appearance: none;
-        background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-        border: 0;
-        border-radius: 6px;
-        box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-        box-sizing: border-box;
-        color: #fff;
-        cursor: pointer;
-        display: inline-flex;
-        font-family: "JetBrains Mono",monospace;
-        height: 48px;
-        justify-content: center;
-        line-height: 1;
-        list-style: none;
-        overflow: hidden;
-        padding-left: 16px;
-        padding-right: 16px;
-        position: relative;
-        text-align: left;
-        text-decoration: none;
-        transition: box-shadow .15s,transform .15s;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        white-space: nowrap;
-        will-change: box-shadow,transform;
-        font-size: 18px;
+    .container.mt-4 {
+        margin-top: 30px;
     }
 
     .card:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         transform: scale(1.02);
         transition: all 0.3s ease;
     }
+
+    .contenedor-filtros {
+        background: black;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 25px;
+    }
+
+        .contenedor-filtros .form-label {
+            margin-bottom: 10px;
+        }
+
+        .contenedor-filtros .form-control,
+        .contenedor-filtros .form-range {
+            margin-bottom: 15px;
+        }
+
+        .contenedor-filtros .btn {
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .contenedor-filtros .form-range {
+            width: 100%;
+        }
+
+        .contenedor-filtros #precioMaxOutput {
+            display: block;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .contenedor-filtros .btn-secondary {
+            background-color: black;
+            border: 2px solid black;
+        }
+
+            .contenedor-filtros .btn-secondary:hover {
+                background-color: black;
+                border-color: black;
+            }
+
+    .custom-btn {
+        border: 2px solid black !important;
+        color: black;
+        background-color: transparent;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+        .custom-btn:hover {
+            border: 2px solid black !important;
+            background-color: black !important;
+            color: white !important;
+        }
 </style>
+@*<style>
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+
+        .carousel-item {
+            text-align: center;
+            overflow: hidden;
+        }
+
+            .carousel-item img {
+                max-height: 300px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+        .carousel-indicators {
+            bottom: 10px;
+        }
+
+            .carousel-indicators button {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+
+            .carousel-indicators [data-bs-target] {
+                box-sizing: content-box;
+                flex: 0 1 auto;
+                width: 12px;
+                height: 18px;
+                padding: 0;
+                margin-right: 3px;
+                margin-left: 3px;
+                text-indent: -999px;
+                cursor: pointer;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                transition: opacity 0.6s ease;
+            }
+
+
+        /*Lo que sigue controla que todas las imagenes tengan el mismo tamaño y un width ya heredado de 100%*/
+        .img-container {
+            height: 232px; /* Altura deseada */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddd; /* Color de fondo si no hay imagen */
+        }
+
+        .img-fluid {
+            height: 232px;
+            object-fit: cover;
+        }
+
+        button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+
+        .contenedor-filtros {
+            /* border: solid 1px; */
+            display: table;
+            color: white;
+            align-items: center;
+            padding: 30px;
+            width: 98%;
+            margin: auto;
+            background: #4098d6;
+            box-shadow: 0px 94px 277px -6px #ffffff;
+        }
+
+
+        body {
+            /*background-image: url('/Content/images/fondoPrincipal.jpg');*/
+            background-color: #fff
+        }
+
+
+
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+            .button-85:before {
+                content: "";
+                background: linear-gradient( 45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000 );
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                background-size: 400%;
+                z-index: -1;
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                animation: glowing-button-85 20s linear infinite;
+                transition: opacity 0.3s ease-in-out;
+                border-radius: 10px;
+            }
+
+        @@keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        .button-29 {
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+    </style>*@
 
 
 <main>
     <div class="container mt-4">
-        <div class="row">
-            <div class="col-lg-3 mt-5">
-
+        <div class="row mb-4">
+            <div class="col-lg-12">
                 <div class="contenedor-filtros">
-
-                    <form method="get" action="@Url.Action("Index", "Repuesto")">
-
-                        <div class="mb-3">
+                    <form method="get" action="@Url.Action("Index", "Repuesto")" class="row g-3" style="background-color:black;">
+                        <div class="col-md-4">
                             <label for="Modelo" class="form-label">Modelo:</label>
                             <input type="text" class="form-control" id="Modelo" name="Modelo" placeholder="-- Cualquier modelo --" value="@ViewBag.ModeloSeleccionado" />
                         </div>
-
-                        <div class="mb-3">
+                        <div class="col-md-4">
                             <label for="Anio" class="form-label">Año:</label>
                             <input type="text" class="form-control" id="Anio" name="Anio" placeholder="-- Cualquier año --" value="@ViewBag.AnioSeleccionado" />
                         </div>
-
-
-                        <div class="mb-3">
+                        <div class="col-md-4">
                             <label for="Precio" class="form-label">Precio:</label>
                             <input type="text" class="form-control" id="Precio" name="Precio" placeholder="-- Cualquier Precio --" value="@ViewBag.PrecioSeleccionado" />
                         </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-danger w-50" style="margin-left: 160px; margin-top:10px;">Buscar</button>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="@Url.Action("Index", "Repuesto")" class="btn btn-danger w-50" style="margin-left: 160px; margin-top: 10px;">Limpiar</a>
+                        </div>
+                        @*<button type="submit" class="btn btn-success">Buscar</button>*@
 
-
-                        <button type="submit" class="btn btn-success">Buscar</button>
-
-                        <a href="@Url.Action("Index", "Repuesto")" class="btn btn-secondary">Limpiar</a>
-
+                        @*<a href="@Url.Action("Index", "Repuesto")" class="btn btn-secondary">Limpiar</a>*@
                     </form>
-
                 </div>
-
             </div>
-            <div class="col-lg-8">
-                <h2 class="mb-2 text-center">Lista de Repuestos</h2>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <h2 class="mb-2 text-center">Lista de Repuestos</h2>
 
-                <a href="@Url.Action("Index", "Admin")" class="btn btn-success">Regresar al menú principal</a>
-                <a class="btn btn-success mb-4" href="@Url.Action("Add")">Agregar</a>
+        @*<a href="@Url.Action("Index", "Admin")" class="btn btn-success">Regresar al menú principal</a>*@
+        <a class="btn btn-success mb-4" href="@Url.Action("Add")">Agregar</a>
 
-                <div class="row">
-                    @foreach (var repuesto in Model)
-                    {
-                        <div class="col-md-3 col-lg-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">@repuesto.Modelo - @repuesto.Anio</h5>
-                                    <p class="card-text"> </p>
-                                    <p class="card-text"> anio: @repuesto.Anio </p>
-                                    <p class="card-text"><strong>Precio: @string.Format("${0:N2}", repuesto.Precio) | @repuesto.CantidadEnStock Disponibles</strong></p>
+        <div class="row">
+            @foreach (var repuesto in Model)
+            {
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card  h-100 ">
+                        <div class="card-body">
+                            <h5 class="card-title text-center ">@repuesto.Modelo - @repuesto.Anio</h5>
+                            <p class="card-text"> </p>
+                            <p class="card-text"> anio: @repuesto.Anio </p>
+                            <p class="card-text"><strong>Precio: @string.Format("${0:N2}", repuesto.Precio) | @repuesto.CantidadEnStock Disponibles</strong></p>
 
-                                    <!-- Carrusel de imágenes -->
-                                    <div id="carouselrepuesto@(repuesto.Id)" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
-                                        <div class="carousel-inner">
-                                            @for (int i = 0; i < 2; i++)
+                            <!-- Carrusel de imágenes -->
+                            <div id="carouselrepuesto@(repuesto.Id)" class="carousel slide" data-bs-ride="carousel" @*data-bs-interval="10000"*@>
+                                <div class="carousel-inner">
+                                    @for (int i = 0; i < 2; i++)
+                                    {
+                                        <div class="carousel-item @(i == 0 ? "active" : "")">
+                                            @if (i == 0 && repuesto.Imagen1 != null && repuesto.Imagen1.Length > 0)
                                             {
-                                                <div class="carousel-item @(i == 0 ? "active" : "")">
-                                                    @if (i == 0 && repuesto.Imagen1 != null && repuesto.Imagen1.Length > 0)
-                                                    {
-                                                        <img src="data:image/png;base64,@Convert.ToBase64String(repuesto.Imagen1)" alt="Imagen del repuesto" class="img-fluid">
-                                                    }
+                                                <img src="data:image/png;base64,@Convert.ToBase64String(repuesto.Imagen1)" alt="Imagen del repuesto" class="img-fluid">
+                                            }
 
-                                                    @if (i == 1 && repuesto.Imagen2 != null && repuesto.Imagen2.Length > 0)
-                                                    {
-                                                        <img src="data:image/png;base64,@Convert.ToBase64String(repuesto.Imagen2)" alt="Segunda Imagen del repuesto" class="img-fluid">
-                                                    }
+                                            @if (i == 1 && repuesto.Imagen2 != null && repuesto.Imagen2.Length > 0)
+                                            {
+                                                <img src="data:image/png;base64,@Convert.ToBase64String(repuesto.Imagen2)" alt="Segunda Imagen del repuesto" class="img-fluid">
+                                            }
 
-                                                    <!-- Cuando no hay imagen -->
-                                                    @if ((i == 0 && (repuesto.Imagen1 == null || repuesto.Imagen1.Length == 0)) ||
-                                                        (i == 1 && (repuesto.Imagen2 == null || repuesto.Imagen2.Length == 0)))
-                                                    {
-                                                        <div class="img-container">
-                                                            <p class="text-center" style="font-size: larger; color: #0d6efd;">Sin Imagen [@i]</p>
-                                                        </div>
-                                                    }
+                                            <!-- Cuando no hay imagen -->
+                                            @if ((i == 0 && (repuesto.Imagen1 == null || repuesto.Imagen1.Length == 0)) ||
+                                                (i == 1 && (repuesto.Imagen2 == null || repuesto.Imagen2.Length == 0)))
+                                            {
+                                                <div class="img-container">
+                                                    <p class="text-center" style="font-size: larger; color: #0d6efd;">Sin Imagen [@i]</p>
                                                 </div>
                                             }
                                         </div>
-                                        <!-- Controles del carrusel -->
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselrepuesto@(repuesto.Id)"
-                                                data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Anterior</span>
-                                        </button>
-
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselrepuesto@(repuesto.Id)"
-                                                data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Siguiente</span>
-                                        </button>
-                                    </div>
-
-
-                                    <!-- Acciones -->
-                                    <div class="mt-3">
-                                        <a class="btn btn-success" href="@Url.Action("Edit", new { Id = repuesto.Id })">Editar</a>
-                                        <a class="btn btn-danger" href="@Url.Action("Delete", new { Id = repuesto.Id })"
-                                           onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?');">Eliminar</a>
-                                    </div>
-
-
+                                    }
                                 </div>
+
+                                <!-- Controles del carrusel -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselrepuesto@(repuesto.Id)" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselrepuesto@(repuesto.Id)" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+                            <!-- Acciones -->
+                            <div class="mt-3">
+                                <a class="btn btn-success" href="@Url.Action("Edit", new { Id = repuesto.Id })">Editar</a>
+                                <a class="btn btn-danger" href="@Url.Action("Delete", new { Id = repuesto.Id })"
+                                   onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?');">Eliminar</a>
                             </div>
                         </div>
-                    }
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 </main>
@@ -351,4 +437,5 @@
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 </script>
+
 
