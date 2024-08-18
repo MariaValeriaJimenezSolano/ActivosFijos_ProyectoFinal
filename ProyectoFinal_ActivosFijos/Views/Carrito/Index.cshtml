@@ -114,9 +114,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if (ViewBag.Carros != null && ((List<ProyectoFinal_ActivosFijos.Models.Carros>)ViewBag.Carros).Any())
+                        @if (ViewBag.Carros != null && ((List<ProyectoFinal_ActivosFijos.Models.Carro>)ViewBag.Carros).Any())
                         {
-                            var carros = (List<ProyectoFinal_ActivosFijos.Models.Carros>)ViewBag.Carros;
+                            var carros = (List<ProyectoFinal_ActivosFijos.Models.Carro>)ViewBag.Carros;
                             foreach (var item in carros)
                             {
                                 <tr>
@@ -153,9 +153,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if (ViewBag.Repuestos != null && ((List<ProyectoFinal_ActivosFijos.Models.Repuestos>)ViewBag.Repuestos).Any())
+                        @if (ViewBag.Repuestos != null && ((List<ProyectoFinal_ActivosFijos.Models.Repuesto>)ViewBag.Repuestos).Any())
                         {
-                            var repuestos = (List<ProyectoFinal_ActivosFijos.Models.Repuestos>)ViewBag.Repuestos;
+                            var repuestos = (List<ProyectoFinal_ActivosFijos.Models.Repuesto>)ViewBag.Repuestos;
                             foreach (var item in repuestos)
                             {
                                 <tr>

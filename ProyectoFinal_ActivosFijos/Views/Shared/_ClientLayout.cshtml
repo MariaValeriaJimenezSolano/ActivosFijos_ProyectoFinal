@@ -321,9 +321,15 @@
             }
         }
 
-        .no-rotate {
-            transform: rotate(0deg); /* Desactiva la rotación */
+        .no-rotate a {
+            transform: rotate(0deg); /* Desactiva la rotación para el icono de perfil */
+            border: none; /* Elimina el borde de rotación */
         }
+
+        .no-rotate img {
+            transform: rotate(0deg); /* Asegúrate de que la imagen no esté rotada */
+        }
+            
     </style>
 </head>
 
@@ -345,8 +351,10 @@
                 <li><a href="https://www.facebook.com/ToyotaCostaRica" target="_blank"><i class="fab fa-facebook"></i></a></li>
                 <li><a href="https://x.com/toyotacr" target="_blank"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="https://www.instagram.com/toyotacostarica/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
 
-                <li class="nav-item dropdown">
+            <ul class="nav-link">
+                <li class="nav-item dropdown no-rotate">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="~/images/profile-icon.png" alt="Perfil" style="width: 24px; height: 24px;" />
                     </a>
@@ -356,9 +364,8 @@
                         <a class="dropdown-item" href="@Url.Action("CerrarSesion", "Comprador")">Cerrar Sesión</a>
                     </div>
                 </li>
-
             </ul>
-
+            
         </div>
     </nav>
 

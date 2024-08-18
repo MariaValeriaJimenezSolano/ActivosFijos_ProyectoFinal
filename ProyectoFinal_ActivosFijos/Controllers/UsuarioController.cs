@@ -158,6 +158,12 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             return RedirectToAction("Index");
         }
 
+        [VerifySession]
+        public ActionResult CerrarSesion()
+        {
+            Session.Clear();
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
 
