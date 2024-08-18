@@ -101,7 +101,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
 
                 Repuesto repuestosTO = new Repuesto
                 {
-                    Id = model.Id,
+                    // Id = model.Id,
                     Nombre = model.Nombre,
                     Estado = model.Estado,
                     Marca = model.Marca,
@@ -110,17 +110,35 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                     Descripcion = model.Descripcion,
                     Precio = (decimal)model.Precio,
                     CantidadEnStock = (int)model.CantidadEnStock,
-                    // Agregar el campo de imagen
-                    Imagen1 = model.Imagen1,
-                    Imagen2 = model.Imagen2,
+                    Imagen1 = imagenBytes,
+                    Imagen2 = imagenBytes2,
                 };
 
-                db.Repuestos.Add(repuestosTO);
-                db.SaveChanges();
+                try
+                {
+                    db.Repuestos.Add(repuestosTO);
+                    db.SaveChanges();
 
-                return Redirect(Url.Content("~/Repuesto/Index"));
+                    return Redirect(Url.Content("~/Repuesto/Index"));
+                }
+                catch (System.Data.Entity.Infrastructure.DbUpdateException ex)
+                {
+                    // Captura detalles de la excepción interna
+                    var innerException = ex.InnerException?.InnerException;
+                    if (innerException != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"Error interno: {innerException.Message}");
+                    }
+
+                    // Opción para capturar y mostrar detalles de la excepción
+                    ModelState.AddModelError("", "Ocurrió un error al intentar guardar los datos. Por favor, intenta nuevamente.");
+
+                    // Retorna la vista con el modelo
+                    return View(model);
+                }
             }
         }
+
 
         //EDITAR
         [HttpGet]
@@ -144,6 +162,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                     Estado = repuesto.Estado,
                     Descripcion = repuesto.Descripcion,
                     Precio = (decimal)repuesto.Precio,
+                    Modelo = repuesto.Modelo,
                     Marca = repuesto.Marca,
                     Anio = (int)repuesto.Anio,
                     CantidadEnStock = (int)repuesto.CantidadEnStock,
@@ -169,6 +188,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 repuestoTO.Nombre = model.Nombre;
                 repuestoTO.Descripcion = model.Descripcion;
                 repuestoTO.Precio = model.Precio;
+                repuestoTO.Modelo = model.Modelo;
                 repuestoTO.Estado = model.Estado;
                 repuestoTO.Anio = model.Anio;
                 repuestoTO.CantidadEnStock = model.CantidadEnStock;

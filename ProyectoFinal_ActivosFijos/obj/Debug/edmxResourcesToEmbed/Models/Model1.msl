@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ActivosFijosDBModelStoreContainer" CdmEntityContainer="ActivosFijosBDEntities">
     <EntitySetMapping Name="Carros">
-      <EntityTypeMapping TypeName="ActivosFijosDBModel.Carro">
+      <EntityTypeMapping TypeName="ActivosFijosDBModel.Carros">
         <MappingFragment StoreEntitySet="Carros">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Marca" ColumnName="Marca" />
@@ -19,7 +19,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Repuestos">
-      <EntityTypeMapping TypeName="ActivosFijosDBModel.Repuesto">
+      <EntityTypeMapping TypeName="ActivosFijosDBModel.Repuestos">
         <MappingFragment StoreEntitySet="Repuestos">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -35,7 +35,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TipoDeUsuarios">
+    <EntitySetMapping Name="TipoDeUsuario">
       <EntityTypeMapping TypeName="ActivosFijosDBModel.TipoDeUsuario">
         <MappingFragment StoreEntitySet="TipoDeUsuario">
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -44,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Usuarios">
-      <EntityTypeMapping TypeName="ActivosFijosDBModel.Usuario">
+      <EntityTypeMapping TypeName="ActivosFijosDBModel.Usuarios">
         <MappingFragment StoreEntitySet="Usuarios">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />

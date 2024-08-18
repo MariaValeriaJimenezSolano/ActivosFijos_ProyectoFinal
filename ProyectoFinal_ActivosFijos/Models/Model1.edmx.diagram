@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c6ef8a21acb844abbf10c208eb867727" Name="Diagram1">
-        <EntityTypeShape EntityType="ActivosFijosDBModel.Carro" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivosFijosDBModel.Repuesto" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+      <Diagram DiagramId="9a72c016f6a34d7a93ddf0bdc0116d08" Name="Diagram1">
+        <EntityTypeShape EntityType="ActivosFijosDBModel.Carros" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosDBModel.Repuestos" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ActivosFijosDBModel.TipoDeUsuario" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ActivosFijosDBModel.Usuario" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosDBModel.Usuarios" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="ActivosFijosDBModel.FK_Usuarios_TipoUsuario" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

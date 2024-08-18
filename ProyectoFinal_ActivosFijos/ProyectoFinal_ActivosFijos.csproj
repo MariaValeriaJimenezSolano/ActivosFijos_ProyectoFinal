@@ -141,7 +141,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Carro.cs">
+    <Compile Include="Models\Carros.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Model1.Context.cs">
@@ -159,7 +159,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Repuesto.cs">
+    <Compile Include="Models\Repuestos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TableViewModel\CarrosTableViewModel.cs" />
@@ -168,7 +168,7 @@
     <Compile Include="Models\TipoDeUsuario.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Usuario.cs">
+    <Compile Include="Models\Usuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VerificarUsuario_Result.cs">

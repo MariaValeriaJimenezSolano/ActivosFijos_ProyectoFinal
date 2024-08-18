@@ -48,7 +48,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
         {
             return View();
         }
-
+                
         [HttpPost]
         public ActionResult Add(UsuariosTableViewModel model)
         {
@@ -58,7 +58,6 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             {
                 Usuario usuariosTO = new Usuario
                 {
-                    Id = model.Id,
                     Nombre = model.Nombre,
                     Cedula = model.Cedula,
                     PrimerApellido = model.PrimerApellido,
@@ -72,12 +71,32 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                     Contrasena = model.Contrasena,
                 };
 
-                db.Usuarios.Add(usuariosTO);
-                db.SaveChanges();
+                try
+                {
+                    db.Usuarios.Add(usuariosTO);
+                    db.SaveChanges();
 
-                return Redirect(Url.Content("~/Usuario/Index"));
+                    return Redirect(Url.Content("~/Usuario/Index"));
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException ex)
+                {
+                    foreach (var validationErrors in ex.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Propiedad: {validationError.PropertyName} Error: {validationError.ErrorMessage}");
+                        }
+                    }
+
+                    // Agrega un mensaje de error al estado del modelo para mostrarlo en la vista
+                    ModelState.AddModelError("", "Ocurrió un error de validación. Por favor, verifica los valores ingresados.");
+
+                    // Opcional: puedes retornar el modelo con los errores para que el usuario vea los mensajes
+                    return View(model);
+                }
             }
         }
+
 
         //EDITAR
         [HttpGet]

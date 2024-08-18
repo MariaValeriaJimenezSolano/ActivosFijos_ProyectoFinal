@@ -20,6 +20,16 @@
 
     <style>
 
+
+        .no-rotate a {
+            transform: rotate(0deg);
+            border: none;
+        }
+
+        .no-rotate img {
+            transform: rotate(0deg);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -331,11 +341,11 @@
 
     <!-- .................Nav................. -->
     <nav>
-        <div class="container nav-container">            
+        <div class="container nav-container">
             <a href="@Url.Action("Index", "Comprador")" class="logo"><h3>Toyota</h3></a>
 
-
             <ul class="nav-link">
+
                 <li><a href="" class="active">@Html.ActionLink("Home", "Index", "Comprador", new { area = "" }, new { @class = "nav-link" })</a></li>
                 <li><a href="">@Html.ActionLink("Vehiculos Disponibles", "VistaVehiculos", "Carros", new { area = "" }, new { @class = "nav-link" })</a></li>
                 <li><a href="">@Html.ActionLink("Repuestos Disponibles", "VistaRepuestos", "Repuesto", new { area = "" }, new { @class = "nav-link" })</a></li>
@@ -347,16 +357,18 @@
                 <li><a href="https://www.instagram.com/toyotacostarica/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a></li>
 
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="~/images/profile-icon.png" alt="Perfil" style="width: 24px; height: 24px;" />
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="@Url.Action("Edit", "Comprador", new { id = (Session["UsuarioActual"] as ProyectoFinal_ActivosFijos.Models.ViewModel.UsuariosViewModel)?.Id })">Gestion de Perfil</a>
-                        <a class="dropdown-item" href="@Url.Action("Index", "Carrito")">Ver carrito de compras</a>
-                        <a class="dropdown-item" href="@Url.Action("CerrarSesion", "Comprador")">Cerrar Sesión</a>
-                    </div>
-                </li>
+                <ul class="nav-link">
+                    <li class="nav-item dropdown no-rotate">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="~/images/profile-icon.png" alt="Perfil" style="width: 24px; height: 24px;" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="@Url.Action("Edit", "Comprador", new { id = (Session["UsuarioActual"] as ProyectoFinal_ActivosFijos.Models.ViewModel.UsuariosViewModel)?.Id })">Gestion de Perfil</a>
+                            <a class="dropdown-item" href="@Url.Action("Index", "Carrito")">Ver carrito de compras</a>
+                            <a class="dropdown-item" href="@Url.Action("CerrarSesion", "Comprador")">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
 
             </ul>
 

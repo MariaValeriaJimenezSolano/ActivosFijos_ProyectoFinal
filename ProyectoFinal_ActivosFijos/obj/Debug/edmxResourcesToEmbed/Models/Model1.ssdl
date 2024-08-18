@@ -20,7 +20,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
     <Property Name="Descripcion" Type="nvarchar(max)" />
     <Property Name="Marca" Type="nvarchar" MaxLength="50" />

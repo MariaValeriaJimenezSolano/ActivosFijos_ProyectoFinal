@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ActivosFijosDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Carro">
+  <EntityType Name="Carros">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -16,11 +16,11 @@
     <Property Name="Imagen2" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="CantidadEnStock" Type="Int32" />
   </EntityType>
-  <EntityType Name="Repuesto">
+  <EntityType Name="Repuestos">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -40,7 +40,7 @@
     <Property Name="TipoDeUsuario1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_TipoUsuario" FromRole="TipoDeUsuario" ToRole="Usuarios" />
   </EntityType>
-  <EntityType Name="Usuario">
+  <EntityType Name="Usuarios">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -61,7 +61,7 @@
   </EntityType>
   <Association Name="FK_Usuarios_TipoUsuario">
     <End Role="TipoDeUsuario" Type="Self.TipoDeUsuario" Multiplicity="0..1" />
-    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="*" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoDeUsuario">
         <PropertyRef Name="Id" />
@@ -72,12 +72,12 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ActivosFijosBDEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Carros" EntityType="Self.Carro" />
-    <EntitySet Name="Repuestos" EntityType="Self.Repuesto" />
-    <EntitySet Name="TipoDeUsuarios" EntityType="Self.TipoDeUsuario" />
-    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+    <EntitySet Name="Carros" EntityType="Self.Carros" />
+    <EntitySet Name="Repuestos" EntityType="Self.Repuestos" />
+    <EntitySet Name="TipoDeUsuario" EntityType="Self.TipoDeUsuario" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
     <AssociationSet Name="FK_Usuarios_TipoUsuario" Association="Self.FK_Usuarios_TipoUsuario">
-      <End Role="TipoDeUsuario" EntitySet="TipoDeUsuarios" />
+      <End Role="TipoDeUsuario" EntitySet="TipoDeUsuario" />
       <End Role="Usuarios" EntitySet="Usuarios" />
     </AssociationSet>
     <FunctionImport Name="DeleteUserbyId">

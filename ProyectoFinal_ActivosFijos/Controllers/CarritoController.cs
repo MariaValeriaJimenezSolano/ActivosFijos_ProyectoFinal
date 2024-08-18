@@ -179,29 +179,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             ViewBag.Total = total;
             return View();
         }
-        /*
-        // POST: Carrito/Checkout
-        [HttpPost]
-        public ActionResult CheckOut(string cardNumber, string expiryDate, string cvv)
-        {
-            // Aquí se procesa el pago
-            // Validar y procesar la información de la tarjeta de crédito aquí
 
-            TempData["Message"] = "Compra realizada con éxito";
-
-            var usuarioViewModel = Session["UsuarioActual"] as UsuariosViewModel;
-            if (usuarioViewModel == null)
-            {
-                return RedirectToAction("Login", "Account");
-            }
-
-            var usuario = db.Usuarios.Find(usuarioViewModel.Id);
-            usuario.ProductosEnCarrito = null; // Limpiar el carrito después de la compra
-            db.SaveChanges();
-
-            return RedirectToAction("Index");
-        }
-        */
         // POST: Carrito/Checkout
         [HttpPost]
         public ActionResult CheckOut(string cardNumber, string expiryDate, string cvv)
