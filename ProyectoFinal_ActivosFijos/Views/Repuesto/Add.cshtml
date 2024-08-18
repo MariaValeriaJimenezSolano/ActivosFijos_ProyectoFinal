@@ -6,7 +6,9 @@
 <style>
     body {
         background-color: white;
-        font-family: Arial, sans-serif;
+        text-decoration: none;
+        list-style: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     h2 {
@@ -16,8 +18,7 @@
 
     .container-add {
         margin-top: 20px;
-        padding: 20px;
-        background-color: #f8f9fa;
+        padding: 20px;      
         border-radius: 10px;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     }
@@ -33,32 +34,38 @@
     .form-control {
         border: 1px solid #ced4da;
         border-radius: 5px;
-        padding: 10px;
+        /*padding: 10px*/;
     }
 
     input[type="submit"],
     input[type="button"] {
-        width: auto;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
+        display: inline-block;
+        width: fit-content;
+        padding: 12px 28px;
+        border:  2px;
+        border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
 
         input[type="submit"].btn-primary {
-            background-color: #28a745;
+            background-color: #898989;
             color: white;
         }
 
+            input[type="submit"].btn-primary:hover {
+                background-color: #6f6f6f;
+                color: white;
+            }
+
         input[type="button"].btn-outline-danger {
-            background-color: transparent;
-            border: 2px solid #dc3545;
-            color: #dc3545;
+            /*background-color: transparent;*/
+            border: 2px solid #f70a0a;
+            /*color: #dc3545;*/
         }
 
             input[type="button"].btn-outline-danger:hover {
-                background-color: #dc3545;
+                background-color: #a30606;
                 color: white;
             }
 </style>
@@ -76,7 +83,8 @@
                     @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label" })
                     @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-                </div><div class="form-group">
+                </div>
+                <div class="form-group">
 
                     @Html.LabelFor(model => model.Estado, htmlAttributes: new { @class = "control-label" })
                     @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
@@ -99,6 +107,9 @@
                     @Html.EditorFor(model => model.Modelo, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Modelo, "", new { @class = "text-danger" })
                 </div>
+            </div>
+
+            <div class="col-md-6">
 
                 <div class="form-group">
                     @Html.LabelFor(model => model.Anio, htmlAttributes: new { @class = "control-label" })
@@ -118,29 +129,29 @@
                     @Html.ValidationMessageFor(model => model.CantidadEnStock, "", new { @class = "text-danger" })
                 </div>
 
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Imagen1, "Imagen")
+                    <input type="file" name="ImagenFile" id="ImagenFile" class="form-control" onchange="previewImage(this, 'previewImagen')" />
+                    <img id="previewImagen" style="max-width: 200px; max-height: 200px; margin-top: 10px;" />
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Imagen2, "Imagen2")
+                    <input type="file" name="ImagenFile2" id="ImagenFile2" class="form-control" onchange="previewImage(this, 'previewImagen2')" />
+                    <img id="previewImagen2" style="max-width: 200px; max-height: 200px; margin-top: 10px;" />
+                </div>
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.Imagen1, "Imagen")
-                <input type="file" name="ImagenFile" id="ImagenFile" class="form-control" onchange="previewImage(this, 'previewImagen')" />
-                <img id="previewImagen" style="max-width: 200px; max-height: 200px; margin-top: 10px;" />
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Imagen2, "Imagen2")
-                <input type="file" name="ImagenFile2" id="ImagenFile2" class="form-control" onchange="previewImage(this, 'previewImagen2')" />
-                <img id="previewImagen2" style="max-width: 200px; max-height: 200px; margin-top: 10px;" />
-            </div>
-
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Agregar" class="btn btn-primary" />
-                <input type="button" class="btn btn-outline-danger" value="Regresar" onclick="document.location.href = '@Url.Content("~/Repuesto/Index")'" />
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Agregar" class="btn btn-primary" />
+                    <input type="button" class="btn btn-outline-danger" value="Regresar" onclick="document.location.href = '@Url.Content("~/Repuesto/Index")'" />
+                </div>
             </div>
         </div>
-    }
+
+
+     }
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

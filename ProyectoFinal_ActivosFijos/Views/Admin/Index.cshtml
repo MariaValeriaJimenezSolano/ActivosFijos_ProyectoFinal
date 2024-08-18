@@ -2,96 +2,382 @@
     ViewBag.Title = "Admin";
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; // Utiliza el diseño específico para administración
 }
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-    :root {
-        --color-primary: #a30606;
-        --color-white: #eaeaea;
-        --color-dark: #333;
-        --color-black: #222;
-    }
-    header{
-        width: 100;
-        height: 100vh;
-        display:flex;
-        align-items: center;
-    }
 
-    .header-left{
-        max-width: 630px;
-        position: relative;
-    }
-    .header-left h1{
-        font-size: 40px;
-        font-weight: 400;
-        color: var(--color-black);
-        margin-top: .5rem;
-    }
-    .header-left p{
-        margin: 15px 0 30px;
-        line-height: 150%;
-        font-size: 16px;
-    }
-    .header-container{
-        display: grid;
-        grid-template-columns: auto auto;
-        align-items: center;
-        height: 100%;
-    }
-    .header-right{
-        position: relative;
-        width: 450px;
-        height: 450px; 
-        margin:auto;
-    }
-    .sq-box{
-        height: 100%;
-        width:100%;
-        border:25px solid var(--color-primary); 
-        background: var(--color-white)
-    }
-</style>
-<main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota</title>
+
+    <!-- .................FontAwesome Link................. -->
+    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        :root {
+            --color-primary: #f70a0a;
+            --color-white: #eaeaea;
+            --color-dark: #333;
+            --color-black: #222;
+        }
+
+        .btn {
+            display: inline-block;
+            width: fit-content;
+            padding: 12px 28px;
+            background: var(--color-primary);
+            border: 2px solid var(--color-primary);
+            border-radius: 4px;
+            box-shadow: 0 10px rgba(0, 0, 0, 0.2);
+            color: var(--color-white);
+            letter-spacing: .4px;
+            font-weight: 600;
+            transition: .4s ease;
+        }
+
+            .btn:hover {
+                background: transparent;
+                color: var(--color-primary);
+            }
+
+        .container {
+            max-width: 1620px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .nav {
+            width: 100%;
+            height: 5rem;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            display: grid;
+            place-items: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .nav-container ul {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+            }
+
+        .logo h3 {
+            font-size: 25px;
+            color: var(--color-black);
+        }
+
+/*        .nav-link li a {
+            color: var(--color-black);
+            font-size: 17px;
+            transition: .4s ease;
+        }
+
+            .nav-link li a:hover {
+                color: var(--color-primary);
+                text-decoration: none;
+            }
+
+        .nav-link li .active {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .social-link li a {
+            height: 40px;
+            width: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent;
+            transform: rotate(45deg);
+            transition: .4s ease;
+            animation: socialAni forwards 1s ease;
+            animation-delay: calc(.2s*var(--i));
+            opacity: 0;
+        }
+
+            .social-link li a:hover {
+                border-color: black;
+                text-decoration: none;
+            }
+
+            .social-link li a i {
+                transform: rotate(-45deg);
+                font-size: 20px;
+                color: black;
+                text-decoration: none;
+            }*/
+
+
+        header {
+            width: 100vh;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left {
+            max-width: 620px;
+            position: relative;
+        }
+
+            .header-left h1 {
+                font-size: 54px;
+                line-height: 1.2;
+                color: var(--color-black);
+                animation: H1Ani forwards 1s ease;
+                opacity: 0;
+                animation-delay: 1s;
+            }
+
+            .header-left h3 {
+                font-size: 40px;
+                font-weight: 400;
+                color: var(--color-primary);
+                margin-top: .5rem;
+                animation: H1Ani forwards 1s ease;
+                opacity: 0;
+                animation-delay: .8s;
+            }
+
+            .header-left p {
+                margin: 15px 0 30px;
+                line-height: 150%;
+                font-size: 16px;
+                animation: logoAni forwards 1s ease;
+                opacity: 0;
+                animation-delay: .6s;
+            }
+
+        .header-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .header-right {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            transform: rotate(45deg);
+            right: -7%;
+        }
+
+        .sq-box {
+            height: 100%;
+            width: 100%;
+            margin-left: 230px;
+            margin-top: -315px;
+            border: 25px solid var(--color-primary);
+            background: var(--color-white);
+            box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: zoomOut 1s ease forwards;
+            animation-delay: 1.3s;
+        }
+
+            .sq-box img {
+                position: absolute;
+                transform: rotate(-45deg);
+                max-width: 700px;
+                top: 130px;
+                left: -180px;
+                opacity: 0;
+                animation: carAni forwards 1s ease;
+                animation-delay: 1.6s;
+            }
+
+        .sq-box2 {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            position: absolute;
+            margin-top: 200px;
+            margin-right: -40px;
+            width: 700px;
+            height: 700px;
+            background: var(--color-primary);
+            transform: rotate(45deg);
+            top: -26%;
+            right: -26%;
+            z-index: -1;
+            opacity: 0;
+            animation: sqbox2Ani forwards 1s ease;
+            animation-delay: .3s;
+        }
+
+        @@keyframes logoAni {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @@keyframes NavliaAni {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @@keyframes socialAni {
+            0% {
+                transform: translateX(100px) rotate(45deg);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0) rotate(45deg);
+                opacity: 1;
+            }
+        }
+
+        @@keyframes H1Ani {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @@keyframes zoomOut {
+            0% {
+                transform: scale(1.1);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @@keyframes carAni {
+            0% {
+                transform: translate(180px, -300px) scale(0) rotate(-45deg);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(0, 0) scale(1) rotate(-45deg);
+                opacity: 1;
+            }
+        }
+
+        @@keyframes sqbox2Ani {
+            0% {
+                right: -40%;
+                opacity: 0;
+            }
+
+            100% {
+                right: -26%;
+                opacity: 1;
+            }
+        }
+
+        .no-rotate {
+            transform: rotate(0deg); /* Desactiva la rotación */
+        }
+    </style>
+
+</head>
+
+<body>
     <header>
         <div class="container header-container">
-            <section class="header-left" aria-labelledby="toyotaTitle">
-                <h1 id="title">Bienvenido al mundo de Toyota</h1>
-                <p class="lead">Toyota es una empresa líder en la fabricación de automóviles que se enfoca en la innovación y la calidad.</p>
-                <p><a href="https://toyota.com" class="btn btn-primary btn-md">Descubre más &raquo;</a></p>
-            </section>
-
+            <div class="header-left">
+                <h1>Bienvenido </h1>
+                <h3> A Toyota</h3>
+                <p>
+                    Te encuentras en la aprte administrativa de Toyota en donde puedes, ver los usario, editar los productos y agregar nuevos componentes.
+                </p>
+                <a href="https://toyota.com" class="btn">Descubre mas</a>
+            </div>
             <div class="header-right">
                 <div class="sq-box">
-
+                    <img src="~/images/Carro1.png" alt="">
                 </div>
             </div>
-
-            <div class="row">
-                <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                    <h2 id="gettingStartedTitle">Gestionar Usuario </h2>
-                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Usuario")"> Ir &raquo;</a></p>
-                </section>
-                <section class="col-md-4" aria-labelledby="modelsTitle">
-                    <h2 id="modelsTitle">Gestionar Carros</h2>
-                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Carros")"> Ir &raquo;</a></p>
-                </section>
-                <section class="col-md-4" aria-labelledby="findDealerTitle">
-                    <h2 id="findDealerTitle">Gestionar Repuesto</h2>
-                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Repuesto")"> Ir &raquo;</a></p>
-                </section>
-            </div>
         </div>
-
+        <div class="sq-box2"></div>
 
     </header>
 
+    @*<header>
+        <div class="container header-container">
+            <div class="header-left">
+                <h1>Bienvenido </h1>
+            <h3>A Toyota</h3>
+                <p >Toyota es una empresa líder en la fabricación de automóviles que se enfoca en la innovación y la calidad.</p>
+                <a href="https://toyota.com" class="btn">Descubre más &raquo;</a>
+            </div>
 
-</main>
+            <div class="header-right">
+                <div class="sq-box">
+                    <img src="~/images/Carro1.png" alt=""/>
+                </div>
+            </div>
+
+            <div class="sq-box2"></div>
+
+            <div class="row">
+                <div class="" >
+                    <h2 id="gettingStartedTitle">Gestionar Usuario </h2>
+                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Usuario")"> Ir &raquo;</a></p>
+                </div>
+                <div class="">
+                    <h2 id="modelsTitle">Gestionar Carros</h2>
+                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Carros")"> Ir &raquo;</a></p>
+                </div>
+                <div class="">
+                    <h2 id="findDealerTitle">Gestionar Repuesto</h2>
+                    <p><a class="btn btn-outline-dark" href="@Url.Action("Index", "Repuesto")"> Ir &raquo;</a></p>
+                </div>
+            </div>
+        </div>*@
+    </header>
+</body>
+</html>
 
 

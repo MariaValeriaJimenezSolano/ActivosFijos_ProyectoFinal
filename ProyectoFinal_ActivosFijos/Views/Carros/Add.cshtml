@@ -6,7 +6,9 @@
 <style>
     body {
         background-color: white;
-        font-family: Arial, sans-serif;
+        text-decoration: none;
+        list-style: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     h2 {
@@ -17,7 +19,7 @@
     .container-add {
         margin-top: 20px;
         padding: 20px;
-        background-color: #f8f9fa;
+      
         border-radius: 10px;
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     }
@@ -33,7 +35,7 @@
     .form-control {
         border: 1px solid #ced4da;
         border-radius: 5px;
-        padding: 10px;
+        /*padding: 10px;*/
     }
 
     input[type="submit"],
@@ -47,18 +49,22 @@
     }
 
         input[type="submit"].btn-primary {
-            background-color: #28a745;
+            background-color: #898989;
             color: white;
         }
+            input[type="submit"].btn-primary:hover {
+                background-color: #6f6f6f;
+                color: white;
+            }
 
-        input[type="button"].btn-outline-danger {
-            background-color: transparent;
-            border: 2px solid #dc3545;
-            color: #dc3545;
-        }
+            input[type="button"].btn-outline-danger {
+                /*background-color: transparent;*/
+                border: 2px solid #f70a0a;
+                /* color: #dc3545;*/
+            }
 
             input[type="button"].btn-outline-danger:hover {
-                background-color: #dc3545;
+                background-color: #a30606;
                 color: white;
             }
 </style>
