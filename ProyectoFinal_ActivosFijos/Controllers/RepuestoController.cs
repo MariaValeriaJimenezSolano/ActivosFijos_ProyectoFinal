@@ -99,7 +99,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                     }
                 }
 
-                Repuesto repuestosTO = new Repuesto
+                Repuestos repuestosTO = new Repuestos
                 {
                     // Id = model.Id,
                     Nombre = model.Nombre,

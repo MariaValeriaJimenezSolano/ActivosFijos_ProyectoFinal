@@ -31,7 +31,7 @@ namespace ProyectoFinal_ActivosFijos.Controllers
                 {
                     using (var db = new ActivosFijosBDEntities())
                     {
-                        Usuario userTO = new Usuario();
+                        Usuarios userTO = new Usuarios();
                         userTO.Cedula = model.Cedula;
                         userTO.Contrasena = model.Contrasena;
                         userTO.Correo = model.Correo;
