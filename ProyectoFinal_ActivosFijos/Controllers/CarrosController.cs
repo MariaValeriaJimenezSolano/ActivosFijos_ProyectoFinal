@@ -310,6 +310,45 @@ namespace ProyectoFinal_ActivosFijos.Controllers
             }
             return View(model);
         }
+        // Método privado para obtener los carros filtrados
+        private List<CarrosTableViewModel> ObtenerCarrosFiltrados(string modelo, int? anio, decimal? precioMax)
+        {
+            using (ActivosFijosBDEntities db = new ActivosFijosBDEntities())
+            {
+                var query = from c in db.Carros
+                            select new CarrosTableViewModel
+                            {
+                                Id = c.Id,
+                                Marca = c.Marca,
+                                Modelo = c.Modelo,
+                                Anio = c.Anio ?? 0,
+                                Precio = c.Precio ?? 0,
+                                Transmision = c.Transmision,
+                                Combustible = c.Combustible,
+                                CantidadEnStock = c.CantidadEnStock ?? 0,
+                                Descripcion = c.Descripcion,
+                                Imagen1 = c.Imagen1,
+                                Imagen2 = c.Imagen2
+                            };
 
+                // Aplicar filtros según los parámetros recibidos
+                if (!string.IsNullOrEmpty(modelo))
+                {
+                    query = query.Where(c => c.Modelo.Contains(modelo));
+                }
+
+                if (anio.HasValue)
+                {
+                    query = query.Where(c => c.Anio == anio.Value);
+                }
+
+                if (precioMax.HasValue)
+                {
+                    query = query.Where(c => c.Precio <= precioMax.Value);
+                }
+
+                return query.ToList();
+            }
+        }
     }
 }
