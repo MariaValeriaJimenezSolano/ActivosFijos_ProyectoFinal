@@ -3,39 +3,51 @@
   "WorkspaceRootPath": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\carros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\repuesto\\vistarepuestos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\repuesto\\vistarepuestos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\carros\\vistavehiculos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\repuesto\\mostrarrepuestoindividual.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\repuesto\\mostrarrepuestoindividual.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\carros\\vistavehiculos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carros\\vistavehiculos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\carros\\mostrarvehiculoindividual.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carros\\mostrarvehiculoindividual.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\carros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carros\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\carroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\carroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\carros\\mostrarvehiculoindividual.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carros\\mostrarvehiculoindividual.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\shared\\_clientlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\shared\\_clientlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -43,11 +55,7 @@
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|c:\\users\\roverssi\\documents\\ale u\\clases 2024\\viii cuatri\\servicios web\\activosfijos_proyectofinal\\proyectofinal_activosfijos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\proyectofinal_activosfijos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC74AAF-9E27-48CC-8322-BC02242FD97B}|ProyectoFinal_ActivosFijos\\ProyectoFinal_ActivosFijos.csproj|solutionrelative:proyectofinal_activosfijos\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -94,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,7 +118,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "VistaRepuestos.cshtml",
+              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
+              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Repuesto\\VistaRepuestos.cshtml",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAgwJIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-23T01:29:00.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MostrarRepuestoIndividual.cshtml",
+              "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Repuesto\\MostrarRepuestoIndividual.cshtml",
+              "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Repuesto\\MostrarRepuestoIndividual.cshtml",
+              "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Repuesto\\MostrarRepuestoIndividual.cshtml",
+              "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Repuesto\\MostrarRepuestoIndividual.cshtml",
+              "ViewState": "AQIAABcBAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-23T01:28:36.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "FilterConfig.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\App_Start\\FilterConfig.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\App_Start\\FilterConfig.cs",
@@ -118,12 +151,11 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\App_Start\\FilterConfig.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T00:15:39.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T00:15:39.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "BundleConfig.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\App_Start\\BundleConfig.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\App_Start\\BundleConfig.cs",
@@ -131,12 +163,11 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\App_Start\\BundleConfig.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T00:15:38.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T00:15:38.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "RouteConfig.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\App_Start\\RouteConfig.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\App_Start\\RouteConfig.cs",
@@ -144,38 +175,35 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\App_Start\\RouteConfig.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T00:15:32.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T00:15:32.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "VistaVehiculos.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
               "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Carros\\VistaVehiculos.cshtml",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAcwI4AAAAKAAAA",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAAAJIAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-23T00:05:04.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T00:05:04.696Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "MostrarVehiculoIndividual.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\MostrarVehiculoIndividual.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Carros\\MostrarVehiculoIndividual.cshtml",
               "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\MostrarVehiculoIndividual.cshtml",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Carros\\MostrarVehiculoIndividual.cshtml",
-              "ViewState": "AQIAADkBAAAAAAAAAAAuwEQBAAA+AAAA",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAAAEQBAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-23T00:02:52.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T00:02:52.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\Index.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Carros\\Index.cshtml",
@@ -183,12 +211,11 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Carros\\Index.cshtml",
               "ViewState": "AQIAAGQAAAAAAAAAAAAcwHcAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-23T00:02:51.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T00:02:51.039Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carrito\\Index.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Carrito\\Index.cshtml",
@@ -196,25 +223,23 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Carrito\\Index.cshtml",
               "ViewState": "AQIAAIYAAAAAAAAAAAAAAMEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-22T23:55:42.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-22T23:55:42.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "CarritoController.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CarritoController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\CarritoController.cs",
               "ToolTip": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CarritoController.cs",
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\CarritoController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAADkAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T23:53:11.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-22T23:53:11.717Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
@@ -222,12 +247,11 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\UsuarioController.cs",
               "ViewState": "AQIAAC8AAAAAAAAAAAAjwDoAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T01:03:51.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T01:03:51.195Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\RegisterController.cs",
@@ -239,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "RepuestoController.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\RepuestoController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\RepuestoController.cs",
@@ -251,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "CarrosController.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\CarrosController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\CarrosController.cs",
@@ -259,12 +283,11 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Controllers\\CarrosController.cs",
               "ViewState": "AQIAAC0BAAAAAAAAAAAAAEIBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T01:02:58.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T01:02:58.43Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Controllers\\LoginController.cs",
@@ -276,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Model1.edmx [Diagram1]",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Models\\Model1.edmx",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Models\\Model1.edmx",
@@ -287,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Web.config",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Web.config",
@@ -300,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Admin\\Index.cshtml",
@@ -308,12 +331,11 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Admin\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-18T06:32:15.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-18T06:32:15.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Comprador\\Index.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Comprador\\Index.cshtml",
@@ -325,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Carros\\Add.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Carros\\Add.cshtml",
@@ -337,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Usuario\\Add.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Usuario\\Add.cshtml",
@@ -349,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_AdminLayout.cshtml",
@@ -361,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "_ClientLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\Roverssi\\Documents\\ALE U\\Clases 2024\\VIII Cuatri\\servicios web\\ActivosFijos_ProyectoFinal\\ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
               "RelativeDocumentMoniker": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
@@ -369,8 +391,7 @@
               "RelativeToolTip": "ProyectoFinal_ActivosFijos\\Views\\Shared\\_ClientLayout.cshtml",
               "ViewState": "AQIAALwAAAAAAAAAAAAAANAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T04:20:57.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T04:20:57.09Z"
             }
           ]
         }

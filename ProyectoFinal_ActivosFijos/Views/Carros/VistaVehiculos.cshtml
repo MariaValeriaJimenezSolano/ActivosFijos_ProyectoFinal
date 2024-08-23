@@ -151,7 +151,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-center">@carro.Modelo - @carro.Anio</h5>
                             <p class="card-text">Transmisión: @carro.Transmision</p>
-                            <p class="card-text"><strong>Precio: @string.Format("₡{0:N2}", carro.Precio) | @carro.CantidadEnStock Disponibles</strong></p>
+                            <p class="card-text"><strong>Precio: @string.Format("${0:N2}", carro.Precio) | @carro.CantidadEnStock Disponibles</strong></p>
 
                             <!-- Carrusel de imágenes -->
                             <div id="carouselcarro@(carro.Id)" class="carousel slide" data-bs-ride="carousel">
